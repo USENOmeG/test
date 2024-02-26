@@ -1,0 +1,383 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="home-container">
+      <div class="first-content">
+        <div class="first-header">
+          <h3>あなたの著作物の権利を守ります</h3>
+        </div>
+        <div class="first-contact">
+          <div class="home-paragraph">
+            <p>
+              当社はあなたの貴重な著作物の権利を確実に守ります。あなたの作品は大切な資産です。
+              我々は著作権を尊重し、不正な使用や盗用から守るため、最新の法律やテクノロジーを駆使して取り組みます。
+              あなたの創造性と独自性を大切にし、安心してご活動いただけるよう、我々が全力でサポートいたします。
+            </p>
+          </div>
+          <div class="first-btn">
+            <div class="btn1">
+              <a href="/contact"
+                ><h3>
+                  <i class="fa-regular fa-message"></i>&nbsp; お問い合わせ
+                </h3></a
+              >
+            </div>
+            <div class="btn2">
+              <a href="/doc"
+                ><h3>
+                  <i class="fa-solid fa-print"></i
+                  >&nbsp;サービス資料ダウンロード
+                </h3></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-us">
+        <div class="about-us-header" id="textFadeIn">
+          <p>About Us</p>
+          <h3>我々について</h3>
+          <a href="#">もっとみる</a>
+        </div>
+
+        <div class="about-us-content">
+          <div class="about-us-mid">
+            <div class="about-us-tracks">
+              <div class="track-card">
+                <h3>10</h3>
+                <p>年の著作物保護経験</p>
+              </div>
+
+              <div class="track-card">
+                <h3>100</h3>
+                <p>件の案件解決</p>
+              </div>
+
+              <div class="track-card">
+                <h3>10</h3>
+                <p>つの賞を受賞</p>
+              </div>
+
+              <div class="track-card">
+                <h3>10</h3>
+                <p>年の著作物保護経験</p>
+              </div>
+            </div>
+
+            <div class="about-us-paragraph">
+              <p>
+                当社は新しいイノベーションと卓越性を重視する革新的な企業です。
+                私たちの使命は、顧客に価値あるソリューションを提供し、持続可能な未来の構築に貢献することです。
+                私たちはチームワークとクリエイティビティを奨励し、社員たちが自己成長できる環境を整えています。
+                お客様のニーズに応じた革新的な製品とサービスを提供することで、私たちは市場でのリーダーシップを築いています。
+                今後も新たな挑戦に取り組み、お客様、従業員、そして社会に価値を提供し続けることを誇りに思っています。
+              </p>
+            </div>
+          </div>
+
+          <div class="about-us-image">
+            <img src="{% static 'images/decoration/ourceo.jpg' %}" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="second-content">
+        <div class="second-header">
+          <h3>こんなお悩みありませんか？</h3>
+        </div>
+
+        <div class="second-candHolder">
+          <div class="second-card">
+            <img src="{% static 'images/decoration/wodering.png' %}" />
+            <div class="secondcard-text"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forth-content">
+        <div class="forth-header">
+          <p>お任せください！</p>
+          <h3>
+            uホールディングスなら<span>著作権問題</span>をすべて解決します！
+          </h3>
+        </div>
+        <div class="forth-main">
+          <div class="forth-card">
+            <img src="{% static "images/decoration/solving-1.jpg" %}"
+            alt="solving problems" />
+            <h3>お問い合わせ</h3>
+            <p>
+              今日はいい天気ですね。外で散歩したい気分です。でも、仕事があります。頑張りましょう！
+            </p>
+          </div>
+
+          <div class="forth-card">
+            <img src="{% static "images/decoration/solving-2.jpg" %}"
+            alt="solving problems" />
+            <h3>コンサルティング</h3>
+            <p>
+              今日はいい天気ですね。外で散歩したい気分です。でも、仕事があります。頑張りましょう！
+            </p>
+          </div>
+
+          <div class="forth-card">
+            <img src="{% static "images/decoration/solving-3.jpg" %}"
+            alt="solving problems" />
+            <h3>問題解決</h3>
+            <p>
+              今日はいい天気ですね。外で散歩したい気分です。でも、仕事があります。頑張りましょう！
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="third-content">
+        <div class="third-header">
+          <p>Why Us</p>
+          <h3>u ホールディングスが選ばれる<span>3</span>つの理由</h3>
+        </div>
+
+        <div class="third-main">
+          <div class="whyUs-card">
+            <h3><span>01</span>無料からはじめられる&無料でも続けられる</h3>
+            <p>
+              uホールディングスは、アカウント登録やオンラインミーティングの参加を無料で提供しています。
+              お客様や貴社のニーズに合わせ、まずは無料でミーティングにご参加いただくことができます。
+              その後も、無料でサービスをご利用いただくことが可能です。当社は著作権を尊重し、お客様に安全でセキュアな環境でのサービスを提供しています。
+            </p>
+          </div>
+
+          <div class="whyUs-card">
+            <h3><span>02</span>著作物の悪用を防ぐための対策を実施しています</h3>
+            <p>
+              春の陽気が広がり、桜の花が風に舞う公園。子どもたちは笑顔で駆け回り、花見客が青空の下で楽しいひと時を共有している。
+              ベンチにはカップルが寄り添い、春の訪れを感じながら手を繋いでいる。
+              遠くには桜並木が美しいトンネルを作り出し、その下を通り抜ける人々が春の喜びに包まれている。
+            </p>
+          </div>
+
+          <div class="whyUs-card">
+            <h3><span>03</span>協力関係が広がるネットワークとテクノロジー</h3>
+            <p>
+              雨が降りしきる中、路地裏のカフェでは人々が温かいコーヒーに手を伸ばしている。窓の外では色とりどりの傘が舞い踊り、都会の喧騒が雨音にかき消される。
+              街は灰色に染まり、交わる視線と笑顔が一瞬の出会いを紡ぐ。コーナーには古びた書店があり、本の匂いが心地よく漂う。都市の中で小さな幸福が瞬間的に広がり、人々は日常に微笑む。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="serviceDetails-container">
+        <div class="serviceDetail-card">
+          <div class="detail-header">
+            <h3 style="color: blue">著作物の保護</h3>
+
+            <p>
+              著作物の保護は、クリエイターが創造的な活動を安心して行える環境を提供します。デジタル時代において、不正コピーから知的財産を守るために、
+              技術力を駆使した新しい取り組みが求められています。我々は、コンテンツ制作者や企業が創造した価値を損なわず、適切なライセンス管理を通じて公正な報酬を得られるよう、
+              先進的な著作権保護サービスを提供しています。これにより、クリエイターたちは安心して創作に没頭し、新しいアイデアを生み出すことが期待されます。
+            </p>
+
+            <div class="details-link">
+              <a href="#" style="color: blue"
+                ><h4 style="color: blue">
+                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
+              ></a>
+            </div>
+          </div>
+          <div class="detail-image">
+            <img src="{% static 'images/decoration/law1.jpg' %}" alt="" />
+          </div>
+        </div>
+
+        <div class="serviceDetail-card-left">
+          <div class="detail-image-left">
+            <img src="{% static 'images/decoration/law2.jpg' %}" alt="" />
+          </div>
+          <div class="detail-header-left">
+            <h3 style="color: #ff4500">違法ダウンローダーの摘発</h3>
+
+            <p>
+              違法ダウンローダーの摘発は、主に著作権侵害や知的財産権の保護を目的に実施されます。この違法なダウンロード行為は、著作物の所有者やクリエイターの権利を侵害し、その結果法的な措置が不可欠となります。
+              著作権者や関係者は、監視手段を通じて侵害を検知し、法的手続きを進め、協力関係を築いて法執行機関と連携し、技術的手段を駆使して違法な行為に対処します。
+              この総合的なアプローチにより、違法ダウンローダーの摘発が行われ、著作権や知的財産権の保護が確立され、デジタル環境における公正な取引が促進されることが期待されます。
+            </p>
+
+            <div class="details-link">
+              <a href="#"
+                ><h4 style="color: #ff4500">
+                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="serviceDetail-card">
+          <div class="detail-header">
+            <h3 style="color: green">協力関係の構築</h3>
+            <p>
+              著作権者は積極的にインターネットプロバイダーや法執行機関と連携し、侵害行為の阻止に取り組んでいます。
+              この連携により、侵害者への警告や法的手続きが適切に行われ、不正なダウンロード行為が制限されることを目指しています。
+              同時に、法執行機関との協力により、違法なダウンロードサイトの摘発と閉鎖に向けた戦略的なアプローチが進められています。
+              これにより、著作権者はデジタル空間において合法的なコンテンツの提供を促進し、公正なビジネス環境の構築に寄与しています。
+            </p>
+
+            <div class="details-link">
+              <a href="#"
+                ><h4 style="color: green">
+                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
+              ></a>
+            </div>
+          </div>
+          <div class="detail-image">
+            <img src="{% static 'images/decoration/law3.jpg' %}" alt="" />
+          </div>
+        </div>
+
+        <div class="serviceDetail-card-left">
+          <div class="detail-image-left">
+            <img src="{% static 'images/decoration/law4.jpg' %}" alt="" />
+          </div>
+          <div class="detail-header-left">
+            <h3 style="color: red">監視と検知</h3>
+
+            <p>
+              著作物の権利を有する者やその代理人は、違法なダウンロードサイトやファイル共有プラットフォームを継続的に監視し、侵害行為を的確に検知しています。
+              これには、高度な技術を駆使した監視手段やデジタルツールが活用され、オンライン空間において著作物の正当な権利を保護するための積極的な取り組みが行われています。
+              監視活動を通じて違法なコンテンツの特定や侵害者の追跡が行われ、これによって著作物の適切な管理と法的な措置が可能になり、デジタル環境における公正かつ安全なクリエイティブな活動が促進されています。
+            </p>
+
+            <div class="details-link">
+              <a href="#"
+                ><h4 style="color: red">
+                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-news">
+        <div class="news-header">
+          <p>News</p>
+          <h3>お知らせ</h3>
+        </div>
+
+        <div class="news-content">
+          <div class="news-card">
+            <div class="newsCard-header">
+              <a href="#"
+                >2024年1月26日 - uホールディングと株式会社Xの業務提携</a
+              >
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <p class="hidden-content">
+              uホールディングが、株式会社Xとの戦略的な業務提携を発表しました。この提携により、双方は持つ技術力やノウハウを結集し、新たな市場への展開を図ります。
+              uホールディングの豊富なリソースと株式会社Xの専門性が交わることで、双方が目指すイノベーションが加速され、顧客への付加価値が向上することが期待されます。
+              提携により、業界における新たな標準を築く一翼となり、市場競争において一層の強みを発揮することでしょう。両社は協力し、今後ますます発展していくことが期待されます。
+            </p>
+          </div>
+
+          <div class="news-card">
+            <div class="newsCard-header">
+              <a href="#"
+                >2023年11月26日 - uホールディングと株式会社Yの業務提携</a
+              >
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <p class="hidden-content">
+              uホールディングが、株式会社Xとの戦略的な業務提携を発表しました。この提携により、双方は持つ技術力やノウハウを結集し、新たな市場への展開を図ります。
+              uホールディングの豊富なリソースと株式会社Yの専門性が交わることで、双方が目指すイノベーションが加速され、顧客への付加価値が向上することが期待されます。
+              提携により、業界における新たな標準を築く一翼となり、市場競争において一層の強みを発揮することでしょう。両社は協力し、今後ますます発展していくことが期待されます。
+            </p>
+          </div>
+
+          <div class="news-card">
+            <div class="newsCard-header">
+              <a href="#"
+                >2022年12月26日 -
+                uホールディングによる著作権保護サービスの開始</a
+              >
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <p class="hidden-content">
+              uホールディングが新たな一翼を担う著作権保護サービスを本日開始しました。このサービスは、コンテンツ制作者や企業がデジタル上での知的財産権を確実に保護できる仕組みを提供します。
+              uホールディングの最先端技術を駆使し、不正コピーの防止や適切なライセンス管理を可能にし、クリエイターたちが安心して創造活動に集中できる環境を整備しました。
+              今後ますます拡大が見込まれるデジタル時代において、Uホールディングは著作権の健全な保護を担う存在として、業界に新たな風を吹き込むことでしょう。
+            </p>
+          </div>
+
+          <div class="news-more">
+            <a href="/news"
+              >もっとみる&nbsp;<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscribe-content">
+        <div class="subs-header">
+          <h3>uホールディングスに登録して</h3>
+          <h3>一緒にビジネスチャンスを拡げませんか？</h3>
+        </div>
+
+        <div class="subs-btn">
+          <div class="btn-blue">
+            <a href="#"
+              ><h3>
+                <i class="fa-regular fa-message"></i>&nbsp;お問い合わせ
+              </h3></a
+            >
+          </div>
+          <div class="btn-orange">
+            <a href="/doc"
+              ><h3>
+                <i class="fa-solid fa-print"></i>&nbsp;サービス資料ダウンロード
+              </h3></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chatbot-btn">
+      <button onclick="activateChatBot()">
+        <i class="fa-regular fa-comment-dots"></i>&nbsp;Help
+      </button>
+    </div>
+
+    <div class="chatbot-section">
+      <h3>hello world</h3>
+      <p>チャットBOT導入はココ</p>
+      <p>
+        Not that important yet. wanna use ChatGPT when deploying it. Because it
+        is super inteligent as me.
+      </p>
+    </div>
+
+    <div id="backToTopBtn" class="back-to-top-button" onclick="scrollToTop()">
+      <h3>Back to Top</h3>
+    </div>
+  </body>
+</html>
+
+{% endblock content %}

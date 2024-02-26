@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.dropbtn a {
+    color: #282d32 !important;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    max-width: 100%;
+}
+
+.access-container {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding: 0 150px;
+}
+
+.access-header {
+    margin-top: 80px;
+}
+
+.access-header h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #282d32;
+}
+
+.access-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    border-bottom: solid #282d32 1px;
+}
+
+.access-text h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.access-text p {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.access-phone {
+    margin-top: 50px;
+}
+
+.access-phone h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.access-phone p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+@media (max-width:1000px) {
+
+    .access-container {
+        margin-top: 50px;
+        padding: 50px;
+    }
+
+    .access-map iframe {
+        margin-top: 50px;
+        width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .access-container {
+        padding: 20px;
+    }
+
+    .access-header {
+        margin-top: 40px;
+    }
+
+    .access-header h3 {
+        text-align: center;
+    }
+
+    .access-map iframe {
+        width: 500px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .access-container {
+        padding: 20px;
+    }
+
+    .access-header h3 {
+        text-align: center;
+    }
+
+    .access-map iframe {
+        width: 400px;
+    }
+}

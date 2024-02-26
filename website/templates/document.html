@@ -1,0 +1,115 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script
+    src="https://kit.fontawesome.com/e325191aeb.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="{% static 'css/document.css' %}" />
+  <title></title>
+</head>
+
+<body>
+  <div class="document-container">
+    <div class="doc-text">
+      <h3>資料のダウンロード</h3>
+      <p>下記フォームをご記入の上、資料ダウンロードをお願いいたします</p>
+    </div>
+
+    <div class="form-container">
+      <div class="form-position">
+        <div class="documentForm">
+          <form>
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>会社名</h3>
+              </div>
+              <input type="text" placeholder="例)株式会社utsuwa" required />
+            </div>
+
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>会社のURL</h3>
+              </div>
+              <input type="text" placeholder="例)https://blablabla" />
+            </div>
+
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>役職</h3>
+              </div>
+
+              <select id="ocupation" placeholder="選択してください" required>
+                <option value="" disabled selected hidden>
+                  選択してください
+                </option>
+                <option value="経営者/役員">経営者/役員</option>
+                <option value="会社員">会社員</option>
+                <option value="自営業">自営業</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>お名前</h3>
+              </div>
+              <input type="text" placeholder="例)佐藤太郎" />
+            </div>
+
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>メールアドレス</h3>
+              </div>
+              <input type="text" placeholder="例)sample@uholdings.com" />
+            </div>
+
+            <div class="input-holder">
+              <div class="input-text">
+                <h3>お電話番号</h3>
+              </div>
+              <input type="text" placeholder="例)080-XXXX-YYYY" required />
+            </div>
+          </form>
+        </div>
+
+        <div class="doc-inputs">
+          <input type="checkbox" id="privacyCheckbox" />
+          <label for="privacyCheckbox"
+            ><p>個人情報の取扱いについてに同意する</p></label
+          >
+        </div>
+
+        <div class="dlbtn">
+          <a
+            href="/documentDL_page"
+            id="downloadButton"
+            onclick="downloadDocument()"
+          >
+            資料ダウンロード
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadDocument() {
+      const checkbox = document.getElementById("privacyCheckbox");
+
+      if (checkbox.checked) {
+        const documentUrl = "path/to/your/document.pdf";
+
+        window.open(documentUrl, "_blank");
+      } else {
+        alert(
+          "ダウンロード前にプライバシーポリシーチェックボックスを確認してください。"
+        );
+      }
+    }
+  </script>
+</body>
+
+{% endblock content %}

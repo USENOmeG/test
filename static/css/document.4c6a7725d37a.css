@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.dropbtn a {
+    color: #282d32 !important;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+.document-container {
+    padding-inline: 10%;
+    padding-block: 50px;
+    margin-block: 100px;
+    display: block;
+}
+
+.doc-text p,
+.doc-text h3{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.doc-text p {
+    font-size: 20px;
+}
+
+.doc-text h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+label p {
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 100px;
+    background-color: #eee;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px black;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+}
+
+.input-holder input {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.input-holder select {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.doc-inputs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px ;
+}
+
+.dlbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dlbtn a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    border-radius: 10px;
+    color: white;
+    background-color: orange;
+}

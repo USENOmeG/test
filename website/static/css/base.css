@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    margin: 0;
+}
+
+/* Navbar container */
+.navbar {
+    height: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-left: auto;
+    position: relative;
+    top: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all 0.5ms ease-out;
+    z-index: 999;
+    background-color: transparent;
+}
+
+nav.scrolled {
+    background-color: white;
+}
+
+nav.scrolled a,
+.mobile-menu-icon i.scrolled {
+    color: black;
+}
+
+nav.dark-mode {
+    background-color: #282d32;
+}
+
+.navbar-logo a {
+    align-items: center;
+    display: flex;
+}
+
+.navbar-logo img {
+    width: 50px;
+    background-color: transparent;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu-icon i {
+    color: white;
+}
+
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn a {
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease; 
+}
+  
+.dropbtn a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, orangered,  #007bff); 
+    transition: all 0.3s ease;
+}
+  
+.dropbtn a:hover::after {
+    width: 100%;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;   
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navbar-content {
+    padding: 14px 16px;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-contact a {
+    font-size: 14px;
+    border-radius: 10px;
+    color: white !important;
+    background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(158,7,245,1) 100%);
+}
+
+.navbar-contact a:hover {
+    background: blue;
+}
+
+.navbar-document a {
+    font-size: 14px;
+    border-radius: 10px;
+    color: white !important;
+    background-color: orange;
+}
+
+.navbar-document a:hover {
+    background-color: #EC6B1E;
+}
+
+.mode-switcher {
+    align-items: center;
+    padding: 14px 8px;
+}
+
+.mode-switcher button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mode-switcher button:hover {
+    animation: flip 0.5s ease-in-out;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    50% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+.mode-switcher i {
+    font-size: 30px;
+    height: 40px;
+}
+
+.scroll-progress-container {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+}
+
+.scroll-progress-container.scrolled {
+    background-color: #eee;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: orangered; 
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-menu, .navbar-items, .navbar-contact, .navbar-document, .mode-switcher {
+        display: none;
+  }
+
+  .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+  }
+
+  .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+  }
+
+  .mobile-menu-icon i {
+        font-size: 24px;
+        color: #282d32;
+  }
+
+  .mobile-nav-active .navbar-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: solid #282d32 1px;
+        z-index: 1;
+  }
+
+  .navbar-items a {
+        padding: 10px;
+        color: black;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-logo img {
+        width: 30px;
+    }
+
+    .navbar-logo a h3 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
+
+/*For dark theme*/
+
+body.dark-mode {
+    background-color: #282d32;
+    transition: 0.5s ease;
+}
+
+body.dark-mode h3,
+body.dark-mode p {
+    color: orangered;
+}

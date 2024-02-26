@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script
+    src="https://kit.fontawesome.com/e325191aeb.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="{% static 'css/help.css' %}" />
+  <title></title>
+</head>
+
+<body>
+  <div class="help-container">
+    <div class="help-left">
+      <div class="help-section" onclick="showhelp(1)">
+        <a href="#"><h3>よくある質問</h3></a>
+      </div>
+
+      <div class="help-section" onclick="showhelp(2)">
+        <a href="#"><h3>その他</h3></a>
+      </div>
+    </div>
+
+    <div class="help-right">
+      <div class="help-content" id="help1">
+        <div class="help-main">
+          <div class="help-mainHeader">
+            <p>ヘルプ</p>
+            <h3>よくある質問</h3>
+          </div>
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"
+              ><h3>
+                過去の100年間で最も重要な発明は何だと思いますか？その理由は何ですか？
+              </h3></a
+            >
+          </div>
+
+          <div class="help-card">
+            <a href="#"
+              ><h3>
+                あなたが任意の歴史的な人物と夕食を共にできるとしたら、誰と何を尋ねますか？
+              </h3></a
+            >
+          </div>
+
+          <div class="help-card">
+            <a href="#"
+              ><h3>
+                世界を1つ変える力を持っていると想像してください。それは何ですか？
+              </h3></a
+            >
+          </div>
+
+          <div class="help-card">
+            <a href="#"
+              ><h3>
+                無人島に取り残されたとしたら、3つのアイテムを持っていきたいですか？
+              </h3></a
+            >
+          </div>
+
+          <div class="help-card">
+            <a href="#"
+              ><h3>
+                あなたが今までにした中で最も冒険的なことは何ですか、そしてもう一度やりますか？
+              </h3></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="help-content" id="help2">
+        <div class="help-main">
+          <div class="help-mainHeader">
+            <p>ヘルプ</p>
+            <h3>その他</h3>
+          </div>
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+
+          <div class="help-card">
+            <a href="#"><h3>無料で使えますか</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      showhelp(1);
+    });
+
+    function showhelp(helpNumber) {
+      const allhelpContents = document.querySelectorAll(".help-content");
+      allhelpContents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      const selectedhelp = document.getElementById("help" + helpNumber);
+      selectedhelp.classList.add("active");
+
+      const allhelpLinks = document.querySelectorAll(".help-section");
+      allhelpLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      const clickedhelpLink = document.querySelector(
+        ".help-section:nth-child(" + helpNumber + ")"
+      );
+      clickedhelpLink.classList.add("active");
+    }
+  </script>
+</body>
+
+{% endblock content %}

@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.first-content,
+.about-us,
+.second-content,
+.third-content,
+.forth-content,
+.home-news {
+    padding-inline: 5%;
+    padding-block: 100px;
+}
+
+.about-us-header p,
+.third-header p,
+.news-header p,
+.chatbot-btn button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.first-content {
+    padding-block: 200px;
+    border-bottom: solid #eee 1px;
+    background-image: url("../images/decoration/background.JPG");
+    background-color: grey;
+    background-blend-mode: multiply;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.first-header {
+    margin-left: 5%;
+    margin-block: 100px;
+}
+
+.first-header h3 {
+    margin-top: 30px;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.first-contact {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.first-contact h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.home-paragraph {
+    max-width: 800px;
+}
+
+.home-paragraph p {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.first-btn {
+    display: block;
+    margin-top: 20px;
+}
+
+.first-btn a {
+    text-decoration: none;
+}
+
+.btn1,
+.btn2{
+    margin-top: 30px;
+}
+
+.btn1 h3 {
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(158,7,245,1) 100%);
+    border-radius: 10px;
+    padding: 15px 10px;
+    min-width: 400px;
+}
+
+.btn2 h3 {
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 15px 10px;
+    min-width: 400px;
+}
+
+.about-us {
+    justify-content: center;
+    gap: 50px;
+    border-bottom: solid #eee 1px;
+}
+
+.about-us-header p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF4500;
+}
+
+.about-us-header h3 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #282d32;
+}
+
+.about-us-header a {
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+}
+
+.about-us-content {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.about-us-tracks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    background-color: #eee;
+    border-radius: 20px;
+    border: solid #282d32 1px;
+}
+
+.track-card {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.track-card h3 {
+    align-self: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #FF4500;
+}
+
+.track-card p {
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about-us-paragraph {
+    margin-top: 50px
+}
+
+.about-us-paragraph p {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+.about-us-image img {
+    max-width: 600px;
+}
+
+.second-content {
+    padding-block: 100px;
+    padding-inline: 5%;
+    border-bottom: solid #eee 1px;
+}
+
+.second-content h3 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;   
+}
+
+.second-card {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.secondcard-text {
+    align-self: center;
+}
+
+.secondcard-text h3 {
+    font-size: 30px;
+}
+
+.second-card img {
+    max-width: 100%;
+}
+
+.third-content {
+    border-bottom: solid #eee 1px;
+}
+
+.third-header p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #FF4500;
+}
+
+.third-header h3 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.third-header span {
+    color: #FF4500;
+    font-size: 70px;
+}
+
+.third-main {
+    margin-top: 50px;
+}
+
+.whyUs-card {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: solid #eee 1px;
+}
+
+.whyUs-card h3 {
+    font-size: 34px;
+}
+
+.whyUs-card h3 span {
+    font-size: 50px;
+    padding-right: 20px;
+    color: #FF4500;
+}
+
+.whyUs-card p {
+    margin-top: 30px;
+}
+
+.forth-content {
+    border-bottom: solid #eee 1px;
+}
+
+.forth-header p,
+.forth-header h3 {
+    text-align: center;
+}
+
+.forth-header p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF4500;
+}
+
+.forth-header h3 {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.forth-main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.forth-card {
+    max-width: 450px;
+    background-color: white;
+    box-shadow: 0 0 5px #282d32;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.forth-card img {
+    max-width: 100%;
+}
+
+.forth-card h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #FF4500;
+}
+
+.forth-card p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.serviceDetails-container {
+    padding-block: 100px;
+    border-bottom: solid #eee 1px;
+}
+
+.serviceDetail-card,
+.serviceDetail-card-left {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    background-color: whitesmoke;
+}
+
+.detail-header,
+.detail-header-left {
+    align-self: center;
+    padding: 20px;
+}
+
+.detail-header h3,
+.detail-header-left h3{
+    color: #282d32;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.details-link {
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+
+.details-link a {
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    font-size: 20px;
+}
+
+.detail-image img,
+.detail-image-left img {
+    max-width: 1000px;
+    max-height: 900px;
+    width: 100%;
+    height: 100%;
+}
+
+.home-news {
+    border-bottom: solid #eee 1px;
+}
+
+.news-header p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF4500;
+}
+
+.news-header h3 {
+    font-size: 40px;
+}
+
+.news-card {
+    margin-top: 30px;
+    border-bottom: solid #eee 1px;
+    padding-bottom: 20px;
+}
+
+.news-card a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #282d32;
+}
+
+.newsCard-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 30px;
+}
+  
+.read-more-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #282d32;
+    border: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.news-more {
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.news-more a {
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+.subscribe-content {
+    background-image: linear-gradient(to right top, #FF4500, #FF6347, #FF7F50, #FF8C00);
+    padding: 50px;
+}
+
+.subs-header h3 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.subs-btn {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.btn-blue  a,
+.btn-orange a {
+    text-decoration: none;
+}
+
+.btn-blue h3 {
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(158,7,245,1) 100%);
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.btn-orange h3 {
+    min-width: 500px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+/* For fixed content and scripts*/
+.chatbot-btn {
+    position: fixed; 
+    right: 5%;
+    bottom: 5%;
+    z-index: 999; 
+}
+
+.chatbot-btn button {
+    width: 150px;
+    padding: 15px 30px;
+    border-radius: 40px;
+    border: transparent;
+    color: #282d32;
+    background-color: lightblue;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chatbot-section {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: none;
+    z-index: 10;
+    background-color: white;
+    transition: 2s;
+    border-radius: 20px;
+    border: solid #eee 1px;
+    padding-inline: 5%;
+    box-shadow: 0 0 5px;
+}
+
+.back-to-top-button {
+    background-color: white;
+    color: #282d32;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-top: solid #eee 1px;
+    border-bottom: solid #eee 1px;
+}
+
+.back-to-top-button h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.back-to-top-button:hover {
+    background-color: whitesmoke;
+}
+
+@media (max-width: 1600px){
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 42px;
+    }
+    
+    .forth-card {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1500px) {
+        
+    .about-us-image img {
+        max-width: 500px;
+    }
+
+    .forth-card {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .first-header h3 {
+        font-size: 50px;
+    }
+
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 36px;
+    }
+
+    .forth-header p {
+        font-size: 24px;   
+    }
+
+    .first-contact {
+        margin-top: 150px;
+        display: block;
+    }
+
+    .track-card h3 {
+        font-size: 40px;
+    }
+    
+    .track-card p {
+        font-size: 16px;
+    }
+
+    .forth-card {
+        max-width: 320px;
+    }
+
+    .track-card h3 {
+        font-size: 40px;
+    }
+
+    
+    .track-card p {
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+
+    .first-header {
+        margin-left: 0;
+    }
+
+    .first-header h3 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .about-us-image img {
+        max-width: 400px;
+    }
+
+    .third-header span {
+        font-size: 50px;
+    }
+
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 32px;
+    }
+
+    .forth-header p {
+        font-size: 24px;   
+    }
+
+    .forth-card {
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    .detail-header h3,
+    .detail-header-left h3{
+        font-size: 30px;
+    }
+
+    .btn-blue h3,
+    .btn-orange h3 {
+        min-width:350px;
+    }
+    
+}
+
+@media (max-width: 784px) {
+
+    .first-content {
+        padding-block: 100px;
+    }
+
+    .first-header h3 {
+        font-size: 42px;
+    }
+
+    .about-us-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn1 h3,
+    .btn2 h3 {
+        min-width: 100%;
+    }
+
+    .about-us-tracks {
+        display: block;
+    }
+
+    .track-card h3 {
+        font-size: 40px;
+    }
+    
+    .track-card p {
+        font-size: 24px;
+    }
+
+    .about-us-paragraph p {
+        font-size: 14px;
+    }
+
+    .about-us-mid {
+        order: 2;
+    }
+    
+    .about-us-image {
+        order: 1;
+    }
+
+    .about-us-image img {
+        max-width: 100%;
+    }
+
+    .third-header span {
+        font-size: 50px;
+    }
+
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 32px;
+    }
+
+    .about-us-header p,
+    .third-header p,
+    .news-header p {
+        font-size: 24px;
+    }
+
+    .forth-main {
+        display: block;
+        margin-top: 50px
+    }
+
+    .forth-card {
+        margin-top: 50px;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .whyUs-card h3 {
+        font-size: 30px;
+    }
+    
+    .whyUs-card h3 span {
+        font-size: 40px;
+        padding-right: 10px;
+    }
+
+    .serviceDetail-card,
+    .serviceDetail-card-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-image,
+    .detail-image-left {
+        order: 1;
+    }
+
+    .detail-header,
+    .detail-header-left {
+        order: 2;
+    }
+    
+    .detail-header h3,
+    .detail-header-left h3{
+        font-size: 30px;
+    }
+
+    .details-link a {
+        font-size: 16px;
+    }
+
+    .subs-header h3 {
+        font-size: 30px;
+    }
+
+    .btn-blue h3,
+    .btn-orange h3 {
+        min-width: 300px;
+    }  
+}
+
+@media (max-width: 500px) {
+
+    .first-content {
+        padding-block: 80px;
+    }
+
+    .first-header h3 {
+        font-size: 42px;
+    }
+
+    .first-contact {
+        margin-top: 80px;
+    }
+    
+    .first-contact h3 {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .home-paragraph p {
+        font-size: 14px;
+    }
+
+    .track-card h3 {
+        font-size: 30px;
+    }
+    
+    .track-card p {
+        font-size: 16px;
+    }
+
+    .third-header span {
+        font-size: 40px;
+    }
+
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 28px;
+    }
+
+    .about-us-header p,
+    .third-header p,
+    .news-header p {
+        font-size: 20px;
+    }
+
+    .subs-header h3 {
+        font-size: 24px;
+    }
+
+    .subscribe-content {
+        padding: 5%;
+    }
+
+    .subs-btn {
+        display: block;
+    }
+
+    .btn-orange {
+        margin-top: 30px;
+    }
+
+    .btn-blue h3,
+    .btn-orange h3 {
+        min-width: 100%;
+    }  
+}
+
+@media (max-width: 380px) {
+
+    .first-header h3 {
+        font-size: 40px;
+    }
+    
+    .home-paragraph p {
+        font-size: 14px;
+    }
+
+    .track-card h3 {
+        font-size: 30px;
+    }
+    
+    .track-card p {
+        font-size: 16px;
+    }
+
+    .third-header span {
+        font-size: 40px;
+    }
+
+    .forth-header h3,
+    .about-us-header h3,
+    .second-header h3,
+    .forth-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 24px;
+    }
+
+    .about-us-header p,
+    .third-header p,
+    .news-header p {
+        font-size: 16px;
+    }
+
+    .whyUs-card h3 {
+        font-size: 24px;
+    }
+    
+    .whyUs-card h3 span {
+        font-size: 32px;
+        padding-right: 10px;
+    }
+
+    .whyUs-card p {
+        font-size: 14px;
+    }
+
+    .detail-header p,
+    .detail-header-left p {
+        font-size: 14px;
+    }
+
+    .news-card p {
+        font-size: 14px;
+    }
+
+    .subs-header h3 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+

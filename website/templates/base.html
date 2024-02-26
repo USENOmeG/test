@@ -1,0 +1,202 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav id="navBar">
+        <div class="navbar-logo">
+          <a href="/">
+            <!--<img src="{% static 'images/#' %}" alt="u-Holdings" />-->
+            <h3>u-Holdings</h3>
+          </a>
+        </div>
+
+        <div class="navbar-mobile">
+          <div class="mobile-menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <div class="navbar-items">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="/service">サービス詳細&nbsp;</a>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="/access">アクセス</a>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="/news">お知らせ&nbsp;</a>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn"><a href="/help">ヘルプ</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="dropdown">
+            <button class="dropbtn">
+              <a href="/service">サービス詳細&nbsp;</a>
+            </button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              <a href="/access">アクセス</a>
+            </button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              <a href="/news">お知らせ&nbsp;</a>
+            </button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              <a href="/help">ヘルプ</a>
+            </button>
+          </div>
+
+          <div class="navbar-content">
+            <div class="navbar-contact">
+              <a href="/contact"><h3>お問い合わせ</h3></a>
+            </div>
+
+            <div class="navbar-document">
+              <a href="/doc"><h3>資料ダウンロード</h3></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="scroll-progress-container" id="scrollBar">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+      </div>
+    </div>
+
+    <script src="{% static 'js/script.js'%}"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+        const navbar = document.querySelector(".navbar");
+
+        mobileMenuIcon.addEventListener("click", function () {
+          navbar.classList.toggle("mobile-nav-active");
+        });
+
+        const navItems = document.querySelectorAll(".navbar-items");
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            navbar.classList.remove("mobile-nav-active");
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          const isClickInsideMenu =
+            navbar.contains(event.target) ||
+            mobileMenuIcon.contains(event.target);
+          if (!isClickInsideMenu) {
+            navbar.classList.remove("mobile-nav-active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+{% block content %}
+<!--When extends base.html, extended content comes inside this-->
+{% endblock content %}
+
+<!--Footer starts-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Footer</title>
+  </head>
+
+  <body>
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-content">
+          <a href="https://utsuwa-production.up.railway.app/"
+            ><h3>運営会社</h3></a
+          >
+          <a href="/term-of-use"><h3>利用規約</h3></a>
+          <a href="/privacy-policy"><h3>プライバシーポリシー</h3></a>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+        <p class="copyright" id="copyright">
+          © Copyright u ホールディングス | <span id="currentYear"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-container-mobile">
+      <div class="footer-main">
+        <div class="footer-content">
+          <h3>Easy links</h3>
+        </div>
+
+        <div class="footer-content">
+          <h3>会社概要</h3>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+        <p class="copyright">© Copyright u ホールディングス | 2024</p>
+      </div>
+    </div>
+
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
+
+    <script>
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      window.onscroll = function () {
+        if (window.scrollY > 22) {
+          navBar.classList.add("scrolled");
+          backToTopBtn.style.display = "block";
+        } else {
+          navBar.classList.remove("scrolled");
+          backToTopBtn.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        console.log("Scrolling to top...");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
