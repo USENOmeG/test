@@ -24,9 +24,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d21jwrg85vp)%f=cr*8*eb1!m@-e4=q__-j_h9l$%d!#%t-1!e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
+# Check if DEBUG is set and its value is '1'
+if DEBUG and DEBUG == '1126':
+    print("Debug mode is enabled.")
+else:
+    print("Debug mode is disabled.")
+
+ALLOWED_HOSTS = ["*"]
+
+if not DEBUG:
+    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
 
 # Application definition
