@@ -11,7 +11,80 @@ body {
     justify-content: center;
     transition: 0.5s ease;
     margin: 0;
+    overflow-x: hidden;
 }
+
+#loading_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other content */
+  }
+  
+  .loader {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF4500; /* Initial color */
+    animation: pulse 2s infinite alternate, change-color 4s infinite linear; /* Apply pulsating and color transition animations */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+  }
+  
+  /* Define pulsating animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Grow to 1.2 times original size */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Define color transition animation */
+  @keyframes change-color {
+    0% {
+      background-color: #FF4500;
+    }
+    25% {
+      background-color: white;
+    }
+    50% {
+      background-color: dodgerblue;
+    }
+    75% {
+      background-color: lavender;
+    }
+    100% {
+      background-color: limegreen;
+    }
+  }
+  
+  /* Apply different animation delays for each circle */
+  .circle:nth-child(2) {
+    animation-delay: -1s; /* Delay the animation for the second circle */
+  }
+  
+  .circle:nth-child(3) {
+    animation-delay: -0.5s; /* Delay the animation for the third circle */
+  }
+   
 
 /* Navbar container */
 .navbar {
@@ -56,8 +129,13 @@ nav.dark-mode {
     display: flex;
 }
 
+.navbar-logo a:hover {
+    opacity: 0.8;
+    transition: 500ms ease;
+}
+
 .navbar-logo img {
-    width: 50px;
+    width: 200px;
     background-color: transparent;
 }
 
@@ -89,23 +167,14 @@ nav.dark-mode {
 
 .dropbtn a {
     text-decoration: none;
+    color: white; 
     position: relative;
-    transition: color 0.3s ease; 
+    overflow: hidden; 
 }
-  
-.dropbtn a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to right, orangered,  #007bff); 
-    transition: all 0.3s ease;
-}
-  
-.dropbtn a:hover::after {
-    width: 100%;
+
+.dropbtn a:hover {
+    color: #FF4500;
+    transition: 500ms ease;
 }
 
 .dropdown .dropbtn {
@@ -121,6 +190,42 @@ nav.dark-mode {
 
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: transparent;
+}
+
+.dropdown:hover .drop_content {
+    visibility: visible;
+}
+
+.drop_content {
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    padding-block: 20px;
+}
+
+.drop_service a {
+    display: block;
+}
+
+.drop_service a:hover p {
+    color: #FF4500;
+    transition: 500ms ease; 
+}
+
+.drop_service a p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #282d32;
+}
+
+.drop_service a img {
+    width: 150px;
 }
 
 .row:after {
@@ -143,7 +248,8 @@ nav.dark-mode {
 }
 
 .navbar-contact a:hover {
-    background: blue;
+    background: linear-gradient(90deg, rgba(0,0,255) 0%, rgba(0,0,255) 100%);
+    transition: 500ms ease;
 }
 
 .navbar-document a {
@@ -154,7 +260,8 @@ nav.dark-mode {
 }
 
 .navbar-document a:hover {
-    background-color: #EC6B1E;
+    background-color: #FF4500;
+    transition: 500ms ease;
 }
 
 .mode-switcher {
@@ -193,8 +300,9 @@ nav.dark-mode {
     position: fixed;
     top: 100px;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background-color: transparent;
+    z-index: 99;
 }
 
 .scroll-progress-container.scrolled {
@@ -204,10 +312,10 @@ nav.dark-mode {
 .scroll-progress-bar {
     height: 100%;
     width: 0;
-    background-color: orangered; 
+    background-color: #FF4500; 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .navbar-menu, .navbar-items, .navbar-contact, .navbar-document, .mode-switcher {
         display: none;
   }
@@ -227,18 +335,18 @@ nav.dark-mode {
   .mobile-menu-icon i {
         font-size: 24px;
         color: #282d32;
+        overflow: hidden;
   }
 
   .mobile-nav-active .navbar-items {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: absolute;
-        top: 80px;
+        position: fixed;
+        top: 104px;
         left: 0;
         width: 100%;
         background-color: white;
-        border-bottom: solid #282d32 1px;
         z-index: 1;
   }
 
@@ -248,9 +356,15 @@ nav.dark-mode {
   }
 }
 
+@media screen and (max-width: 1000px) {
+    *:not(.CopyRights_highlightBar) {
+        overflow-x: hidden;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .navbar-logo img {
-        width: 30px;
+        width: 150px;
     }
 
     .navbar-logo a h3 {
@@ -268,5 +382,5 @@ body.dark-mode {
 
 body.dark-mode h3,
 body.dark-mode p {
-    color: orangered;
+    color: #EC6B1E;
 }

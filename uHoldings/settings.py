@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d21jwrg85vp)%f=cr*8*eb1!m@-e4=q__-j_h9l$%d!#%t-1!e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
-
+''
 # Check if DEBUG is set and its value is '1'
 if DEBUG and DEBUG == '1126':
     print("Debug mode is enabled.")
@@ -81,7 +81,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request',
             ],
         },
     },

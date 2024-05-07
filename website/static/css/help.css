@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,20 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+body {
+    z-index: 1;
+}
+
+#nav_help a {
+    color: #FF4500 !important;
+}
+
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {
@@ -15,8 +28,9 @@
 }
 
 .help-container {
-    margin-top: 100px;
+    margin-block: 100px;
     display: flex;
+    z-index: 1;
 }
 
 .help-left {
@@ -26,11 +40,14 @@
     border-right: solid #eee 1px;
     overflow-y: auto;
     flex: 1;
+    align-self: stretch;
     height: 100%;
+    z-index: 1;
 }
 
 .help-section a {
     text-decoration: none;
+    z-index: 999;
 }
 
 .help-section h3 {
@@ -44,11 +61,12 @@
 .help-section h3:hover {
     background: lightgrey;
     border-radius: 10px;
+    transition: 500ms ease;
 }
 
 .help-section.active h3 {
     font-weight: bold;
-    color: orangered;
+    color: #FF4500;
     background: #FFD580;
     border-radius: 10px;
 }
@@ -61,6 +79,7 @@
     display: flex;
     justify-content: center;
     flex: 1;
+    align-self: stretch;
 }
 
 .help-content {
@@ -73,7 +92,7 @@
 }
 
 .help-main {
-    padding-inline: 10%;
+    padding-inline: 5%;
 }
 
 .help-mainHeader {
@@ -82,9 +101,10 @@
 }
 
 .help-mainHeader p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #FF4500;
+    font-family: poppins;
 }
 
 .help-mainHeader h3 {
@@ -95,16 +115,17 @@
 
 .help-card {
     border-bottom: solid #eee 1px;
-    padding: 40px 40px;
+    padding: 20px;
+}
+
+.help-card h3 {
+    color: #282d32;
 }
 
 .help-card a {
     text-decoration: none;
 }
 
-.help-card h3 {
-    color: #282d32;
-}
 
 @media (max-width: 1200px) {
     .help-container {
@@ -119,7 +140,8 @@
         order: 1;
         display: flex;
         justify-content: space-around;
-        height: 50px;
+        width: 100%;
+        height: auto;
     }
 
     .help-section h3 {
@@ -153,12 +175,29 @@
 }
 
 @media (max-width: 500px) {
-    .help-main {
-        padding-inline: 1;
+
+    .help-left {
+        border-right: solid #eee 0px;
+        width: 100vw;
     }
 
     .help-right {
-        padding: 15px;
+        padding-inline: 5%;
+        margin-left: 0px; 
     }
+
+    .help-mainHeader {
+        margin-top: 30px;
+    }
+
+    .help-mainHeader h3 {
+        font-size: 30px;
+    }
+
+    .help-card h3 {
+        font-size: 16px;
+    }
+
+
 }
  

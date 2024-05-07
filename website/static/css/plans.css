@@ -7,7 +7,11 @@
 }
 
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {

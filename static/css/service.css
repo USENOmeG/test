@@ -6,8 +6,16 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+#nav_services a {
+    color: #FF4500 !important;
+}
+
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {
@@ -16,75 +24,118 @@
 
 .service-container {
     margin-top: 100px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.service-left {
-    width: 200px;
-    position: fixed;
-    left: 0;
-    padding: 30px;
-    border-right: solid #eee 1px;
-    overflow-y: auto;
-    flex: 1;
-    height: 100%;
+.serviceDetail-header,
+.serviceDetail-content,
+.serviceDetail-contentB {
+    padding-inline: 5%;
+    padding-block: 100px;
+    background: #282d32;
+    background-blend-mode: multiply;
 }
 
-.service-section a {
-    text-decoration: none;
+
+.serviceDetail-headerA,
+.serviceDetail-headerC {
+    text-align: left;
+    background-color: gray; 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat:auto;
 }
 
-.service-section h3 {
-    margin-top: 30px;
-    color: #282d32;  
-    font-size: 16px;
-    font-weight: normal;
-    padding: 10px 20px;
+.serviceDetail-headerB,
+.serviceDetail-headerD {
+    text-align: right;
+    background-color: gray; 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.service-section h3:hover {
-    background: lightgrey;
-    border-radius: 20px;
+.serviceDetail-headerA {
+    background-image: url("../images/decoration/law1.jpg");
 }
 
-.service-section.active h3 {
-    color: orangered;
-    background: whitesmoke;
-    border-radius: 20px;
+.serviceDetail-headerB {
+    background-image: url("../images/decoration/law2.jpg");
 }
 
-.service-right {
-    padding: 30px;
-    height: 1000px;
+.serviceDetail-headerC {
+    background-image: url("../images/decoration/law3.jpg");
+}
+
+.serviceDetail-headerD {
+    background-image: url("../images/decoration/law4.jpg");
+}
+
+.serviceDetail-headerA:hover,
+.serviceDetail-headerB:hover,
+.serviceDetail-headerC:hover,
+.serviceDetail-headerD:hover {
     background-color: white;
-    margin-left: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    background-blend-mode: multiply;
+    transition: 500ms ease;
 }
 
-.service-content {
-    display: none;
-}
-
-.service-content.active {
-    display: block;
-}
-
-.service-content-header h3 {
-    padding: 20px 60px;
-    color: black;
+.serviceDetail-headerA h3,
+.serviceDetail-headerC h3 {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 50px;
-    background-color: #FFD580;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 800px;
+    color: white;
 }
 
-.service-content-header p {
-    margin-top: 30px;
+.serviceDetail-headerB h3,
+.serviceDetail-headerD h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
 }
+
+.serviceDetail-headerA p,
+.serviceDetail-headerB p,
+.serviceDetail-headerC p,
+.serviceDetail-headerD p {
+    font-size: 16px;
+    margin-top: 30px;
+    color: white;
+}
+
+.serviceDetail-text {
+    padding-inline: 5%;
+    padding-block: 100px;
+}
+
+.more_info {
+    margin-top: 30px;
+    overflow: initial;
+}
+
+.more_info a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 25px;
+    color: #282d32;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.more_info a:hover {
+    color: white;
+    background-color: #282d32;
+    transition: 500ms ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .service-container {
+        margin-top: 100px;
+        display: block;
+    }
+} 
+    
 
 

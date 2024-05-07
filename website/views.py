@@ -86,3 +86,28 @@ def PPolicy(request):
 def access(request):
 
     return render(request, 'access.html')
+
+
+def service_detail1(request):
+
+    return render(request, 'serviceDetail1.html')
+
+
+def service_detail2(request):
+
+    return render(request, 'serviceDetail2.html')
+
+
+def service_detail3(request):
+
+    return render(request, 'serviceDetail3.html')
+
+
+def service_detail4(request):
+
+    return render(request, 'serviceDetail4.html')
+
+
+def about_us(request):
+
+    return render(request, 'about-us.html')

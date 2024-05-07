@@ -6,8 +6,16 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+#nav_access a {
+    color: #FF4500 !important;
+}
+
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {
@@ -22,8 +30,7 @@ body {
 }
 
 .access-container {
-    margin-top: 200px;
-    margin-bottom: 50px;
+    margin-block: 200px;
     padding: 0 150px;
 }
 
@@ -31,9 +38,17 @@ body {
     margin-top: 80px;
 }
 
+.access-header p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF4500;
+    font-family: poppins;
+}
+
 .access-header h3 {
-    text-align: center;
-    font-size: 40px;
+    text-align: left;
+    font-size: 70px;
     font-weight: bold;
     color: #282d32;
 }

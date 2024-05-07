@@ -13,5 +13,10 @@ urlpatterns = [
     path('doc', document, name='document'),
     path('privacy-policy', PPolicy, name='PPolicy'),
     path('term-of-use', term_of_use, name='terms'),
-    path('access', access, name='access')
+    path('access', access, name='access'),
+    path('service1', service_detail1, name="service1"),
+    path('service2', service_detail2, name="service2"),
+    path('service3', service_detail3, name="service3"),
+    path('service4', service_detail4, name="service4"),
+    path('about-us', about_us, name="about-us"),
 ]

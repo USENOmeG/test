@@ -7,7 +7,11 @@
 }
 
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {
@@ -45,11 +49,8 @@ label p {
 }
 
 .form-container {
-    margin-top: 100px;
-    background-color: #eee;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 3px black;
 }
 
 form {
@@ -58,16 +59,20 @@ form {
     gap: 30px;
 }
 
-.input-holder input {
-    margin-top: 20px;
-    padding: 10px 20px;
-    width: 100%;
-}
-
+.input-holder input,
 .input-holder select {
     margin-top: 20px;
     padding: 10px 20px;
     width: 100%;
+    border: none;
+    background-color: #eee;
+}
+
+
+.input-holder input:hover,
+.input-holder select:hover {
+    box-shadow: 0 0 3px #282d32;
+    transition: 500ms ease;
 }
 
 .doc-inputs {
@@ -81,14 +86,18 @@ form {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    width: 100%;
 }
 
 .dlbtn a {
+    text-align: center;
     text-decoration: none;
+    padding-block: 10px;
+    background-color: #EC6B1E;
     font-size: 20px;
     font-weight: bold;
-    padding: 14px 16px;
-    border-radius: 10px;
     color: white;
-    background-color: orange;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }

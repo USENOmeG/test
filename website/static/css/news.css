@@ -6,8 +6,16 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+#nav_news a {
+    color: #FF4500 !important;
+}
+
 .dropbtn a {
-    color: #282d32 !important;
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
 }
 
 .scroll-progress-container {
@@ -20,19 +28,23 @@
     padding-block: 100px;
 }
 
-.news-header h3 {
-    padding-bottom: 100px;
-    font-size: 40px;
+.news-header p {
+    text-align: left;
+    font-size: 20px;
     font-weight: bold;
-    text-align: center;
+    color: #FF4500;
+    font-family: poppins;
 }
 
 .news-header h3 {
-    font-size: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: left;
+    color: #282d32;
 }
 
 .news-card {
-    margin-top: 30px;
+    margin-top: 100px;
     border-bottom: solid #eee 1px;
     padding-bottom: 20px;
 }
@@ -95,7 +107,23 @@
     }
     
     .news-header h3 {
-        text-align: center;
-        font-size: 42px;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .news-card a {
+        font-size: 16px;
+    }
+      
+    .read-more-btn {
+        font-size: 16px;
+    }
+
+    .news-card {
+        margin-top: 50px;
+    }
+
+    .news-pages {
+        margin-top: 50px;
     }
 }

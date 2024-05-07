@@ -16,7 +16,7 @@ body {
 .footer-container {
   width: 100%;
   background-color: whitesmoke;
-  z-index: 999;
+  position: absolute;
 }
 
 .footer-container-mobile {
@@ -28,7 +28,8 @@ body {
   padding-inline: 50px;
   display: flex;
   justify-content: space-around;
-  border-bottom: solid #eee1ee 1px ;
+  border-bottom: solid white 1px;
+  z-index: 999;
 }
 
 .footer-logo {
@@ -52,8 +53,25 @@ body {
   font-weight: normal;
 }
 
-.footer-content a:hover {
+.footer-content i {
   color: black;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.footer-content h3:hover,
+.footer-content i:hover {
+  color: #EC6B1E;
+  transition: 500ms ease;
+}
+
+.footer-logoImage img {
+  max-width: 200px;
+}
+
+.footer-logoImage img:hover {
+  opacity: 0.8;
+  transition: 500ms ease;
 }
 
 @media (max-width: 500px) {
