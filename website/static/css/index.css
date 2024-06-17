@@ -7,16 +7,14 @@
 }
 
 .first-content,
+.rad_content,
 .about-strike3,
-.about-us,
 .third-content,
-.forth-content,
 .home-news {
     padding-inline: 5%;
     padding-block: 100px;
-}
+}  
 
-.about-us-header p,
 .third-header p,
 .news-header p,
 .chatbot-btn button {
@@ -31,12 +29,29 @@
 .first-content {
     padding-block: 200px;
     border-bottom: solid #eee 1px;
-    background-image: url("../images/decoration/background.jpeg");
-    background-blend-mode: multiply;
-    background-size: auto;
-    background-repeat: no-repeat;
+    background: radial-gradient(circle at 20% 30%, orangered, transparent 30%),
+                radial-gradient(circle at 70% 40%, rgba(0, 204, 255, 1), transparent 30%),
+                radial-gradient(circle at 40% 70%, lightgreen, transparent 30%),
+                radial-gradient(circle at 80% 20%, rgba(255, 100, 0, 1), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(100, 50, 200, 1), transparent 30%),
+                radial-gradient(circle at 50% 50%, rgba(0, 100, 255, 0.9), transparent 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 0, 0.9), transparent 20%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 30s ease infinite;
     width: 100vw;
     height: 93vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .first-header {
@@ -44,9 +59,9 @@
 }
 
 .first-header h3 {
-    color: white;
-    font-size: 70px;
-    font-weight: bold;
+    color:  #282d32; 
+    font-size: 120px;
+    font-weight: bolder;
 }
 
 .first-contact {
@@ -55,19 +70,14 @@
     justify-content: space-between;
 }
 
-.first-contact h3 {
-    text-align: center;
-    font-size: 24px;
-}
-
 .home-paragraph {
     max-width: 800px;
 }
 
 .home-paragraph p {
     font-size: 16px;
-    font-weight: bold;
-    color: white;
+    font-weight: bolder;
+    color: #282d32; 
 }
 
 .home_paragraph_link {
@@ -79,7 +89,7 @@
 }
 
 .home_paragraph_link p {
-    color: white;
+    color: #282d32; 
     font-weight: bold;
 }
 
@@ -90,6 +100,113 @@
 .home_paragraph_link p:hover i {
     transform: translateX(10px);
     transition: 500ms ease;
+}
+
+.typing-animation {
+    display: inline-block;
+    border-right: 5px solid orangered; 
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px; 
+}
+  
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.rad_content {
+    background-color: #000000;
+}
+
+.rad_card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+}
+
+.rad_card {
+    position: relative;
+    min-height: 496px;
+    background-color: #FF4500;
+    border: none;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    overflow: hidden;
+}
+
+.rad_card a {
+    text-decoration: none;
+    color: white;
+}
+
+.rad_card:hover {
+    transform: scale(1.05);
+    transition: 500ms ease;
+    background-blend-mode: darken;
+    background-position-x: 500px;
+    background-position-y: 500px;
+}
+
+.red_card_genre p,
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
+    text-align: left;
+}
+
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
+    margin-top: 15px;
+}
+
+.red_card_genre p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rad_card_header p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rad_card_header h3 {
+    line-height: 22px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rad_card_hiddencontent {
+    visibility: hidden;
+}
+
+.rad_card_hiddencontent p {
+    font-size: 20px;
+}
+
+.rad_card:hover .rad_card_hiddencontent {
+    visibility: visible;
+    transition: 500ms ease;
+}
+
+.rad_card_content_button {
+    position: absolute; 
+    bottom: 20px;     
+    right: 20px;        
+}
+
+.rad_card_content_button h3 {
+    text-align: right;
 }
 
 .CopyRights_highlightBar_container {
@@ -135,259 +252,164 @@
     transition: 500ms ease;
 }
 
-.about-us {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    gap: 50px;
-    border-bottom: solid #eee 1px;
-    background-color: antiquewhite;
-}
-
-.about-us-header p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF4500;
-}
-
-.about-us-header h3 {
-    font-size: 70px;
-    font-weight: bold;
-    color: #282d32;
-}
-
-.about-us-paragraph {
-    margin-top: 80px;
-}
-
-.about-us-paragraph p {
-    color: #282d32;
-    font-size: 18px;
-    font-weight: 500;
-    padding-right: 50px;
-}
-
-.about-us-paragraph a {
-    text-decoration: none;
-}
-
-.about-us-paragraph a p {
-    color: blue;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 80px;
-}
-
-.about-us-paragraph a p:hover {
-    color: #FF4500;
-}
-
-.about-us-paragraph a p:hover i {
-    transform: translateX(10px);
-    transition: 500ms ease;
-}
-
-.about-us-image img {
-    position: relative;
-    max-width: 500px;
-}
-
-.second-content {
-    border-bottom: solid #eee 1px;
-}
-
-.second-content h3 {
-    text-align: center;
-    font-size: 60px;
-    font-weight: bold;  
-    margin-block: 100px;
-}
-
-.second-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    background-color: whitesmoke;
-}
-
-.secondCard-text {
-    align-self: center;
-    padding: 20px;
-}
-
-.secondCard-text h3 {
-    font-weight: bolder;
-    text-align: left;
-    font-size: 54px;
-    margin-top: 30px;
-}
-
-.secondCard-text p {
-    font-size: 20px;
-}
-
-.second-card img {
-    max-width: 1000px;
-    max-height: 900px;
-    width: 100%;
-    height: 100%;
-}
-
-.third-content {
-    border-bottom: solid #eee 1px;
-}
-
-.third-header p {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    color: #FF4500;
-}
-
-.third-header h3 {
-    text-align: center;
-    font-size: 60px;
-    font-weight: bold;
-}
-
-.third-header span {
-    color: #FF4500;
-    font-size: 70px;
-    font-family: poppins;
-    font-weight: bold;
-}
-
-.third-main {
-    margin-top: 50px;
-}
-
 .about-strike3 {
     border-bottom: solid #eee 1px;
-    background-color: #eee;
 }
 
 .strike3-header h3 {
     text-align: center;
-    font-size: 60px;
     font-weight: bold;
+    font-size: 80px;
 }
 
 .strike3-header p {
+    font-size: 24px;
     margin-top: 30px;
     text-align: center;
 }
 
-.strike3-image,
-.strike3-image2 {
-    display: flex;
-    justify-content: center;
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.strike3-image img,
-.strike3-image2 img {
-    align-self: center;
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
     margin-top: 100px;
-    max-width: 800px;
-    min-width: 300px;
-    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.strike3-image {
+    text-align: center;
+}
+
+.strike3-image img {
+    max-width: 1000px;
+    max-height: 600px;
 }
 
 .strike3Image-paragraph {
-    margin-top: 30px;
-}
-
-.strike3Image-paragraph p {
+    padding: 10px;
     text-align: center;
 }
 
-.strike3Image-paragraph a {
-    color: blue;
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    cursor: pointer;
 }
 
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+  
 .strike3-footer {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .strike3-footer p {
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     color: blue;
 }
 
-.whyUs-card {
-    margin-top: 50px;
-    padding-bottom: 50px;
+.third-content {
+    background-color: #000000;
     border-bottom: solid #eee 1px;
-}
-
-.whyUs-card h3 {
-    font-size: 34px;
-}
-
-.whyUs-card h3 span {
-    font-size: 50px;
-    padding-right: 20px;
-    color: #FF4500;
-}
-
-.whyUs-card p {
-    margin-top: 30px;
-}
-
-.forth-content {
-    border-bottom: solid #eee 1px;
-}
-
-.forth-header p,
-.forth-header h3 {
+    position: relative;
     text-align: center;
 }
 
-.forth-header p {
-    font-size: 30px;
-    font-weight: bold;
-    color: #FF4500;
-}
-
-.forth-header h3 {
-    margin-top: 10px;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.forth-main {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-}
-
-.forth-card {
-    max-width: 450px;
-    background-color: orange;
-    border-radius: 20px;
-    padding: 25px;
-}
-
-.forth-card img {
-    max-width: 100%;
-}
-
-.forth-card h3 {
-    margin-top: 10px;
+.third-header {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 50%; 
+    transform: translateY(0); 
+    z-index: 1; 
+    background-color: transparent;
+    transition: top 0.3s, transform 0.3s; 
     text-align: center;
-    font-size: 30px;
+}
+
+.third-header p {
+    font-size: 40px;
+    font-weight: bold;
+    color: blue;
+}
+
+.third-header h3 {
+    font-size: 60px;
+    font-weight: bold;
     color: white;
 }
 
-.forth-card p {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 15px;
+.third-header span {
+    color: #FF4500;
+    font-size: 130px;
+    font-family: poppins;
     font-weight: bold;
 }
 
-.serviceDetails-container {
-    padding-top: 100px;
+.whyUs_cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.whyUs_card {
+    width: 45%; 
+    margin-top: 150px;
+    padding: 40px;
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.whyUs_card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.whyUs_card:nth-child(even) {
+    align-self: flex-end;
+}
+
+.whyUs_card h4 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.whyUs_card_hidden {
+    margin-top: 30px;
+    visibility: hidden;
+}
+
+.whyUs_card:hover .whyUs_card_hidden {
+    visibility: visible;
+}
+
+
+/* .serviceDetails-container {
     border-bottom: solid #eee 1px;
 }
 
@@ -439,10 +461,11 @@
     max-height: 900px;
     width: 100%;
     height: 100%;
-}
+} */
 
 .home-news {
     border-bottom: solid #eee 1px;
+    background-color: white;
 }
 
 .news-header p {
@@ -453,93 +476,71 @@
 
 .news-header h3 {
     font-size: 40px;
-}
-
-.news-card {
-    margin-top: 30px;
-    border-bottom: solid #eee 1px;
-    padding-bottom: 20px;
-}
-
-.news-card a {
-    text-decoration: none;
-    font-size: 20px;
     color: #282d32;
 }
 
-.newsCard-header {
+.news-content {
+    margin-top: 100px;
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 500px;
+}
+
+.news-card {
+    flex: 0 0 auto;
+}
+
+.news-card a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #282d32;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.news-card .news_date,
+.news-card .news_content {
+    padding: 10px;
+}
+
+.news_controls {
+    margin-top: 75px;
     display: flex;
     justify-content: space-between;
 }
 
-.hidden-content {
-    display: none;
-    margin-top: 30px;
+.controls {
+    position: relative;
+    z-index: 10;
 }
-  
-.read-more-btn {
-    font-size: 20px;
-    cursor: pointer;
+
+#prev, #play-pause, #next {
     background-color: transparent;
     color: #282d32;
     border: none;
-    margin-top: 10px;
-    transition: background-color 500ms ease;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
 }
 
-.news-more {
-    margin-top: 20px;
+.indicators {
+    position: relative;
     display: flex;
-    justify-content: right;
+    z-index: 10;
 }
 
-.news-more a {
-    font-size: 20px;
-    text-decoration: none;
-    color: blue;
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #282d32;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.subscribe-content {
-    background-image: linear-gradient(to right top, #FF4500, #FF6347, #FF7F50, #FF8C00);
-    padding: 50px;
-}
-
-.subs-header h3 {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-}
-
-.subs-btn {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-}
-
-.btn-blue  a,
-.btn-orange a {
-    text-decoration: none;
-}
-
-.btn-blue h3 {
-    min-width: 500px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(158,7,245,1) 100%);
-    border-radius: 10px;
-    padding: 15px 10px;
-}
-
-.btn-orange h3 {
-    min-width: 500px;
-    text-align: center;
-    color: white;
-    background-color: orange;
-    border-radius: 10px;
-    padding: 15px 10px;
+.indicator.active {
+    background-color: #FF4500;
 }
 
 /* For fixed content and scripts*/
@@ -600,70 +601,20 @@
 }
 
 @media (max-width: 1600px){
-    .forth-header h3,
-    .about-us-header h3,
-    .second-header h3,
-    .forth-header h3,
+
+    .first-header h3 {
+        font-size: 100px;
+    }
+
     .strike3-header h3,
     .third-header h3,
     .news-header h3 {
-        font-size: 42px;
-    }
+        font-size: 60px;
+    }  
     
-    .forth-card {
-        max-width: 400px;
+    .strike3-header p {
+        font-size: 16px;
     }
-}
-
-@media (max-width: 1500px) {
-        
-    .about-us-image img {
-        max-width: 500px;
-    }
-
-    .forth-card {
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .about-us {
-        display: block;
-        gap: 50px;
-    }
-
-    .about-us-header {
-        padding: 0px;
-    }
-    
-    .about-us-header h3 {
-        font-size: 50px;
-    }
-    
-    .about-us-paragraph {
-        margin-top: 0px;
-    }
-    
-    .about-us-paragraph p {
-        padding-right: 0px;
-    }
-    
-    .about-us-paragraph a p {
-        margin-top: 20px;
-    }
-
-    .about-us-image {
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-        order: 1;
-    }
-
-    .about-us-image img {
-        order: 1;
-        max-width: 80%;
-    }
-    
 }
 
 @media (max-width: 1200px) {
@@ -671,48 +622,19 @@
         font-size: 50px;
     }
 
-    .forth-header h3,
-    .about-us-header h3,
-    .second-header h3,
-    .forth-header h3,
     .third-header h3,
     .news-header h3 {
         font-size: 36px;
-    }
-
-    .forth-header p {
-        font-size: 24px;   
     }
 
     .first-contact {
         margin-top: 150px;
         display: block;
     }
-
-    .track-card h3 {
-        font-size: 40px;
-    }
-    
-    .track-card p {
-        font-size: 16px;
-    }
-
-    .forth-card {
-        max-width: 320px;
-    }
-
-    .track-card h3 {
-        font-size: 40px;
-    }
-
-    
-    .track-card p {
-        font-size: 16px;
-    }
-    
+  
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 
     .first-header {
         margin-left: 0;
@@ -725,10 +647,6 @@
 
     .home-paragraph {
         max-width: 100%;
-    }
-
-    .about-us-image img {
-        max-width: 400px;
     }
 
     .CopyRights_highlightBar {
@@ -747,22 +665,9 @@
         font-size: 50px;
     }
 
-    .forth-header h3,
-    .about-us-header h3,
-    .second-header h3,
-    .forth-header h3,
     .third-header h3,
     .news-header h3 {
         font-size: 32px;
-    }
-
-    .forth-header p {
-        font-size: 24px;   
-    }
-
-    .forth-card {
-        max-width: 320px;
-        padding: 15px;
     }
 
     .detail-header h3,
@@ -788,74 +693,18 @@
         font-size: 42px;
     }
 
-    .about-us-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-us-tracks {
-        display: block;
-    }
-
-    .track-card h3 {
-        font-size: 40px;
-    }
-    
-    .track-card p {
-        font-size: 24px;
-    }
-
-    .about-us-mid {
-        order: 2;
-    }
-    
-    .about-us-image {
-        margin-top: 30px;
-        order: 1;
-    }
-
-    .about-us-image img {
-        max-width: 100%;
-    }
-
     .third-header span {
         font-size: 50px;
     }
 
-    .forth-header h3,
-    .about-us-header h3,
-    .second-header h3,
-    .forth-header h3,
     .third-header h3,
     .news-header h3 {
         font-size: 32px;
     }
 
-    .about-us-header p,
-    .about-us-paragraph p,
     .third-header p,
     .news-header p {
         font-size: 24px;
-    }
-
-    .forth-main {
-        display: block;
-        margin-top: 50px
-    }
-
-    .forth-card {
-        margin-top: 50px;
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .whyUs-card h3 {
-        font-size: 30px;
-    }
-    
-    .whyUs-card h3 span {
-        font-size: 40px;
-        padding-right: 10px;
     }
 
     .serviceDetail-card,
@@ -924,25 +773,12 @@
         text-align: center;
     }
 
-    .track-card h3 {
-        font-size: 30px;
-    }
-    
-    .track-card p {
-        font-size: 16px;
-    }
-
     .third-header span {
         font-size: 40px;
     }
 
     .strike3-header h3,
     .strike3-header h3 span,
-    .about-us-header h3,
-    .forth-header h3,
-    .about-us-header h3,
-    .second-header h3,
-    .forth-header h3,
     .third-header h3,
     .news-header h3 {
         font-size: 32px;
@@ -951,7 +787,6 @@
 
     .home-paragraph p,
     .about-strike3 p,
-    .about-us-header p,
     .third-header p,
     .news-header p {
         text-align: left;
@@ -985,37 +820,19 @@
     .first-header h3 {
         font-size: 32px;
     }
-    
-    .about-us-paragraph p {
-        margin-top: 30px;
-    }
-
-    .track-card h3 {
-        font-size: 30px;
-    }
-    
-    .track-card p {
-        font-size: 16px;
-    }
 
     .third-header span {
         font-size: 40px;
     }
 
-    .forth-header h3,
-    .about-us-header h3,
     .strike3-header h3,
     .strike3-header h3 span,
-    .second-header h3,
-    .forth-header h3,
     .third-header h3,
     .news-header h3 {
         font-size: 30px;
     }
 
     .home-paragraph p,
-    .about-us-header p,
-    .about-us-paragraph p,
     .third-header p,
     .news-header p {
         font-size: 16px;
@@ -1043,20 +860,6 @@
 
     .third-main {
         margin-top: 30px;
-    }
-
-    .whyUs-card h3 {
-        font-size: 24px;
-    }
-    
-    .whyUs-card h3 span {
-        
-        font-size: 32px;
-        padding-right: 10px;
-    }
-
-    .whyUs-card p {
-        font-size: 16px;
     }
 
     .serviceDetails-container {

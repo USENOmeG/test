@@ -1,0 +1,332 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script
+    src="https://kit.fontawesome.com/e325191aeb.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="{% static 'css/company_index.css' %}" />
+  <title></title>
+</head>
+
+<body>
+  <div class="company_index_container">
+    <div class="company_index_main_container">
+      <div class="company_index_mainImage">
+        <img src="{% static "images/decoration/OrgPagePic.png" %}" alt="main
+        image about us">
+      </div>
+
+      <dir class="company_index_header">
+        <h3>知的財産権を守るために <br />全力で取り組んでいます</h3>
+        <p>
+          私たちは、あなたの創造性と成果を確固たるものとし、安心して活動できる環境を提供します。
+          <br />
+          最新の技術と専門知識を駆使し、あなたの貴重な著作物を保護し、サポートします。これにより、自信を持って創作活動に専念できます。
+        </p>
+        <div class="company_index_heder_btn">
+          <a href="">知的財産権の守り方</a>
+        </div>
+      </dir>
+    </div>
+
+    <div class="company_index_accordion_container">
+      <div class="accrodion_header">
+        <h3>ポジティブを作り出す</h3>
+        <p>
+          私たちは、世界中でポジティブな変化を起こすことにコミットし、私たちの人々、クライアント、
+          そして私たちがホームと呼ぶコミュニティのために責任あるビジネスリーダーとして行動することを確約しています。
+          私たちは知的財産権と著作権を尊重し、クリエイティブな成果を保護するために努力します。
+        </p>
+      </div>
+
+      <div class="accordion_content">
+        <ul class="accordion_list">
+          <li>
+            <div class="accordion_shown">
+              <p>著作権</p>
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="hidden-content">
+              <div class="accordion_hidden_text">
+                <p>
+                  We help our clients advance their environmental, social and
+                  governance goals by connecting sustainability to their
+                  transformations; operate our business with a strong commitment
+                  to the environment, ethics and human rights; and work to
+                  create value in communities around the world.
+                </p>
+
+                <a href=""
+                  >詳しく&nbsp;<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
+
+              <div class="accordion_hidden_image">
+                <img src="{% static "" %}" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="accordion_shown">
+              <p>著作権</p>
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="hidden-content">
+              <div class="accordion_hidden_text">
+                <p>
+                  We help our clients advance their environmental, social and
+                  governance goals by connecting sustainability to their
+                  transformations; operate our business with a strong commitment
+                  to the environment, ethics and human rights; and work to
+                  create value in communities around the world.
+                </p>
+
+                <a href=""
+                  >詳しく&nbsp;<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
+
+              <div class="accordion_hidden_image">
+                <img src="{% static "" %}" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="accordion_shown">
+              <p>著作権</p>
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="hidden-content">
+              <div class="accordion_hidden_text">
+                <p>
+                  We help our clients advance their environmental, social and
+                  governance goals by connecting sustainability to their
+                  transformations; operate our business with a strong commitment
+                  to the environment, ethics and human rights; and work to
+                  create value in communities around the world.
+                </p>
+
+                <a href=""
+                  >詳しく&nbsp;<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
+
+              <div class="accordion_hidden_image">
+                <img src="{% static "" %}" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="accordion_shown">
+              <p>著作権</p>
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="hidden-content">
+              <div class="accordion_hidden_text">
+                <p>
+                  We help our clients advance their environmental, social and
+                  governance goals by connecting sustainability to their
+                  transformations; operate our business with a strong commitment
+                  to the environment, ethics and human rights; and work to
+                  create value in communities around the world.
+                </p>
+
+                <a href=""
+                  >詳しく&nbsp;<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
+
+              <div class="accordion_hidden_image">
+                <img src="{% static "" %}" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="accordion_shown">
+              <p>著作権</p>
+              <button class="read-more-btn" onclick="toggleContent(this)">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="hidden-content">
+              <div class="accordion_hidden_text">
+                <p>
+                  We help our clients advance their environmental, social and
+                  governance goals by connecting sustainability to their
+                  transformations; operate our business with a strong commitment
+                  to the environment, ethics and human rights; and work to
+                  create value in communities around the world.
+                </p>
+
+                <a href=""
+                  >詳しく&nbsp;<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
+
+              <div class="accordion_hidden_image">
+                <img src="{% static "" %}" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="company_index_quote_container">
+      <div class="company_index_quote_header">
+        <h3>ビジョンと経験をもってクライアントをサポートする</h3>
+      </div>
+
+      <div class="company_index_quote_content">
+        <img src="{% static "images/decoration/Image_sample_ceo.jpeg" %}"
+        alt="Mr.Tsuji's image would be nice here'">
+        <div class="company_index_quote_text">
+          <h3>
+            "すべての戦略は技術へと導きます。—企業はデータ、AI、新しい働き方を活用し、
+            著作物や著作権に関する新たなアプローチを取り入れ、弾力性を構築し、
+            新たな成長の道筋を見つけるために企業のすべての部分を再発明する必要があります。"
+          </h3>
+
+          <p>辻&nbsp;州平&nbsp;/&nbsp;CEO&amp;Founder</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="industry_of_one_container">
+      <div class="industry_of_one_main">
+        <h3>Industry&nbsp;of&nbsp;One</h3>
+        <p>
+          Across industries, we bring together the capabilities needed to help
+          clients change and grow quickly.
+        </p>
+      </div>
+
+      <div class="industry_of_one_content">
+        <ul>
+          <li id="CompanyQuote">
+            <h3>Strategy&nbsp;&amp;&nbsp;Consulting</h3>
+            <div class="vertical_content">
+              <p>Envisioning and executing change at speed and scale.</p>
+              <img src="{% static "" %}" alt="">
+            </div>
+          </li>
+
+          <li id="CompanyQuote">
+            <h3>Strategy&nbsp;&amp;&nbsp;Technology</h3>
+            <div class="vertical_content">
+              <p>Envisioning and executing change at speed and scale.</p>
+              <img src="{% static "" %}" alt="">
+            </div>
+          </li>
+
+          <li id="CompanyQuote">
+            <h3>Strategy&nbsp;&amp;&nbsp;Operation</h3>
+            <div class="vertical_content">
+              <p>Envisioning and executing change at speed and scale.</p>
+              <img src="{% static "" %}" alt="">
+            </div>
+          </li>
+
+          <li id="CompanyQuote">
+            <h3>Strategy&nbsp;&amp;&nbsp;Industry</h3>
+            <div class="vertical_content">
+              <p>Envisioning and executing change at speed and scale.</p>
+              <img src="{% static "" %}" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="company_index_stats_container">
+      <div class="stats_card">
+        <h4>742K</h4>
+        <p>Worldwild client</p>
+      </div>
+
+      <div class="stats_card">
+        <h4>9,000+</h4>
+        <p>clients served across more than 120 countries</p>
+      </div>
+
+      <div class="stats_card">
+        <h4>350+</h4>
+        <p>partners in our ecosystem</p>
+      </div>
+    </div>
+
+    <div class="company_index_office_container">
+      <h3>Our offices</h3>
+
+      <div class="office_card_container">
+        <div class="office_card">
+          <img src="{% static "images/decoration/Office_Sapporo.jpg" %}" alt="">
+          <h4>Sapporo,</h4>
+        </div>
+
+        <div class="office_card">
+          <img src="{% static "images/decoration/Office_Tokyo.jpg" %}" alt="">
+          <h4>Tokyo</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="company_index_recognition_container">
+      <h3>We’re recognized for the value we create together</h3>
+
+      <div
+        class="rad_recognition_card"
+        style="background-image: url('{% static 'image1.jpg' %}')"
+      >
+        <h3>We constantly blabla</h3>
+        <div class="rad_hidden">
+          <h3>aiaiaiai</h3>
+        </div>
+      </div>
+
+      <div
+        class="rad_recognition_card"
+        style="background-image: url('{% static 'image2.jpg' %}')"
+      >
+        <h3>We constantly blabla</h3>
+        <div class="rad_hidden">
+          <h3>aiaiaiai</h3>
+        </div>
+      </div>
+
+      <div
+        class="rad_recognition_card"
+        style="background-image: url('{% static 'image3.jpg' %}')"
+      >
+        <h3>We constantly blabla</h3>
+        <div class="rad_hidden">
+          <h3>aiaiaiai</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+{% endblock content %}

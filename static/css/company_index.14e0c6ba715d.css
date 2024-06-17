@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.dropbtn a {
+    color: #282d32;
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+.company_index_container {
+    margin-top: 100px;
+}
+
+body {
+    
+}
+
+.company_index_main_container,
+.company_index_accordion_container,
+.company_index_quote_container,
+.industry_of_one_container,
+.company_index_stats_container,
+.company_index_office_container,
+.company_index_recognition_container {
+    padding-inline: 5%;
+    padding-block: 100px;
+}
+
+.company_index_main_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company_index_header h3,
+.company_index_header p,
+.company_index_heder_btn a {
+    text-decoration: none;
+    color: #282d32;
+}
+
+.company_index_mainImage img {
+    max-width: 600px;
+}
+
+.company_index_header {
+    max-width: 700px;
+}
+
+.company_index_header h3 {
+    font-size: 54px;
+}
+
+.company_index_header p {
+    margin-top: 70PX;
+}
+
+.company_index_heder_btn {
+    margin-top: 70px;
+}
+
+.company_index_heder_btn a {
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    background-color: #FF4500;
+}
+
+.accrodion_header {
+    max-width: 700px;
+}
+
+.accrodion_header h3 {
+    font-size: 54px;
+    color: #282d32;
+}
+
+.accrodion_header p {
+    margin-top: 50px;
+}
+
+.accordion_content {
+    margin-top: 50px;
+}
+
+.accordion_content ul {
+    list-style-type: none;
+}
+
+.accordion_content ul li {
+    position: relative;
+    border-top: solid 2px #FF4500;
+    padding-block: 20px;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+}
+
+.accordion_content ul li:hover {
+    opacity: 1;
+}
+
+.accordion_content ul li:last-child {
+    border-bottom: solid 2px #FF4500;
+}
+
+.accordion_content ul li:hover ~ li,
+.accordion_content ul li:hover ~ li ~ li,
+.accordion_content ul li:hover ~ li ~ li ~ li,
+.accordion_content ul li:hover ~ li ~ li ~ li ~ li,
+.accordion_content ul li:not(:hover) {
+    opacity: 0.5;
+}
+
+.accordion_shown p,
+.accordion_shown button {
+    font-size: 20px;
+    font-weight: 500;
+    background: none;
+    border: none;
+}
+
+.accordion_shown button {
+    margin-right: 30px;
+}
+
+.accordion_shown {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hidden-content {
+    display: none;
+    margin-top: 30px;
+}
+
+.company_index_quote_header h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.company_index_quote_content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.company_index_quote_content img {
+    max-width: 600px;
+    left: 0;
+}
+
+.company_index_quote_text {
+    max-width: 700px;
+    align-self: center;
+}
+
+.company_index_quote_text p {
+    margin-top: 30px;
+}
+
+.industry_of_one_main h3 {
+    font-size: 108px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.industry_of_one_main p {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.industry_of_one_content {
+    margin-top: 100px;
+}
+
+.industry_of_one_content ul {
+    list-style-type: none;
+}
+
+.company_index_stats_container {
+    display: flex;
+    gap: 200px;
+}
+
+.stats_card {
+    max-width: 250px;
+}
+
+.stats_card h4 {
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.stats_card p {
+    font-size: 22px;
+}
+
+.company_index_office_container h3 {
+    font-size: 54px;
+    text-align: center;
+}
+
+.office_card_container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+}
+
+.office_card {
+    display: flex;
+    gap: 30px;
+    max-width: 600px;
+}
+
+.office_card img {
+    max-width: 150px;
+}
+
+.office_card h4 {
+    font-size: 100px;
+    font-weight: bold;
+}
+

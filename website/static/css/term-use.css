@@ -24,10 +24,6 @@
     padding-inline: 10%;
 }
 
-.use-terms-header {
-    margin-top: 100px;
-}
-
 .use-terms-header  h3 {
     text-align: center;
     font-size: 40px;
@@ -38,12 +34,13 @@
 .use-terms-header p {
     text-align: center;
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
 }
 
 .use-terms-header h4 {
     text-align: right;
+    margin-top: 50px;
 }
 
 .use-terms-main {

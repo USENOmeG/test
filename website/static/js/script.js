@@ -56,13 +56,35 @@ function isInViewport(element) {
   );
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  var text = "あなたの著作物を守ります";
+  var element = document.getElementById("wannatext");
+  var charIndex = 0;
+
+  function typeWriter() {
+      if (charIndex < text.length) {
+          element.innerHTML += text.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 200); // Adjust typing speed by changing the delay here
+      } else {
+          element.style.borderRight = 'none'; // Remove the caret after typing
+      }
+  }
+
+  // Add a 3-second delay before starting the typing effect
+  setTimeout(function() {
+      typeWriter();
+      element.style.animation = "blink-caret .75s step-end infinite";
+  }, 3000); // 3000 milliseconds = 3 seconds
+});
+
 // Function to apply random fade-in animation to elements when they enter viewport
 function applyFadeInAnimation() {
   var elements = document.querySelectorAll('.fade-in');
   elements.forEach(function(element, index) {
       if (isInViewport(element)) {
           // Set delay for animation for non-first elements
-          var delay = index === 0 ? 3000 : 100; // 3 seconds delay for first element, 1 second delay for others
+          var delay = index === 0 ? 1000 : 50; // 3 seconds delay for first element, 1 second delay for others
           element.style.transitionDelay = delay + 'ms';
           // Apply animation by setting opacity to 1
           element.style.opacity = 1;
@@ -70,13 +92,14 @@ function applyFadeInAnimation() {
   });
 }
 
+
 // Call applyFadeInAnimation function when scrolling
 window.addEventListener('scroll', applyFadeInAnimation);
 
 // Call applyFadeInAnimation function on page load
 window.addEventListener('load', function() {
   // Apply fade-in animation to all elements except the first one
-  var elements = document.querySelectorAll('.fade-in:not(.first-header):not(.first-contact)');
+  var elements = document.querySelectorAll('.fade-in:not(.first-header)');
   elements.forEach(function(element) {
       element.style.opacity = 0; // Start with opacity 0 for animation
   });
@@ -89,6 +112,139 @@ window.addEventListener('load', function() {
   // Call applyFadeInAnimation to handle other elements
   applyFadeInAnimation();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const newsContent = document.querySelector('.news-content');
+  const newsCards = document.querySelectorAll('.news-card');
+  const controlBtn = document.getElementById('play-pause');
+  const indicators = document.querySelectorAll('.indicator');
+
+  const cardWidth = newsCards[0].offsetWidth + 500; // Card width plus gap
+  const numCards = newsCards.length;
+  let currentPosition = 0;
+  let isPlaying = true;
+  let intervalId;
+
+  // Duplicate the news cards to create a seamless scroll
+  newsContent.innerHTML += newsContent.innerHTML;
+
+  function startSlider() {
+      intervalId = setInterval(scrollNews, 10);
+  }
+
+  function stopSlider() {
+      clearInterval(intervalId);
+  }
+
+  function toggleSlider() {
+      if (isPlaying) {
+          stopSlider();
+          controlBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      } else {
+          startSlider();
+          controlBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+      }
+      isPlaying = !isPlaying;
+  }
+
+  function scrollNews() {
+      currentPosition -= 1;
+      newsContent.style.transform = `translateX(${currentPosition}px)`;
+
+      // Check if the news content has scrolled past the last card
+      if (currentPosition <= -cardWidth * numCards) {
+          currentPosition = 0;
+          newsContent.style.transition = 'none';
+          newsContent.style.transform = `translateX(${currentPosition}px)`;
+          // Wait for the next frame to re-enable transition
+          requestAnimationFrame(() => {
+              newsContent.style.transition = '';
+              currentPosition -= 1;
+              newsContent.style.transform = `translateX(${currentPosition}px)`;
+          });
+      }
+  }
+
+  function updateIndicators() {
+      const activeIndex = Math.abs(currentPosition / cardWidth) % numCards;
+      indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === activeIndex);
+      });
+  }
+
+  setInterval(updateIndicators, 100);
+
+  controlBtn.addEventListener('click', toggleSlider);
+
+  startSlider();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const sliderContainer = document.querySelector('.slider-container');
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    if (index >= slides.length) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else {
+      currentIndex = index;
+    }
+    const offset = -currentIndex * 100;
+    sliderContainer.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevButton.addEventListener('click', function() {
+    showSlide(currentIndex - 1);
+  });
+
+  nextButton.addEventListener('click', function() {
+    showSlide(currentIndex + 1);
+  });
+
+  showSlide(currentIndex);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const thirdHeader = document.querySelector('.third-header');
+  const thirdContent = document.querySelector('.third-content');
+  const whyUsCardsContainer = document.querySelector('.whyUs_cards_container');
+
+  // function handleScroll() {
+  //     const containerRect = thirdContent.getBoundingClientRect();
+  //     const headerRect = thirdHeader.getBoundingClientRect();
+  //     const cardsContainerRect = whyUsCardsContainer.getBoundingClientRect();
+
+  //     // Check if the header should be sticky and centered in the viewport
+  //     if (containerRect.top < window.innerHeight / 2 && containerRect.bottom > window.innerHeight / 2) {
+  //         thirdHeader.style.position = 'fixed';
+  //         thirdHeader.style.top = '50%';
+  //         thirdHeader.style.transform = 'translateY(-50%)';
+  //         thirdHeader.style.zIndex = '1';
+  //     } else {
+  //         thirdHeader.style.position = 'absolute';
+  //         thirdHeader.style.top = '100px';
+  //         thirdHeader.style.transform = 'translateY(0)';
+  //         thirdHeader.style.zIndex = '1';
+  //     }
+
+  //     // Check if the header should move below the cards
+  //     if (containerRect.bottom <= headerRect.height + 100) { // Include 100px top margin
+  //         thirdHeader.style.position = 'absolute';
+  //         thirdHeader.style.top = `${cardsContainerRect.bottom - containerRect.top - headerRect.height}px`;
+  //         thirdHeader.style.transform = 'translateY(0)';
+  //     }
+  // }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initialize on page load
+});
+
+
 
 
 // Viewport triggered animation
@@ -190,8 +346,9 @@ window.addEventListener('load', function() {
 // startAnimationIfInView();
 
 
+// To toggle hidden content 
 function toggleContent(button) {
-  const card = button.closest('.news-card');
+  const card = button.closest('.news-card, .accordion_content ul li');
   const content = card.querySelector('.hidden-content');
 
   if (content.style.display === 'none' || content.style.display === '') {
@@ -281,8 +438,17 @@ function prevSlide() {
   )
 }
 
-function nextSlide() {
 
+// For the company_index hovering effects
+// So far, I'm wondering how to make it come true
+function activateAndHoveringEffect() {
+  var CompanyQuotes = getElementById('.hovering_effect');
+
+  CompanyQuotes.addEventListener(
+    'hover', () => {
+      document.CompanyQuotes.classList.add('.active')
+      log.console('quote has been hovered.')
+    })
 }
 
 

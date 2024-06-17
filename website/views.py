@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 
-from .forms import *
+# from .forms import user_info
 from .models import *
 
 from django.views.decorators.csrf import csrf_protect
@@ -17,6 +17,27 @@ from .forms import ContactForm
 
 
 def home(request):
+
+    # genre = models.genres
+    # header_main = models.header_main
+    # header_sub = models.header_sub
+    # paragraph = models.paragraph
+    # backImage = models.background_image
+    # paragraph1 = models.rad_paragraph1
+    # paragraph2 = models.rad_paragraph2
+    # paragraph3 = models.rad_paragraph3
+    # paragraph4 = models.rad_paragraph4
+    # background_image = models.rad_background_image
+    # image1 = models.rad_image1
+    # image2 = models.rad_image2
+    # image3 = models.rad_image3
+    # image4 = models.rad_image4
+
+    # for _ in rad_genres:
+
+    #     if models.csrf_protect():
+
+    #         genre =
 
     return render(request, 'index.html')
 
@@ -66,6 +87,11 @@ def contact(request):
     return render(request, 'contact.html')
 
 
+def company_index(request):
+
+    return render(request, 'company_index.html')
+
+
 def document(request):
 
     form = ContactForm  # modify the form to download document
@@ -111,3 +137,24 @@ def service_detail4(request):
 def about_us(request):
 
     return render(request, 'about-us.html')
+
+
+# def sign_up(request):
+#     """
+#     creating user for login.
+#     That makes the website un visitable on internet without it.
+#     """
+
+#     user_info = user_info
+
+#     user_name = user_name
+#     mail_address = mail_address
+#     password1 = password1
+#     password2 = password2
+
+#     if user_info.method == 'GET':
+#         save.user_name == user_name
+#         save.mail_address == mail_address
+#         save.password == password1
+
+#     return render(request, 'sign_up.html')

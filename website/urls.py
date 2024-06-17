@@ -18,5 +18,5 @@ urlpatterns = [
     path('service2', service_detail2, name="service2"),
     path('service3', service_detail3, name="service3"),
     path('service4', service_detail4, name="service4"),
-    path('about-us', about_us, name="about-us"),
+    path('about/company-index', company_index, name="company-index")
 ]

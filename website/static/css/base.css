@@ -9,7 +9,7 @@
 body {
     align-items: center;
     justify-content: center;
-    transition: 0.5s ease;
+    transition: 0.01s ease;
     margin: 0;
     overflow-x: hidden;
 }
@@ -204,6 +204,7 @@ nav.dark-mode {
     left: 0;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-inline: 5%;
     padding-block: 20px;
@@ -244,24 +245,44 @@ nav.dark-mode {
     font-size: 14px;
     border-radius: 10px;
     color: white !important;
-    background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(158,7,245,1) 100%);
 }
 
-.navbar-contact a:hover {
-    background: linear-gradient(90deg, rgba(0,0,255) 0%, rgba(0,0,255) 100%);
-    transition: 500ms ease;
+.navbar-contact a:hover h3{
+    color: #FF4500;
+    transition: 500ms ease; 
 }
 
-.navbar-document a {
-    font-size: 14px;
-    border-radius: 10px;
-    color: white !important;
-    background-color: orange;
+.navbar_ux {
+    display: flex;
 }
 
-.navbar-document a:hover {
-    background-color: #FF4500;
-    transition: 500ms ease;
+.language_selection button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    height: 100%; 
+    background: none;
+    border: none;
+}
+
+.language_selection:hover .dropbtn_lNG {
+    /* chang this to visible  */
+    visibility: hidden;
+}
+
+.dropbtn_lNG {
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    padding-block: 20px;
 }
 
 .mode-switcher {
@@ -377,7 +398,7 @@ nav.dark-mode {
 
 body.dark-mode {
     background-color: #282d32;
-    transition: 0.5s ease;
+    transition: 0.01s ease;
 }
 
 body.dark-mode h3,

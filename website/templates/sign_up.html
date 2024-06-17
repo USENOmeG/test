@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/sign_up.css" />
+    <title>sign up</title>
+  </head>
+  <body>
+    <div class="sign_up_form_container">
+      <div class="sign_up_form">
+        <form action="GET">
+          <input type="text" placeholder="What's' your userID?" />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="passoword1" />
+          <input type="text" placeholder="passoword2" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+{% endblock content %}
