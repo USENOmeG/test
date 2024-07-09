@@ -1080,6 +1080,12 @@ body {
     }
 }
 
+@media (max-height: 680px) {
+    .home-paragraph p {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 380px) {
     .home-paragraph p,
     .third-header p,
