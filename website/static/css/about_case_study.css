@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
+}
+
+.about_case_container {
+    margin-block: 100px;
+    padding-inline: 5%;
+}
+
+.about_case_header {
+    margin-top: 100px;
+}
+
+.about_case_header h3 {
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: #B2A476;
+}
+
+.about_case_header p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.about_case_paragraph {
+    margin-top: 100px;
+}
+
+.case_section_header {
+    margin-top: 50px;
+}
+
+.case_section_header h3 {
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.about_case_paragraph ul {
+    margin-top: 50px;
+}
+
+.about_case_paragraph li {
+    margin-top: 30px;
+}
+
+.about_case_paragraph ul h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about_case_paragraph ul p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: inherit;
+}

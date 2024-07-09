@@ -1,0 +1,94 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/about_case_study.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>About case study</title>
+  </head>
+
+  <body>
+    <div class="about_case_container">
+      <div class="about_case_header">
+        <h3>開示判決とは</h3>
+        <p>
+          「開示判決」とは、日本の民事訴訟法に基づき、裁判所が特定の文書や情報の開示を命じる判決です。
+          <br />
+          この判決は、当事者の一方が相手方に対して特定の文書や情報の提供を求める際に、
+          <br />
+          その請求が法的に正当であると裁判所が判断した場合に下されます。
+        </p>
+      </div>
+
+      <div class="about_case_paragraph">
+        <div class="case_section_header">
+          <h3>開示判決の目的と意義</h3>
+        </div>
+
+        <ul>
+          <li>
+            <h4>証拠の収集</h4>
+            <p>
+              開示判決は、訴訟当事者が適切な証拠を収集する手助けをする役割を果たします。たとえば、原告が被告の持つ重要な文書を訴訟の証拠として必要とする場合、裁判所は開示判決を通じてその文書の提出を命じることができます。これにより、訴訟の公正さが保たれ、適切な判決が下されることが期待されます。
+            </p>
+          </li>
+          <li>
+            <h4>情報の非対称性の解消</h4>
+            <p>
+              訴訟においては、しばしば一方の当事者が重要な情報を独占していることがあります。このような場合、開示判決は情報の非対称性を解消し、両当事者が公平な立場で訴訟に臨むことを可能にします。たとえば、企業間の紛争において、被告企業が独自に持つ内部文書が訴訟の核心に関わる場合、原告企業は開示判決を通じてその文書の開示を求めることができます。
+            </p>
+          </li>
+        </ul>
+
+        <div class="case_section_header">
+          <h3>開示判決の手続き</h3>
+        </div>
+
+        <ul>
+          <li>
+            <h4>開示請求の提出</h4>
+            <p>
+              開示判決を求める当事者は、まず裁判所に対して開示請求を提出します。この請求には、開示を求める文書や情報の具体的な内容と、それが訴訟にどのように関連しているかを明示する必要があります。
+            </p>
+          </li>
+          <li>
+            <h4>裁判所の審査</h4>
+            <p>
+              裁判所は、開示請求が法的に正当であるかを慎重に審査します。開示請求が正当と認められるためには、請求された文書や情報が訴訟の解決に不可欠であること、そして開示が適当であることが必要です。裁判所は、請求の必要性や相当性を検討し、必要に応じて相手方からの意見も聴取します。
+            </p>
+          </li>
+          <li>
+            <h4>開示判決の発令</h4>
+            <p>
+              裁判所が開示請求を正当と判断した場合、開示判決が発令されます。この判決により、相手方は指定された文書や情報を開示しなければなりません。相手方が開示判決に従わない場合、罰則が科されることがあります。
+            </p>
+          </li>
+          <li>
+            <h4>罰則の適用</h4>
+            <p>
+              開示判決に従わない場合、裁判所は罰則を適用することがあります。罰則には、金銭的な制裁やその他の法的措置が含まれます。これにより、相手方が開示判決を遵守するよう強制されます。
+            </p>
+          </li>
+        </ul>
+
+        <div class="case_section_header">
+          <p>
+            開示判決は、訴訟における公正さを確保し、適切な証拠の収集や情報の非対称性の解消を促進するための重要な手段です。当事者が適切に証拠を提出し、裁判所が正確な判断を下すためには、開示判決の制度が欠かせないものとなっています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+{% endblock content %}

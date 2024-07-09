@@ -6,19 +6,24 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .first-content,
 .rad_content,
 .about-strike3,
 .third-content,
+.homeCareer_text,
 .home-news {
     padding-inline: 5%;
-    padding-block: 100px;
-}  
+    padding-block: 150px;
+} 
 
 .third-header p,
 .news-header p,
 .chatbot-btn button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .fade-in {
@@ -27,41 +32,79 @@
 }
 
 .first-content {
-    padding-block: 200px;
     border-bottom: solid #eee 1px;
-    background: radial-gradient(circle at 20% 30%, orangered, transparent 30%),
-                radial-gradient(circle at 70% 40%, rgba(0, 204, 255, 1), transparent 30%),
-                radial-gradient(circle at 40% 70%, lightgreen, transparent 30%),
-                radial-gradient(circle at 80% 20%, rgba(255, 100, 0, 1), transparent 30%),
-                radial-gradient(circle at 10% 80%, rgba(100, 50, 200, 1), transparent 30%),
-                radial-gradient(circle at 50% 50%, rgba(0, 100, 255, 0.9), transparent 20%),
-                radial-gradient(circle at 90% 90%, rgba(255, 255, 0, 0.9), transparent 20%);
-    background-size: 200% 200%;
-    animation: gradientAnimation 30s ease infinite;
     width: 100vw;
-    height: 93vh;
+    height: 92vh;
 }
 
-@keyframes gradientAnimation {
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.5), #B2A476);
+    opacity: 0.8;
+    animation: waveAnimation 60s linear infinite;
+}
+
+.wave:nth-child(2) {
+    animation: waveAnimation2 45s linear infinite;
+    opacity: 0.6;
+}
+
+.wave:nth-child(3) {
+    animation: waveAnimation3 30s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes waveAnimation {
     0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        background-position: 0% 0%;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes waveAnimation2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes waveAnimation3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 }
 
 .first-header {
     margin-top: 100px;
+    z-index: 10;
 }
 
 .first-header h3 {
     color:  #282d32; 
     font-size: 120px;
     font-weight: bolder;
+    grid-row: auto;
+    white-space: normal; 
+    word-wrap: break-word; 
 }
 
 .first-contact {
@@ -94,7 +137,7 @@
 }
 
 .home_paragraph_link p:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .home_paragraph_link p:hover i {
@@ -117,7 +160,7 @@
   
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: black; }
+    50% { border-color: #282d32; }
 }
 
 .rad_content {
@@ -132,8 +175,9 @@
 
 .rad_card {
     position: relative;
-    min-height: 496px;
-    background-color: #FF4500;
+    height: 496px;
+    width: 372px;
+    background-color: #B2A476;
     border: none;
     padding: 20px;
     display: flex; 
@@ -171,18 +215,18 @@
 }
 
 .red_card_genre p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .rad_card_header p {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .rad_card_header h3 {
     line-height: 22px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -191,11 +235,19 @@
 }
 
 .rad_card_hiddencontent p {
+    position: relative;
+    right: -500px;
+    transition: 500ms ease;
     font-size: 20px;
 }
 
 .rad_card:hover .rad_card_hiddencontent {
     visibility: visible;
+}
+
+.rad_card:hover .rad_card_hiddencontent p {
+    visibility: visible;
+    transform: translateX(-500px);
     transition: 500ms ease;
 }
 
@@ -222,7 +274,7 @@
 
 .CopyRights_highlightBar h3 {
     font-weight: bolder;
-    font-family: Poppins;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     align-self: center;
 }
 
@@ -234,8 +286,8 @@
 .highlight_number {
     font-size: 28px;
     font-weight: bolder;
-    color: #FF4500;
-    border-right: solid #FF4500 1px;
+    color: #B2A476;
+    border-right: solid #B2A476 1px;
 }
 
 .highlight_text {
@@ -248,7 +300,7 @@
 }
 
 .highlight_text a:hover {
-    color: #FF4500;
+    color: #B2A476;
     transition: 500ms ease;
 }
 
@@ -327,7 +379,13 @@
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    color: blue;
+    color: #000000;
+}
+
+.strike3-footer p span {
+    background: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .third-content {
@@ -351,7 +409,7 @@
 .third-header p {
     font-size: 40px;
     font-weight: bold;
-    color: blue;
+    color: white;
 }
 
 .third-header h3 {
@@ -361,10 +419,14 @@
 }
 
 .third-header span {
-    color: #FF4500;
+    color: #B2A476;
     font-size: 130px;
-    font-family: poppins;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: bold;
+}
+
+#whyUs_subHeader {
+    font-size: 130px;
 }
 
 .whyUs_cards_container {
@@ -384,6 +446,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .whyUs_card:nth-child(odd) {
@@ -400,83 +463,116 @@
 }
 
 .whyUs_card_hidden {
-    margin-top: 30px;
+    position: relative;
+    top: 1050px;
     visibility: hidden;
+}
+
+.whyUs_card:hover .whyUs_card_header h4 {
+    transform: translateY(-1100px);
+    transition: 500ms ease;
 }
 
 .whyUs_card:hover .whyUs_card_hidden {
     visibility: visible;
+    transform: translateY(-1050px);
+    transition: 500ms ease;
 }
 
-
-/* .serviceDetails-container {
-    border-bottom: solid #eee 1px;
+.home_career {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
 }
 
-.serviceDetail-card,
-.serviceDetail-card-left {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    background-color: whitesmoke;
+.homeCareer_image {
+    flex: 1;
+    position: relative;
 }
 
-.detail-header,
-.detail-header-left {
-    align-self: center;
-    padding: 20px;
+.homeCareer_image img#main_image {
+    max-width: 1000px;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    z-index: -1; 
 }
 
-.detail-header h3,
-.detail-header-left h3{
-    color: #282d32;
-    font-size: 54px;
-    margin-bottom: 30px;
+.homeCareer_image img#sub_image {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    top: -30px;
+    z-index: 10; 
 }
 
-.detail-header p,
-.detail-header-left p {
-    font-size: 16px;
+.homeCareer_text {
+    flex: 1;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-.details-link {
-    margin-top: 50px;
-    border-radius: 30px;
-    padding: 15px 30px;
+.homeCareer_text h4 {
+    font-size: 24px;
+    margin-top: 30px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.details-link a {
+.homeCareer_text h3 {
+    font-size: 42px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.homeCareer_text h5 {
+    font-size: 18px;
+    margin-block: 30px;
+}
+
+.homeCareer_text h3 span {
+    color: #B2A476;
+    font-size: 70px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: bold;
+}
+
+.homeCareer_text a {
     text-decoration: none;
-    text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    color: #282d32;
+    font-weight: bold;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.details-link a:hover i {
+.homeCareer_text a:hover {
+    color: #B2A476;
+    transition: 500ms ease;
+}
+
+.homeCareer_text a:hover i {
+    color: #B2A476;
     transform: translateX(10px);
     transition: 500ms ease;
 }
 
-.detail-image img,
-.detail-image-left img {
-    max-width: 1000px;
-    max-height: 900px;
-    width: 100%;
-    height: 100%;
-} */
-
 .home-news {
     border-bottom: solid #eee 1px;
     background-color: white;
-}
-
-.news-header p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF4500;
+    overflow-x: hidden;
 }
 
 .news-header h3 {
-    font-size: 40px;
+    font-size: 24px;
     color: #282d32;
+}
+
+.news-header p {
+    font-size: 80px;
+    font-weight: bold;
+    color: #B2A476;
 }
 
 .news-content {
@@ -524,6 +620,10 @@
     cursor: pointer;
 }
 
+#play-pause i {
+    font-size: 30px;
+}
+
 .indicators {
     position: relative;
     display: flex;
@@ -531,8 +631,8 @@
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: #282d32;
     margin: 0 5px;
     border-radius: 50%;
@@ -540,7 +640,7 @@
 }
 
 .indicator.active {
-    background-color: #FF4500;
+    background-color: #B2A476;
 }
 
 /* For fixed content and scripts*/
@@ -559,7 +659,7 @@
     color: #282d32;
     background-color: lightblue;
     font-size: 20px;
-    font-family: Poppins;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: bold;
     cursor: pointer;
 }
@@ -600,290 +700,392 @@
     transition: 500ms ease;
 }
 
+/* For lower resolution pc */
 @media (max-width: 1600px){
-
     .first-header h3 {
-        font-size: 100px;
+        font-size: 110px;
     }
-
+    .rad_card_container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .rad_card {
+        height: 424px;
+        width: 276px;
+    }
+    .rad_card_paragraph p {
+        font-size: 12px;
+    }
     .strike3-header h3,
     .third-header h3,
-    .news-header h3 {
-        font-size: 60px;
+    .news-header p {
+        font-size: 80px;
     }  
-    
     .strike3-header p {
-        font-size: 16px;
+        font-size: 20px;
     }
-}
-
-@media (max-width: 1200px) {
-    .first-header h3 {
+    .third-header h3 {
         font-size: 50px;
     }
-
-    .third-header h3,
-    .news-header h3 {
-        font-size: 36px;
+    .third-header span {
+        font-size: 110px;
     }
-
-    .first-contact {
-        margin-top: 150px;
-        display: block;
-    }
-  
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .homeCareer_text,
+    .home-news {
+        padding-inline: 5%;
+        padding-block: 150px;
+    } 
+    .first-header h3 {
+        font-size: 90px;
+    }
+}
 
+/* For tablets i.g. Ipads */
+@media (max-width: 1024px) {
     .first-header {
         margin-left: 0;
     }
-
     .first-header h3 {
-        font-size: 50px;
+        font-size: 74px;
         text-align: center;
     }
-
     .home-paragraph {
         max-width: 100%;
     }
-
     .CopyRights_highlightBar {
         overflow-x: scroll;
     }
-    
     .CopyRights_highlightBar h3 {
         margin-right: 50px;
     }
-    
     .highlight_content {
         min-width: 200px;
     }
-
-    .third-header span {
-        font-size: 50px;
-    }
-
+    .rad_card_container {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    .strike3-header h3,
     .third-header h3,
     .news-header h3 {
-        font-size: 32px;
+        font-size: 58px;
+    }  
+    .strike3-footer p {
+        font-size: 28px;
     }
-
-    .detail-header h3,
-    .detail-header-left h3{
-        font-size: 30px;
+    .third-header span {
+        font-size: 60px;
     }
-
-    .btn-blue h3,
-    .btn-orange h3 {
-        min-width:350px;
+    #whyUs_subHeader {
+        font-size: 76px;
     }
-    
+    .home_career {
+        display: flex;
+        flex-direction: column;
+    }
+    .homeCareer_image {
+        order: 1;
+    }
+    .homeCareer_text {
+        order: 2;
+    }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 768px) {
+
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .homeCareer_text,
+    .home-news {
+        padding-block: 80px;
+    } 
 
     .first-content {
         padding-top: 100px;
         padding-bottom: 30px;
     }
-
     .first-header h3 {
-        font-size: 42px;
-    }
-
-    .third-header span {
         font-size: 50px;
     }
 
-    .third-header h3,
-    .news-header h3 {
-        font-size: 32px;
+    .home_paragraph_link a {
+        text-align: center;
     }
 
-    .third-header p,
-    .news-header p {
-        font-size: 24px;
-    }
-
-    .serviceDetail-card,
-    .serviceDetail-card-left {
+    .rad_card_container {
         display: flex;
-        flex-direction: column;
+        overflow-x: scroll;
+    } 
+    .rad_card {
+        min-height: 496px;
+        min-width: 372px;
     }
-
-    .detail-image,
-    .detail-image-left {
-        order: 1;
+    .rad_card:hover {
+        transform: scale(1.0);
     }
-
-    .detail-header,
-    .detail-header-left {
-        order: 2;
-    }
-    
-    .detail-header h3,
-    .detail-header-left h3{
-        font-size: 30px;
-    }
-
-    .details-link a {
-        font-size: 16px;
-    }
-
-    .subs-header h3 {
-        font-size: 30px;
-    }
-
-    .btn-blue h3,
-    .btn-orange h3 {
-        min-width: 300px;
-    }  
-}
-
-@media (max-width: 500px) {
-
-    .first-content {
-        padding-bottom: 0px;
-    }
-
-    .first-header h3 {
-        font-size: 42px;
-    }
-
-    .first-header p {
-        font-size: 16px;
-    }
-
-    .first-contact {
-        margin-top: 80px;
-    }
-    
-    .first-contact h3 {
-        text-align: center;
-        font-size: 20px;
-    }
-    
-    .home-paragraph p {
-        font-size: 14px;
-    }
-
-    .home_paragraph_link a p {
-        text-align: center;
-    }
-
     .third-header span {
-        font-size: 40px;
+        font-size: 50px;
     }
-
-    .strike3-header h3,
-    .strike3-header h3 span,
     .third-header h3,
     .news-header h3 {
         font-size: 32px;
-        text-align: left;
     }
-
-    .home-paragraph p,
-    .about-strike3 p,
     .third-header p,
     .news-header p {
-        text-align: left;
-        font-size: 16px;
-    }
-
-    .subs-header h3 {
         font-size: 24px;
     }
-
-    .subscribe-content {
-        padding: 5%;
-    }
-
-    .subs-btn {
-        display: block;
-    }
-
-    .btn-orange {
-        margin-top: 30px;
-    }
-
-    .btn-blue h3,
-    .btn-orange h3 {
-        min-width: 100%;
-    }  
 }
 
 @media (max-width: 430px) {
-
     .first-header h3 {
-        font-size: 32px;
-    }
-
-    .third-header span {
-        font-size: 40px;
-    }
-
+        font-size: 48px;
+    }  
     .strike3-header h3,
     .strike3-header h3 span,
     .third-header h3,
-    .news-header h3 {
-        font-size: 30px;
+    .news-header p {
+        font-size: 42px;
     }
-
     .home-paragraph p,
     .third-header p,
-    .news-header p {
-        font-size: 16px;
+    .news-header h3,
+    .strike3-header p {
+        font-size: 20px;
     }
-
+    .rad_card_container {
+        gap: 20px;
+    }
+    .rad_card {
+        min-width: 350px;
+        min-height: 466px;
+    }
     .strike3Image-paragraph p {
         margin-top: 20px;
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
     }
-
     .strike3-image img,
     .strike3-image2 img {
         margin-top: 50px;
+        max-width: 400px;
     }
-
     .strike3-footer {
         margin-top: 30px;
     }
-
     .strike3-footer p {
-        font-size: 16px;
-        text-align: center;
+        font-size: 20px;
     }
-
     .third-main {
         margin-top: 30px;
     }
-
-    .serviceDetails-container {
-        padding-top: 0px;
+    .third-header h3,
+    .third-header p {
+        text-align: center;
     }
-
-    .detail-header p,
-    .detail-header-left p {
-        font-size: 16px;
+    #whyUs_subHeader {
+        font-size: 52px;
     }
-
+    .whyUs_cards_container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .whyUs_card {
+        width: 80%; 
+        margin-top: 100px;
+        padding: 20px;
+        flex: 1 1 100%;
+        z-index: 2;
+    }
+    .whyUs_card h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .whyUs_card_hidden {
+        position: relative;
+        top: 1050px;
+        visibility: hidden;
+    }
+    .whyUs_card:hover .whyUs_card_header h4 {
+        transform: translateY(-1100px);
+        transition: 500ms ease;
+    }
+    .whyUs_card:hover .whyUs_card_hidden {
+        visibility: visible;
+        transform: translateY(-1050px);
+        transition: 500ms ease;
+    }
+    .homeCareer_text {
+        padding-block: 30px;
+        margin-left: 0px;
+    }
+    .homeCareer_text h3 {
+        font-size: 36px;
+    }
+    .homeCareer_text h5 {
+        font-size: 18px;
+    }
+    .homeCareer_text h3 span {
+        font-size: 50px;
+    }
     .news-card p {
+        font-size: 18px;
+    }
+    .newsCard-header a {
         font-size: 16px;
     }
-
-    .newsCard-header a {
-        font-size: 16px
-    }
-
     .read-more-btn {
         font-size: 16px;
     }
-
     .subs-header h3 {
         font-size: 18px;
     }
+    #play-pause i {
+        font-size: 24px;
+    }
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
 }
+
+@media (max-width: 397px) {
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .home-news {
+        padding-block: 50px;
+    }
+    .first-header h3 {
+        font-size: 48px;
+    }
+    .strike3-header h3,
+    .strike3-header h3 span,
+    .third-header h3,
+    .news-header p {
+        font-size: 38px;
+    }
+    .home-paragraph p,
+    .third-header p,
+    .news-header h3,
+    .strike3-header p {
+        font-size: 18px;
+    }
+    .rad_card_container {
+        gap: 20px;
+    }
+    .rad_card {
+        min-height: 426px;
+        min-width: 320px;
+    }
+    .slide {
+        margin-top: 30px;
+    }
+    .strike3Image-paragraph p {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .strike3-image img,
+    .strike3-image2 img {
+        margin-top: 50px;
+        max-width: 380px;
+    }
+    .strike3-footer {
+        margin-top: 30px;
+    }
+    .strike3-footer p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .third-main {
+        margin-top: 30px;
+    }
+    .third-header h3,
+    .third-header p {
+        text-align: center;
+    }
+    #whyUs_subHeader {
+        font-size: 50px;
+    }
+    .whyUs_cards_container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .whyUs_card {
+        width: 80%; 
+        margin-top: 100px;
+        padding: 20px;
+        flex: 1 1 100%;
+        z-index: 2;
+    }
+    .whyUs_card h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .whyUs_card_hidden {
+        position: relative;
+        top: 1050px;
+        visibility: hidden;
+    }
+    .whyUs_card:hover .whyUs_card_header h4 {
+        transform: translateY(-1100px);
+        transition: 500ms ease;
+    }
+    .whyUs_card:hover .whyUs_card_hidden {
+        visibility: visible;
+        transform: translateY(-1050px);
+        transition: 500ms ease;
+    }
+    .homeCareer_text {
+        padding-block: 30px;
+        margin-left: 0px;
+    }
+    .homeCareer_text h3 {
+        font-size: 36px;
+    }
+    .homeCareer_text h5 {
+        font-size: 18px;
+    }
+    .homeCareer_text h3 span {
+        font-size: 50px;
+    }
+    .news-card p {
+        font-size: 18px;
+    }
+    .newsCard-header a {
+        font-size: 16px
+    }
+    .read-more-btn {
+        font-size: 16px;
+    }
+    .subs-header h3 {
+        font-size: 18px;
+    }
+    #play-pause i {
+        font-size: 24px;
+    }
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-paragraph p,
+    .third-header p,
+    .news-header h3,
+    .strike3-header p {
+        font-size: 14px;
+    }
+}
+

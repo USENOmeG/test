@@ -6,12 +6,15 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.dropbtn a {
-    color: #282d32;
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .scroll-progress-container {
@@ -34,7 +37,7 @@ body {
 
 .contact-header h3 {
     text-align: center;
-    font-size: 42px;
+    font-size: 64px;
 }
 
 form {
@@ -62,11 +65,10 @@ input {
     height: 50px;
     padding: 20px 30px;
     font-size: 16px;
-    background-color: #eee;
-    border: none;
+    border: solid 1px #282d32;
 }
 
-input:hover {
+input:focus {
     box-shadow: 0 0 3px #282d32;
     transition: 500ms ease;
 }
@@ -74,10 +76,8 @@ input:hover {
 textarea {
     width: 800px;
     min-height: 100px;
-    padding: 20px 40px;
+    padding: 20px 30px;
     font-size: 16px;
-    background-color: #eee;
-    border: none;
 }
 
 textarea:hover {
@@ -91,7 +91,7 @@ textarea:hover {
 
 button {
     padding-block: 10px;
-    background-color: #EC6B1E;
+    background-color: #B2A476;
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -101,75 +101,47 @@ button {
 
 @media (max-width: 900px) {
     input {
-        width: 700px;
+        width: 100%;
     }
     
     textarea {
-        width: 700px;
+        width: 100%;
     }
 }
 
-@media (max-width: 800px) {
-    input {
-        width: 600px;
-    }
-    
-    textarea {
-        width: 600px;
-    }
-}
-
-@media (max-width: 700px) {
-    input {
-        width: 500px;
-    }
-    
-    textarea {
-        width: 500px;
-    }
-}
-
-@media (max-width: 600px) {
-    input {
-        width: 400px;
-    }
-    
-    textarea {
-        width: 400px;
-    }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 430px) {
 
     .contact-container {
         margin-top: 100px;
-        padding-block: 50px;
+        padding-block: 20px;
     }
     
     .contact-header h3 {
-        font-size: 30px;
+        margin-top: 50px;
+        font-size: 38px;
     }
+
     input {
-        width: 400px;
+        width: 380px;
     }
     
     textarea {
-        width: 400px;
+        width: 380px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 397px) {
 
     .contact-input {
         display: block;
     }
 
     input {
-        width: 100%;
+        width: 350px;
     }
     
     textarea {
-        width: 100%;
+        width: 350px;
     }
 }
 

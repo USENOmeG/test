@@ -7,12 +7,15 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.dropbtn a {
-    color: #282d32;
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .scroll-progress-container {
@@ -23,17 +26,14 @@
     margin-top: 100px;
 }
 
-body {
-    
-}
-
 .company_index_main_container,
 .company_index_accordion_container,
 .company_index_quote_container,
 .industry_of_one_container,
 .company_index_stats_container,
 .company_index_office_container,
-.company_index_recognition_container {
+.company_index_recognition_container,
+.whyUs_cards_container {
     padding-inline: 5%;
     padding-block: 100px;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 .company_index_header h3 {
-    font-size: 54px;
+    font-size: 64px;
 }
 
 .company_index_header p {
@@ -74,19 +74,23 @@ body {
     color: white;
     font-weight: bold;
     padding: 20px 40px;
-    background-color: #FF4500;
+    background-color: #B2A476;
 }
 
-.accrodion_header {
+.company_index_heder_btn a:hover {
+    opacity: 0.8;
+}
+
+.accordion_header {
     max-width: 700px;
 }
 
-.accrodion_header h3 {
+.accordion_header h3 {
     font-size: 54px;
     color: #282d32;
 }
 
-.accrodion_header p {
+.accordion_header p {
     margin-top: 50px;
 }
 
@@ -100,7 +104,7 @@ body {
 
 .accordion_content ul li {
     position: relative;
-    border-top: solid 2px #FF4500;
+    border-top: solid 2px #B2A476;
     padding-block: 20px;
     opacity: 1; 
     transition: opacity 0.3s ease;
@@ -111,7 +115,7 @@ body {
 }
 
 .accordion_content ul li:last-child {
-    border-bottom: solid 2px #FF4500;
+    border-bottom: solid 2px #B2A476;
 }
 
 .accordion_content ul li:hover ~ li,
@@ -119,7 +123,7 @@ body {
 .accordion_content ul li:hover ~ li ~ li ~ li,
 .accordion_content ul li:hover ~ li ~ li ~ li ~ li,
 .accordion_content ul li:not(:hover) {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .accordion_shown p,
@@ -139,10 +143,34 @@ body {
     justify-content: space-between;
 }
 
-
 .hidden-content {
     display: none;
     margin-top: 30px;
+}
+
+.accordion_hidden_text p {
+    margin-bottom: 30px;
+}
+
+.accordion_hidden_text a {
+    
+    text-decoration: none;
+    color: blue;
+}
+
+.accordion_hidden_text a:hover {
+    color: #B2A476;
+}
+
+.industry_of_one_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+#CompanyQuote {
+    position: relative;
+    top: 30px;
 }
 
 .company_index_quote_header h3 {
@@ -151,14 +179,28 @@ body {
 }
 
 .company_index_quote_content {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 50px; 
+}
+
+.quote_header {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.quote_header:hover {
+    transform: scale(1.1);
+    color: #B2A476;
+}
+
+.quote_header:hover::before {
+    content: "\2022"; /* Unicode character for bullet dot */
+    margin-right: 5px; 
+    color: #B2A476; 
 }
 
 .company_index_quote_content img {
-    max-width: 600px;
-    left: 0;
+    width: 100%;
+    max-width: 700px;
 }
 
 .company_index_quote_text {
@@ -171,7 +213,7 @@ body {
 }
 
 .industry_of_one_main h3 {
-    font-size: 108px;
+    font-size: 90px;
     font-weight: bold;
     text-align: center;
 }
@@ -182,12 +224,19 @@ body {
     text-align: center;
 }
 
-.industry_of_one_content {
-    margin-top: 100px;
+.vertical_content {
+    display: none;
+    flex: 1;
+    max-width: 400px;
 }
 
-.industry_of_one_content ul {
-    list-style-type: none;
+.vertical_content.active {
+    display: block;
+}
+
+.vertical_content img {
+    margin-top: 20px;
+    max-width: 400px;
 }
 
 .company_index_stats_container {
@@ -202,6 +251,7 @@ body {
 .stats_card h4 {
     font-size: 54px;
     font-weight: bold;
+    color: #B2A476;
 }
 
 .stats_card p {
@@ -220,10 +270,16 @@ body {
     gap: 80px;
 }
 
-.office_card {
+.office_card a {
+    color: #282d32;
+    text-decoration: none;
     display: flex;
     gap: 30px;
     max-width: 600px;
+}
+
+.office_card a:hover {
+    color: #B2A476;
 }
 
 .office_card img {
@@ -234,4 +290,161 @@ body {
     font-size: 100px;
     font-weight: bold;
 }
+
+.whyUs_cards_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.whyUs_card {
+    flex: 1 1 30%;
+    max-height: 350px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.whyUs_card h4 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.whyUs_card_hidden {
+    margin-top: 30px;
+    visibility: hidden;
+}
+
+.whyUs_card:hover .whyUs_card_hidden {
+    visibility: visible;
+}
+
+@media (max-width: 430px) {
+    .company_index_main_container,
+    .company_index_accordion_container,
+    .company_index_quote_container,
+    .industry_of_one_container,
+    .company_index_stats_container,
+    .company_index_office_container,
+    .company_index_recognition_container,
+    .whyUs_cards_container {
+        padding-block: 50px;
+    }
+
+    .company_index_main_container {
+        display: block;
+    }
+
+    .company_index_mainImage img {
+        margin-top: -50px;
+        max-width: 400px;
+    }
+
+    .company_index_header {
+        max-width: 400px;
+    }
+
+    .company_index_header h3 {
+        font-size: 42px;
+    }
+
+    .company_index_header p {
+        margin-top: 50PX;
+    }
+
+    .company_index_heder_btn {
+        margin-top: 50px;
+    }
+
+    .accordion_header h3 {
+        font-size: 42px;
+    }
+
+    .accordion_shown button {
+        margin-right: 30px;
+    }
+
+    .industry_of_one_content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 0px;
+    }
+
+    .industry_of_one_main h3 {
+        font-size: 38px;
+    }
+
+    .industry_of_one_main p {
+        font-size: 18px;
+    }
+
+    .quote_header {
+        font-size: 32px;
+    }
+
+    .vertical_content {
+        max-width: 350px;
+    }
+
+    .vertical_content.active {
+        display: block;
+    }
+
+    .vertical_content img {
+        margin-top: 20px;
+        max-width: 400px;
+    }
+
+    .company_index_stats_container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .company_index_office_container h3 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .office_card_container {
+        margin-top: 50px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .office_card a {
+        gap: 15px;
+        max-width: 250px;
+    }
+
+    .office_card img {
+        max-width: 100px;
+    }
+
+    .office_card h4 {
+        font-size: 56px;
+    }
+
+    .whyUs_cards_container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 397px) {
+    .company_index_mainImage img {
+        max-width: 350px;
+    }
+
+    .company_index_header {
+        max-width: 350px;
+    }
+
+    .vertical_content img {
+        max-width: 350px;
+    }
+}
+
 

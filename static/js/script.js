@@ -1,4 +1,4 @@
-// For progressive bar underneath the Navbar
+// For Navbar
 const scrollProgressBar = document.addEventListener('scroll', function () {
     const scrollBar = document.getElementById('scrollProgressBar');
     const maxHeight = document.body.scrollHeight - window.innerHeight;
@@ -24,6 +24,28 @@ const scrollBar = document.querySelectorAll('.scroll-progress-container');
           scrollBar.classList.remove("scrolled");
         }
       };
+
+function navMobileIcon() {
+  var mobileMenuIcon = document.querySelector('.mobile-menu-icon i');
+
+  if (mobileMenuIcon) {
+    mobileMenuIcon.addEventListener('click', () => {
+      mobileMenuIcon.classList.toggle('fa-bars');
+      mobileMenuIcon.classList.toggle('fa-xmark');
+    });
+  }
+}
+
+// For the button in navbar. It allows user to open search box
+function magnify_searching() {
+  var search_button = document.querySelector('.ai_search');
+  var navbar_menu = document.querySelector('.navbar-menu');
+  var search_box = document.querySelector('.search_box');
+  
+  search_button.classList.toggle('active');
+  navbar_menu.classList.toggle('hidden');
+  search_box.classList.toggle('active');
+}
 
 // For screen loader
 document.addEventListener("DOMContentLoaded", function() {
@@ -56,6 +78,7 @@ function isInViewport(element) {
   );
 }
 
+// Typing animation
 document.addEventListener("DOMContentLoaded", function() {
   var text = "あなたの著作物を守ります";
   var element = document.getElementById("wannatext");
@@ -84,14 +107,13 @@ function applyFadeInAnimation() {
   elements.forEach(function(element, index) {
       if (isInViewport(element)) {
           // Set delay for animation for non-first elements
-          var delay = index === 0 ? 1000 : 50; // 3 seconds delay for first element, 1 second delay for others
-          element.style.transitionDelay = delay + 'ms';
+          // var delay = index === 0 ? 1000 : 50; // 3 seconds delay for first element, 1 second delay for others
+          // element.style.transitionDelay = delay + 'ms';
           // Apply animation by setting opacity to 1
           element.style.opacity = 1;
       }
   });
 }
-
 
 // Call applyFadeInAnimation function when scrolling
 window.addEventListener('scroll', applyFadeInAnimation);
@@ -106,13 +128,17 @@ window.addEventListener('load', function() {
 
   // Apply fade-in animation to the first element with a delay of 3 seconds
   var firstElement = document.querySelector('.first-header .fade-in');
-  firstElement.style.transitionDelay = '2s';
+  var firstParagraph = this.document.querySelector('.first-contact');
+  firstElement.style.transitionDelay = '0s';
   firstElement.style.opacity = 1;
+
+  firstParagraph.style.transitionDelay = '0s'
 
   // Call applyFadeInAnimation to handle other elements
   applyFadeInAnimation();
 });
 
+// news cards scroll animation
 document.addEventListener('DOMContentLoaded', function () {
   const newsContent = document.querySelector('.news-content');
   const newsCards = document.querySelectorAll('.news-card');
@@ -209,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlide(currentIndex);
 });
 
+// WhyUs header 
 document.addEventListener('DOMContentLoaded', function () {
   const thirdHeader = document.querySelector('.third-header');
   const thirdContent = document.querySelector('.third-content');
@@ -244,108 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
   handleScroll(); // Initialize on page load
 });
 
-
-
-
-// Viewport triggered animation
-// const EnterViewPort = new addEventListener('entries', function() {
-//   const animation = document.querySelectorAll('.animation')
-//   const viewport = EnterViewPort('.animation')
-
-
-//   if (EnterViewPort == forEach.entries ) {
-//     document.add.classList('.play_animation').style.visibility = "visible"
-//   } else {
-//     document.querySelectorAll.toggle('.animation').style.visibility = "none"
-//   }
-// })
-
-
-// text animations
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   var textWrapper = document.querySelector(".ml11 .letters");
-//   textWrapper.innerHTML = textWrapper.textContent.replace(
-//     /([^\x00-\x80]|\w)/g,
-//     "<span class='letter'>$&</span>"
-//   );
-
-//   anime.timeline()
-//     .add({
-//       targets: ".ml11 .line",
-//       scaleY: [0, 1],
-//       opacity: [0.5, 1],
-//       easing: "easeOutExpo",
-//       duration: 1000,
-//     })
-//     .add({
-//       targets: ".ml11 .line",
-//       translateX: [
-//         0,
-//         textWrapper.getBoundingClientRect().width + 10,
-//       ],
-//       easing: "easeOutExpo",
-//       duration: 700,
-//       delay: 1800,
-//     })
-//     .add({
-//       targets: ".ml11 .letter",
-//       opacity: [0, 1],
-//       easing: "easeOutExpo",
-//       duration: 600,
-//       offset: "-=775",
-//       delay: (el, i) => 34 * (i + 1),
-//     })
-//     .add({
-//       targets: ".ml11 .line",
-//       opacity: 0, // Fade out the line
-//       duration: 500, // Duration of the fade-out animation
-//       easing: "easeOutExpo",
-//       complete: function() {
-//         // Callback function to remove the line element from the DOM after fading out
-//         var lineElement = document.querySelector(".ml11 .line");
-//         lineElement.parentNode.removeChild(lineElement);
-//       }
-//     });
-// });
-
-// function isInViewport(element) {
-//   var rect = element.getBoundingClientRect();
-//   return (
-//     rect.top >= 0 &&
-//     rect.left >= 0 &&
-//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//   );
-// }
-
-// // Function to start the animation when the element enters the viewport
-// function startAnimationIfInView() {
-//   var textWrapper = document.querySelector('.ml2');
-//   if (isInViewport(textWrapper)) {
-//     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-//     anime.timeline()
-//       .add({
-//         targets: '.ml2 .letter',
-//         scale: [4, 1],
-//         opacity: [0, 1],
-//         translateZ: 0,
-//         easing: "easeOutExpo",
-//         duration: 950,
-//         delay: (el, i) => 70 * i
-//       });
-//     // Remove the animation event listener to prevent it from triggering again
-//     window.removeEventListener('scroll', startAnimationIfInView);
-//   }
-// }
-
-// // Add event listener to start the animation when the page is scrolled
-// window.addEventListener('scroll', startAnimationIfInView);
-
-// // Start the animation if the element is already in the viewport when the page loads
-// startAnimationIfInView();
-
-
 // To toggle hidden content 
 function toggleContent(button) {
   const card = button.closest('.news-card, .accordion_content ul li');
@@ -360,6 +285,7 @@ function toggleContent(button) {
   }
 }
 
+// Fading animation
 const textFadeIn = document.getElementById("textFadeIn"); // test this out later (fade in animation) 
   window.onscroll = function() {
     if (window.scrollTo.arguments) {
@@ -369,15 +295,7 @@ const textFadeIn = document.getElementById("textFadeIn"); // test this out later
     }
   };
 
-// makes the screen into dark theme
-document.querySelector('.mode-switcher').addEventListener (
-  'click', () => {
-    document.body.classList.toggle('dark-mode') 
-    console.log('btn clicked')
-  }
-);
-
-
+// Fot chatBot
 function activateChatBot() {
   const chatbotBtn = document.querySelector('.chatbot-btn');
   const chatbotSection = document.querySelector('.chatbot-section');
@@ -438,27 +356,75 @@ function prevSlide() {
   )
 }
 
+// For quotes in company index page
+document.addEventListener('DOMContentLoaded', () => {
+  function hoverPopOuts() {
+    var headers = document.querySelectorAll('.quote_header');
+    var contents = document.querySelectorAll('.vertical_content');
 
-// For the company_index hovering effects
-// So far, I'm wondering how to make it come true
-function activateAndHoveringEffect() {
-  var CompanyQuotes = getElementById('.hovering_effect');
+    // Display the first element by default
+    contents[0].classList.add('active');
 
-  CompanyQuotes.addEventListener(
-    'hover', () => {
-      document.CompanyQuotes.classList.add('.active')
-      log.console('quote has been hovered.')
-    })
+    headers.forEach((header, index) => {
+      header.addEventListener('mouseover', () => {
+        // Remove active class from all contents
+        contents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to the current content
+        contents[index].classList.add('active');
+      });
+    });
+  }
+
+  // Call the function to set up the event listeners
+  hoverPopOuts();
+});
+
+// For first content background
+document.addEventListener('mousemove', function (e) {
+  const waves = document.querySelectorAll('.wave');
+  const x = (e.clientX / window.innerWidth) * 2 - 1;
+  const y = (e.clientY / window.innerHeight) * 2 - 1;
+
+  waves.forEach(wave => {
+      wave.style.transform = `translate(-50%, -50%) rotate(${x * 20}deg)`;
+  });
+});
+
+// chevrons for navbar and whatnot
+// function chevronDirection(button) {
+//   var chevron = button.querySelector('.fa-chevron-down');
+
+//   if (chevron) {
+//       button.addEventListener('mouseover', () => {
+//           chevron.classList.remove('fa-chevron-down');
+//           chevron.classList.add('fa-chevron-up');
+//       });
+
+//       button.addEventListener('mouseout', () => {
+//           chevron.classList.remove('fa-chevron-up');
+//           chevron.classList.add('fa-chevron-down');
+//       });
+//   }
+// }
+
+// // Attach the function to all buttons with the class 'dropbtn'
+// document.querySelectorAll('.dropbtn').forEach(button => {
+//   chevronDirection(button);
+// });
+
+// Changing the navbar mobile icon from three bars to x mark
+function navMobileIcon() {
+  var mobileMenuIcon = document.querySelector('.mobile-menu-icon i');
+
+  if (mobileMenuIcon) {
+    mobileMenuIcon.addEventListener('click', () => {
+      mobileMenuIcon.classList.toggle('fa-bars');
+      mobileMenuIcon.classList.toggle('fa-xmark');
+    });
+  }
 }
 
+// Initialize the function
+navMobileIcon();
 
-
-
-
-
-
-
-
-
-  
-  

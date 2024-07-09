@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    max-width: 100%;
+}
+
+/* for navbar buttons */
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
+}
+
+.serviceDetail-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.serviceDetail-header,
+.serviceDetail-content,
+.serviceDetail-contentB {
+    padding-inline: 5%;
+    padding-block: 100px;
+}
+
+
+.serviceDetail-header {
+    height: 90vh;
+    text-align: left;
+    background-color: #eee; 
+    background-blend-mode: multiply;
+    background-image: url("../../images/decoration/law1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+.serviceDetail-header h3 {
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+.serviceDetail-header p {
+    font-size: 24px;
+    margin-top: 30px;
+    color: white;
+}
+
+.serviceDetail-contentHeader,
+.serviceDetail-contentHeaderB {
+    display: flex;
+    gap: 30px;
+}
+
+.serviceDetail-contentHeaderB {
+    justify-content: right;
+}
+
+.serviceDetail-image {
+    display: flex;
+    justify-content: center;
+}
+
+.serviceDetail-image img {
+    margin-top: 50px; /* it is for now but thinking of making more complex with js */
+    max-width: 800px;
+    width: 100%;
+}
+
+.serviceDetail-contentB {
+    background-color: #eee;
+}
+
+.serviceDetail-contentHeader h3,
+.serviceDetail-contentHeaderB h3,
+.serviceDetail-contentHeader p,
+.serviceDetail-contentHeaderB p {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.serviceDetail-contentText {
+    margin-top: 50px;
+}
+
+.other-solution {
+    background-color: #eee;
+    padding-block: 80px;
+    padding-inline: 5%;
+}
+
+.otherSolution-content {
+    margin-top: 50px;
+}
+
+.otherSolution-header h3 {
+    font-size: 42px;
+}
+
+.otherSolution-content ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.otherSolution-content li {
+    
+}
+
+.solution-text {
+    top: -50%;
+    position: relative;
+}
+
+.solution-text p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.solution-card {
+    max-width: 300px;
+    z-index: 1;
+    flex: 1;
+}
+
+.solution-card a {
+    text-decoration: none;
+}
+
+.solution-card:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+
+.solution-image img {
+    width: 100%;
+    background-blend-mode: multiply;
+    background-color: grey;
+}
+
+/* For image slider */
+
+.service_gallery_container {
+    overflow-x: hidden;
+}
+
+.gallery_holder {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.gallery_images {
+
+}
+
+.gallery_images img {
+    width: 100%;
+    display: none;
+}
+
+.gallery_holder button {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+@media screen and (max-width: 430px) {
+    .serviceDetail-header h3 {
+        font-size: 40px;
+    }
+    
+    .serviceDetail-header p {
+        font-size: 16px;
+        margin-top: 30px;
+        color: white;
+    }
+
+    .serviceDetail-header {
+        height: 90vh;
+        text-align: left;
+        background-color: transparent; 
+        background-blend-mode: multiply;
+        background-image: url("../../images/decoration/law1.jpg");
+        background-size: 100vw;
+        max-height: 400px;
+        background-repeat: no-repeat;
+    }
+
+    .serviceDetail-contentHeader h3,
+    .serviceDetail-contentHeaderB h3,
+    .serviceDetail-contentHeader p,
+    .serviceDetail-contentHeaderB p {
+        font-size: 30px;
+    }
+
+    .otherSolution-header h3 {
+        font-size: 30px;
+    }
+    
+ /* make a list for mobile     */
+    .other-solution {
+        display: none; 
+    }
+}
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="rad_card_container"></div>
+    {% for content in rad_card %}
+    <h4>{{ content.genres }}</h4>
+    <h3>{{ content.header_main}}</h3>
+    {% endfor %}
+  </body>
+</html>

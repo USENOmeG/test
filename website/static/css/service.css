@@ -6,16 +6,16 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-#nav_services a {
-    color: #FF4500 !important;
-}
-
-.dropbtn a {
-    color: #282d32;
+.dropbtn a,
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .scroll-progress-container {

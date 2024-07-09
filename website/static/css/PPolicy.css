@@ -6,12 +6,15 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.dropbtn a {
-    color: #282d32;
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .scroll-progress-container {
@@ -26,9 +29,9 @@
 
 .policy-header  h3 {
     text-align: center;
-    font-size: 40px;
+    font-size: 64px;
     font-weight: bold;
-    color: orangered;
+    color: #B2A476;
 }
 
 .policy-header p {

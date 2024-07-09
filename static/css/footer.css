@@ -24,8 +24,7 @@ body {
 }
 
 .footer-main {
-  padding-block: 80px;
-  padding-inline: 50px;
+  padding: 50px 80px;
   display: flex;
   justify-content: space-around;
   border-bottom: solid white 1px;
@@ -61,7 +60,7 @@ body {
 
 .footer-content h3:hover,
 .footer-content i:hover {
-  color: #EC6B1E;
+  color: #B2A476;
   transition: 500ms ease;
 }
 
@@ -81,13 +80,26 @@ body {
     }
 
     .footer-container-mobile {
-      background-color: #EC6B1E;
+      background-color: #eee;
       width: 100%;
       display: block;
       padding: 20px;
     }
 
     .footer-main {
-      display: grid;
+      display: flex;
+      justify-content:left;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-content a h3 {
+      text-align: left;
+      color: #282d32;
     }
 }

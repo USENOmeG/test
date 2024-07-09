@@ -1,10 +1,35 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="login_container">
+      <div class="login_header">
+        <h3>LogIn</h3>
+
+        <p>
+          自身のアカウントにログインして、u&nbsp;Holdingsの最新情報を手に入れよう
+        </p>
+      </div>
+
+      <form action="GET">
+        <input id="email_Address" type="text" placeholder="Email Address" />
+        <input id="password1 " type="text" placeholder="Passoword" />
+        <button class="login_btn" type="submit"><h3>Log In</h3></button>
+      </form>
+
+      <div class="login_footer">
+        <p>※現在はアカウント作成用のフォームを設けておりません</p>
+      </div>
+    </div>
+  </body>
 </html>
+
+{% endblock content %}

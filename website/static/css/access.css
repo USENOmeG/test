@@ -10,8 +10,11 @@
     color: #FF4500 !important;
 }
 
-.dropbtn a {
-    color: #282d32;
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
 }
 
 .dropbtn a:hover {

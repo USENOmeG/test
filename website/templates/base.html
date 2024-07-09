@@ -39,30 +39,158 @@
           </div>
 
           <div class="navbar-items">
-            <div class="dropdown">
-              <button class="dropbtn">
-                <a href="/service">サービス詳細&nbsp;</a>
+            <div class="dropdown" id="dropdown_margin">
+              <button class="mobile_dropbtn" id="nav_services">
+                <h3>
+                  What we do&nbsp;<i class="fa-solid fa-chevron-right"></i>
+                </h3>
               </button>
+
+              <div class="drop_content">
+                <div class="drop_content_box">
+                  <button>
+                    <h3>
+                      Capabilities&nbsp;<i
+                        class="fa-solid fa-chevron-right"
+                      ></i>
+                    </h3>
+                  </button>
+                  <div class="drop_service">
+                    <a href="/service1">
+                      <p>著作物の保護</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="/service2">
+                      <p>違法ダウンローダーの摘発</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="/service3">
+                      <p>協力関係の構築</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="/service4">
+                      <p>監視と検知</p>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="drop_content_box">
+                  <button>
+                    <h3>
+                      Case studies&nbsp;<i
+                        class="fa-solid fa-chevron-right"
+                      ></i>
+                    </h3>
+                  </button>
+                  <div class="drop_service">
+                    <a href="/case_study">
+                      <p>開示判決一覧</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="/about_case_study">
+                      <p>開示判決とは</p>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="drop_content_box">
+                  <button>
+                    <h3>
+                      Industries&nbsp;<i class="fa-solid fa-chevron-right"></i>
+                    </h3>
+                  </button>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>著作物の管理</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>著作物の保護</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>データ管理</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>ハイレベルテクノロジー</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>ソフトウエア</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="#">
+                      <p>プラットフォーム</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="dropdown">
-              <button class="dropbtn">
-                <a href="/access">アクセス</a>
+              <button class="mobile_dropbtn" id="nav_services">
+                <h3>
+                  Who we are&nbsp;<i class="fa-solid fa-chevron-right"></i>
+                </h3>
               </button>
+
+              <div class="drop_content">
+                <div class="drop_content_box">
+                  <button>
+                    <h3>Our organization</h3>
+                    &nbsp;<i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                  <div class="drop_service">
+                    <a href="/about/company-index">
+                      <p>u&nbsp;Holdingsについて</p>
+                    </a>
+                  </div>
+
+                  <div class="drop_service">
+                    <a href="/service2">
+                      <p>Office</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="dropdown">
-              <button class="dropbtn">
-                <a href="/news">お知らせ&nbsp;</a>
-              </button>
+            <div class="mobile_dropdown">
+              <a href="/news">News&nbsp;</a>
             </div>
 
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/help">ヘルプ</a></button>
+            <div class="mobile_dropdown">
+              <a href="/contact">Contact</a>
+            </div>
+
+            <div class="mobile_ux">
+              <div><a href="#">AI&nbsp;search</a></div>
+              <div><a class="user_account" href="/login">Account</a></div>
             </div>
           </div>
         </div>
 
+        {% comment %} for usual width and aspect ratio {% endcomment %}
         <div class="navbar-menu">
           <div class="dropdown">
             <button class="dropbtn" id="nav_services">
@@ -72,37 +200,112 @@
             </button>
 
             <div class="drop_content">
-              <h3>Capabilities</h3>
-              <div class="drop_service">
-                <a href="/service1">
-                  <p>著作物の保護</p>
-                </a>
+              <div class="drop_content_box">
+                <h3>Capabilities</h3>
+                <div class="drop_service">
+                  <a href="/service1">
+                    <p>著作物の保護</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="/service2">
+                    <p>違法ダウンローダーの摘発</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="/service3">
+                    <p>協力関係の構築</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="/service4">
+                    <p>監視と検知</p>
+                  </a>
+                </div>
               </div>
 
-              <div class="drop_service">
-                <a href="/service2">
-                  <p>違法ダウンローダーの摘発</p>
-                </a>
+              <div class="drop_content_box">
+                <h3>Case studies</h3>
+                <div class="drop_service">
+                  <a href="/case_study">
+                    <p>開示判決一覧</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="/about_case_study">
+                    <p>開示判決とは</p>
+                  </a>
+                </div>
               </div>
 
-              <div class="drop_service">
-                <a href="/service3">
-                  <p>協力関係の構築</p>
-                </a>
-              </div>
+              <div class="drop_content_box">
+                <h3>Industries</h3>
+                <div class="drop_service">
+                  <a href="#">
+                    <p>著作物の管理</p>
+                  </a>
+                </div>
 
-              <div class="drop_service">
-                <a href="/service4">
-                  <p>監視と検知</p>
-                </a>
+                <div class="drop_service">
+                  <a href="#">
+                    <p>著作物の保護</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="#">
+                    <p>データ管理</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="#">
+                    <p>ハイレベルテクノロジー</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="#">
+                    <p>ソフトウエア</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="#">
+                    <p>プラットフォーム</p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn" id="nav_company_index">
-              <a href="/about/company-index">Who we are</a>
+            <button class="dropbtn" id="nav_services">
+              <a href="/about/company-index"
+                >Who we are&nbsp;<i class="fa-solid fa-chevron-down"></i
+              ></a>
             </button>
+
+            <div class="drop_content">
+              <div class="drop_content_box">
+                <h3>Our organization</h3>
+                <div class="drop_service">
+                  <a href="/about/company-index">
+                    <p>u&nbsp;Holdingsについて</p>
+                  </a>
+                </div>
+
+                <div class="drop_service">
+                  <a href="#">
+                    <p>Office</p>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="dropdown">
@@ -111,14 +314,6 @@
             </button>
           </div>
 
-          {% comment %}
-          <div class="dropdown">
-            <button class="dropbtn" id="nav_help">
-              <a href="/help">Help</a>
-            </button>
-          </div>
-          {% endcomment %}
-
           <div class="dropdown">
             <button class="dropbtn" id="nav_help">
               <a href="/contact">Contact</a>
@@ -126,24 +321,24 @@
           </div>
         </div>
 
+        <div class="search_box">
+          <input
+            placeholder="type to search..."
+            type="text"
+            name="search_area"
+            id="search_area"
+            rows="1"
+          />
+        </div>
+
         <div class="navbar_ux">
-          <div class="ai_search">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </div>
+          <button class="ai_search" onclick="magnify_searching()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
 
-          <div class="language_selection">
-            <a
-              ><i class="fa-solid fa-globe"></i>&nbsp;JPN&nbsp;<i
-                class="fa-solid fa-chevron-down"
-              ></i
-            ></a>
-
-            <div class="dropbtn_lNG">
-              <a href="#">ENGLISH</a>
-              <a href="#">SPANISH</a>
-              <a href="#">SUGONDEZE</a>
-            </div>
-          </div>
+          <a class="user_account" href="/login"
+            ><i class="fa-solid fa-user"></i
+          ></a>
         </div>
       </nav>
       <div class="scroll-progress-container" id="scrollBar">
@@ -203,15 +398,16 @@
       <div class="footer-main">
         <div class="footer-logoImage">
           <a href="/"
-            ><img src="{% static 'images/icon/uholdings_logo_out.png' %}"
-            alt="org logo"></a
-          >
+            ><img
+              src="{% static 'images/icon/uholdings_logo_out.png' %}"
+              alt="org logo"
+          /></a>
         </div>
         <div class="footer-content">
-          <a href="/about-us"><h3>会社概要</h3></a>
-          <a href="/term-of-use"><h3>利用規約</h3></a>
-          <a href="/privacy-policy"><h3>プライバシーポリシー</h3></a>
-          <a href="#"><h3>サイトマップ</h3></a>
+          <a href="/about/company-index"><h3>About us</h3></a>
+          <a href="/term-of-use"><h3>Term&nbsp;of&nbsp;Use</h3></a>
+          <a href="/privacy-policy"><h3>Privacy&nbsp;policies</h3></a>
+          <a href="/help"><h3>Help</h3></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
@@ -228,16 +424,22 @@
     <div class="footer-container-mobile">
       <div class="footer-main">
         <div class="footer-content">
-          <h3>Easy links</h3>
-        </div>
-
-        <div class="footer-content">
-          <h3>会社概要</h3>
+          <a href="/about/company-index"><h3>About us</h3></a>
+          <a href="/career"><h3>Career</h3></a>
+          <a href="/contact"><h3>Contact us</h3></a>
+          <a href="/locations"><h3>Locations</h3></a>
+          <a href="/privacy-policy"><h3>Privacy&nbsp;policies</h3></a>
+          <a href="/site-maps"><h3>Site Maps</h3></a>
+          <a href="/socials"><h3>Socials</h3></a>
+          <a href="/term-of-use"><h3>Term&nbsp;of&nbsp;Use</h3></a>
+          <a href="/help"><h3>Help</h3></a>
         </div>
       </div>
 
       <div class="footer-logo">
-        <p class="copyright">© Copyright u ホールディングス | 2024</p>
+        <p class="copyright">
+          © Copyright&nbsp;u&nbsp;ホールディングス&nbsp;|&nbsp;2024
+        </p>
       </div>
     </div>
 

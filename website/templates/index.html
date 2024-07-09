@@ -9,7 +9,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Home</title>
   </head>
@@ -17,13 +20,18 @@
   <body>
     <div class="home-container">
       <div class="first-content">
+        <div class="background-animation">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
         <div class="first-header">
           <h3 class="typing-animation" id="wannatext"></h3>
         </div>
 
         <div class="first-contact">
           <div class="home-paragraph">
-            <p id="text">
+            <p class="fade-in" id="text">
               当社はあなたの貴重な著作物の権利を確実に守ります。あなたの作品は大切な資産です。
               我々は著作権を尊重し、不正な使用や盗用から守るため、最新の法律やテクノロジーを駆使して取り組みます。
               あなたの創造性と独自性を大切にし、安心してご活動いただけるよう、我々が全力でサポートいたします。
@@ -31,7 +39,8 @@
 
             <div class="home_paragraph_link">
               <a href="/contact"
-                ><p>お問い合わせ&nbsp;<i class="fa-solid fa-arrow-right"></i></p
+                ><p class="fade-in" id="text">
+                  お問い合わせ&nbsp;<i class="fa-solid fa-arrow-right"></i></p
               ></a>
             </div>
           </div>
@@ -45,6 +54,8 @@
               class="highlight_text"
               style="font-family: poppins; font-weight: bold"
             >
+              TRENDING
+              <br />
               INSIGHTS
             </p>
           </div>
@@ -67,19 +78,24 @@
         </div>
       </div>
 
+      {% comment %} This structure has an unexpected closing statement? If I
+      want to use prettier, remove here and save the script {% endcomment %}
       <div class="rad_content">
         <div class="rad_card_container">
-          <button class="rad_card" style="background-image: url('{% static "images/rad_card_background/rad_image1.jpg" %}')">
-            <a href="#">
-              <div class="red_card_genre">
+          <div
+            class="rad_card"
+            style="
+              background-image: url('{% static 'images/rad_card_background/rad_image1.jpg' %}');
+            "
+          >
+            <a href="/rad_card">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
               <div class="rad_card_header">
                 <p>開示判決</p>
-                <h3>
-                  対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた
-                </h3>
+                <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
               </div>
 
               <div class="rad_card_showncontent">
@@ -100,20 +116,17 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card">
+          <div class="rad_card">
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>NEWS</p>
               </div>
 
               <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
+                <p>新規許諾メーカー</p>
+                <h3>X社よりYの許諾を頂き、調査を開始</h3>
               </div>
 
               <div class="rad_card_showncontent">
@@ -123,10 +136,8 @@
               <div class="rad_card_hiddencontent">
                 <div class="rad_card_paragraph">
                   <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
+                    国内超人気作家のX氏より、作品の調査許諾を頂き、海賊版等の違法アップロード/ダウンロードの取り締まりを開始した。
+                    すでに数多くの違法行為を観測しており、順次申し立てを行う予定である。
                   </p>
                 </div>
                 <div class="rad_card_content_button">
@@ -134,11 +145,16 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card" style="background-image: url('{% static "images/rad_card_background/rad_image2.jpg" %}')">
+          <div
+            class="rad_card"
+            style="
+              background-image: url('{% static 'images/rad_card_background/rad_image2.jpg' %}');
+            "
+          >
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -168,11 +184,16 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card" style="background-image: url('{% static "images/rad_card_background/rad_image3.jpg" %}')">
+          <div
+            class="rad_card"
+            style="
+              background-image: url('{% static 'images/rad_card_background/rad_image3.jpg' %}');
+            "
+          >
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -202,11 +223,11 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card">
+          <div class="rad_card">
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -236,11 +257,16 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card">
+          <div
+            class="rad_card"
+            style="
+              background-image: url('{% static 'images/rad_card_background/rad_image4.jpeg' %}');
+            "
+          >
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -270,11 +296,11 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card">
+          <div class="rad_card">
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -304,11 +330,16 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
 
-          <button class="rad_card">
+          <div
+            class="rad_card"
+            style="
+              background-image: url('{% static 'images/rad_card_background/rad_image5.jpeg' %}');
+            "
+          >
             <a href="#">
-              <div class="red_card_genre">
+              <div class="rad_card_genre">
                 <p>CASE STUDY</p>
               </div>
 
@@ -338,20 +369,20 @@
                 </div>
               </div>
             </a>
-          </button>
+          </div>
         </div>
       </div>
+      {% comment %} till here {% endcomment %}
 
       <div class="about-strike3">
         <div class="strike3-header">
           <h3 class="fade-in" id="text">
-            海賊版流通による<span style="color: blue">被害</span>
+            海賊版流通による<span style="color: red">被害</span>
           </h3>
 
           <p>
             国内での海賊版サイトによる被害額だけで<span style="">500億円</span
             >を超えており漫画以外の作品においても、その被害は同様であると予測される。
-            <br />
             漫画村のアクセス数は<span>月間1億回</span>にものぼり、被害額は<span
               >約3,200億円</span
             >
@@ -361,42 +392,54 @@
 
         <div class="slider">
           <div class="slider-container">
-
             <div class="slide">
               <div class="strike3-image">
-                <img src="{% static 'images/decoration/strike3Data2.png' %}" alt="about strike3">
+                <img
+                  src="{% static 'images/decoration/strike3Data2.png' %}"
+                  alt="about strike3"
+                />
               </div>
               <div class="strike3Image-paragraph">
                 <p>
                   引用元: 出版広報センターより&nbsp;「深刻な海賊版の被害」
                   <br />
-                  <a href="https://shuppankoho.jp/damage/">https://shuppankoho.jp/damage/</a>
+                  <a href="https://shuppankoho.jp/damage/"
+                    >https://shuppankoho.jp/damage/</a
+                  >
                 </p>
               </div>
             </div>
 
             <div class="slide">
               <div class="strike3-image">
-                <img src="{% static 'images/decoration/strike3Data1.png' %}" alt="about strike3">
+                <img
+                  src="{% static 'images/decoration/strike3Data1.png' %}"
+                  alt="about strike3"
+                />
               </div>
               <div class="strike3Image-paragraph">
                 <p>
-                  引用元: 出版広報センターより&nbsp;「説明資料&nbsp;海賊版サイトによる被害と法整備の必要性について」
+                  引用元:
+                  出版広報センターより&nbsp;「説明資料&nbsp;海賊版サイトによる被害と法整備の必要性について」
                   <br />
-                  <a href="https://www.bunka.go.jp/seisaku/bunkashingikai/kondankaito/shingaikontentsu/01/pdf/r1422992_02.pdf">https://www.bunka.go.jp/seisaku/bunkashingikai/kondankaito/shingaikontentsu/01/pdf/r1422992_02.pdf</a>
+                  <a
+                    href="https://www.bunka.go.jp/seisaku/bunkashingikai/kondankaito/shingaikontentsu/01/pdf/r1422992_02.pdf"
+                    >https://www.bunka.go.jp/seisaku/bunkashingikai/kondankaito/shingaikontentsu/01/pdf/r1422992_02.pdf</a
+                  >
                 </p>
               </div>
             </div>
           </div>
-          <button class="prev">❮</button>
-          <button class="next">❯</button>
+          <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
 
         <div class="strike3-footer">
           <p class="fade-in" id="text">
             海賊版動画に関しても同様の被害が予測され
-            <br />
-            撲滅・被害請求に伴う動きを進め、抑止力を生み出す必要がある
+            撲滅・被害請求に伴う動きを進め、<span>抑止力を生み出す必要</span>がある
           </p>
         </div>
       </div>
@@ -405,200 +448,137 @@
         <div class="third-header">
           <p class="fade-in" id="text">Why Us</p>
           <h3 class="fade-in" id="text">
-            <span style="font-family: poppins">u&nbsp;Holdings</span
-            >が選ばれる<span style="font-size: 130px">3</span>つの理由
+            <span>u&nbsp;Holdings&nbsp;</span>が選ばれる<span
+              id="whyUs_subHeader"
+              >3</span
+            >つの理由
           </h3>
         </div>
 
         <div class="whyUs_cards_container">
-          <div class="whyUs_card" style="background-color: #FF4500;">
+          <div class="whyUs_card" style="background-color: #b2a476">
             <div class="whyUs_card_header">
-              <h4>無料からはじめられる&無料でも続けられる</h4>
-            </div>
-            <div class="whyUs_card_hidden">
-              <p>u Holdingsは、アカウント登録やオンラインミーティングの参加を無料で提供しています。 
-                お客様や貴社のニーズに合わせ、まずは無料でミーティングにご参加いただくことができます。 
-                その後も、無料でサービスをご利用いただくことが可能です。当社は著作権を尊重し、
-                お客様に安全でセキュアな環境でのサービスを提供しています。</p>
-            </div>
-          </div>
-
-          <div class="whyUs_card" style="background-color: blue;">
-            <div class="whyUs_card_header">
-              <h4>著作物の悪用を防ぐための対策を実施しています</h4>
-            </div>
-            <div class="whyUs_card_hidden">
-              <p>春の陽気が広がり、桜の花が風に舞う公園。子どもたちは笑顔で駆け回り、
-                花見客が青空の下で楽しいひと時を共有している。 
-                ベンチにはカップルが寄り添い、春の訪れを感じながら手を繋いでいる。 
-                遠くには桜並木が美しいトンネルを作り出し、
-                その下を通り抜ける人々が春の喜びに包まれている。</p>
-            </div>
-          </div>
-
-          <div class="whyUs_card" style="background-color: green; margin-bottom: 200px;">
-            <div class="whyUs_card_header">
-              <h4>協力関係が広がるネットワークとテクノロジー</h4>
+              <h4>業界トップの実績</h4>
             </div>
             <div class="whyUs_card_hidden">
               <p>
-                雨が降りしきる中、路地裏のカフェでは人々が温かいコーヒーに手を伸ばしている。
-                窓の外では色とりどりの傘が舞い踊り、都会の喧騒が雨音にかき消される。 街は灰色に染まり、
-                交わる視線と笑顔が一瞬の出会いを紡ぐ。コーナーには古びた書店があり、本の匂いが心地よく漂う。
-                都市の中で小さな幸福が瞬間的に広がり、人々は日常に微笑む。
+                u&nbsp;Holdingsは、著作物の違法ダウンロードやアップロードの取り締まりにおいて、業界No.1の勝訴実績を誇ります。
+                私たちは、著作権保護のために毎月xxx件の摘発を行い、全ての案件で勝訴判決を獲得しています。
+                これにより、著作権侵害に対する強力な抑止力を提供し、クリエイターの権利を守るための信頼できるパートナーとしての地位を確立しています。
+              </p>
+            </div>
+          </div>
+
+          <div class="whyUs_card" style="background-color: #6a9fb5">
+            <div class="whyUs_card_header">
+              <h4>不透明性の撤廃</h4>
+            </div>
+            <div class="whyUs_card_hidden">
+              <p>
+                「不透明性の撤廃」を重視し、クライアントに対する情報提供とコミュニケーションを徹底しています。
+                これにより、クライアントは常に最新の進捗状況や成果を把握でき、安心して私たちのサービスを利用することができます。
+                透明性の高いプロセスとオープンな対話を通じて、クライアントとの信頼関係を築き、長期的なパートナーシップを実現しています。
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="whyUs_card"
+            style="background-color: #8aa65b; margin-bottom: 200px"
+          >
+            <div class="whyUs_card_header">
+              <h4>市場におけるイノベーションの推進</h4>
+            </div>
+            <div class="whyUs_card_hidden">
+              <p>
+                当社は市場におけるイノベーションの推進を使命とし、常に新しいアイデアと技術を探求し、顧客のニーズに応えることを重視しています。私たちは革新を通じて、業界の常識を超えた価値を提供し、持続可能な成長を実現することを目指しています。
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {% comment %} <div class="serviceDetails-container">
-        <div class="serviceDetail-card">
-          <div class="detail-header">
-            <h3 class="fade-in" id="text" style="color: blue">著作物の保護</h3>
-
-            <p class="fade-in" id="text">
-              著作物の保護は、クリエイターが創造的な活動を安心して行える環境を提供します。デジタル時代において、不正コピーから知的財産を守るために、
-              技術力を駆使した新しい取り組みが求められています。我々は、コンテンツ制作者や企業が創造した価値を損なわず、適切なライセンス管理を通じて公正な報酬を得られるよう、
-              先進的な著作権保護サービスを提供しています。これにより、クリエイターたちは安心して創作に没頭し、新しいアイデアを生み出すことが期待されます。
-            </p>
-
-            <div class="details-link">
-              <a href="/service1" style="color: blue"
-                ><h4 style="color: blue">
-                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
-              ></a>
-            </div>
-          </div>
-          <div class="detail-image">
-            <img src="{% static 'images/decoration/law1.jpg' %}" alt="" />
-          </div>
+      <div class="home_career">
+        <div class="homeCareer_image">
+          <img
+            id="main_image"
+            src="{% static 'images/decoration/homeCareer.jpeg' %}"
+            alt="career image"
+          />
+          <img
+            id="sub_image"
+            src="{% static 'images/decoration/homeCareer_calligraph.png' %}"
+            alt=""
+          />
         </div>
 
-        <div class="serviceDetail-card-left">
-          <div class="detail-image-left">
-            <img src="{% static 'images/decoration/law2.jpg' %}" alt="" />
-          </div>
-          <div class="detail-header-left">
-            <h3 class="fade-in" id="text" style="color: #ff4500">
-              違法ダウンローダーの摘発
-            </h3>
-
-            <p class="fade-in" id="text">
-              違法ダウンローダーの摘発は、主に著作権侵害や知的財産権の保護を目的に実施されます。この違法なダウンロード行為は、著作物の所有者やクリエイターの権利を侵害し、その結果法的な措置が不可欠となります。
-              著作権者や関係者は、監視手段を通じて侵害を検知し、法的手続きを進め、協力関係を築いて法執行機関と連携し、技術的手段を駆使して違法な行為に対処します。
-              この総合的なアプローチにより、違法ダウンローダーの摘発が行われ、著作権や知的財産権の保護が確立され、デジタル環境における公正な取引が促進されることが期待されます。
-            </p>
-
-            <div class="details-link">
-              <a href="/service2"
-                ><h4 style="color: #ff4500">
-                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
-              ></a>
-            </div>
-          </div>
+        <div class="homeCareer_text">
+          <h4>Career</h4>
+          <h3><span>u&nbsp;Holdings</span>で一緒に働きませんか？</h3>
+          <h5>
+            あなたが輝く時です。
+            あなたのスキル、好奇心、そして革新的なアイデアを駆使して、著作物を保護し、未来を創りましょう。
+          </h5>
+          <a href="/contact"
+            >Join us&nbsp;<i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
-
-        <div class="serviceDetail-card">
-          <div class="detail-header">
-            <h3 class="fade-in" id="text" style="color: green">
-              協力関係の構築
-            </h3>
-            <p class="fade-in" id="text">
-              著作権者は積極的にインターネットプロバイダーや法執行機関と連携し、侵害行為の阻止に取り組んでいます。
-              この連携により、侵害者への警告や法的手続きが適切に行われ、不正なダウンロード行為が制限されることを目指しています。
-              同時に、法執行機関との協力により、違法なダウンロードサイトの摘発と閉鎖に向けた戦略的なアプローチが進められています。
-              これにより、著作権者はデジタル空間において合法的なコンテンツの提供を促進し、公正なビジネス環境の構築に寄与しています。
-            </p>
-
-            <div class="details-link">
-              <a href="service3"
-                ><h4 style="color: green">
-                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
-              ></a>
-            </div>
-          </div>
-          <div class="detail-image">
-            <img src="{% static 'images/decoration/law3.jpg' %}" alt="" />
-          </div>
-        </div>
-
-        <div class="serviceDetail-card-left">
-          <div class="detail-image-left">
-            <img src="{% static 'images/decoration/law4.jpg' %}" alt="" />
-          </div>
-          <div class="detail-header-left">
-            <h3 class="fade-in" id="text" style="color: red">監視と検知</h3>
-
-            <p class="fade-in" id="text">
-              著作物の権利を有する者やその代理人は、違法なダウンロードサイトやファイル共有プラットフォームを継続的に監視し、侵害行為を的確に検知しています。
-              これには、高度な技術を駆使した監視手段やデジタルツールが活用され、オンライン空間において著作物の正当な権利を保護するための積極的な取り組みが行われています。
-              監視活動を通じて違法なコンテンツの特定や侵害者の追跡が行われ、これによって著作物の適切な管理と法的な措置が可能になり、デジタル環境における公正かつ安全なクリエイティブな活動が促進されています。
-            </p>
-
-            <div class="details-link">
-              <a href="/service4"
-                ><h4 style="color: red">
-                  詳しくみる&nbsp;<i class="fa-solid fa-arrow-right"></i></h4
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div> {% endcomment %}
+      </div>
 
       <div class="home-news">
         <div class="news-header">
-          <p class="fade-in" id="text">u&nbsp;holdings&nbsp;News</p>
           <h3 class="fade-in" id="text">お知らせ</h3>
+          <p class="fade-in" id="text">News</p>
         </div>
 
         <div class="news-content">
           <div class="news-card">
-              <a href="#">
-                  <div class="news_date">
-                      <p>2024年1月26日</p>
-                  </div>
-                  <div class="news_content">
-                      <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-                  </div>
-              </a>
+            <a href="#">
+              <div class="news_date">
+                <p>2024年1月26日</p>
+              </div>
+              <div class="news_content">
+                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
+              </div>
+            </a>
           </div>
           <div class="news-card">
-              <a href="#">
-                  <div class="news_date">
-                      <p>2024年1月26日</p>
-                  </div>
-                  <div class="news_content">
-                      <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-                  </div>
-              </a>
+            <a href="#">
+              <div class="news_date">
+                <p>2024年1月26日</p>
+              </div>
+              <div class="news_content">
+                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
+              </div>
+            </a>
           </div>
           <div class="news-card">
-              <a href="#">
-                  <div class="news_date">
-                      <p>2024年1月26日</p>
-                  </div>
-                  <div class="news_content">
-                      <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-                  </div>
-              </a>
+            <a href="#">
+              <div class="news_date">
+                <p>2024年1月26日</p>
+              </div>
+              <div class="news_content">
+                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
+              </div>
+            </a>
           </div>
           <div class="news-card">
-              <a href="#">
-                  <div class="news_date">
-                      <p>2024年1月26日</p>
-                  </div>
-                  <div class="news_content">
-                      <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-                  </div>
-              </a>
+            <a href="#">
+              <div class="news_date">
+                <p>2024年1月26日</p>
+              </div>
+              <div class="news_content">
+                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
+              </div>
+            </a>
           </div>
         </div>
 
         <div class="news_controls">
           <div class="controls">
             <button id="play-pause">
-                <i class="fa-solid fa-pause"></i> <!-- Initially, display the pause icon -->
+              <i class="fa-solid fa-pause"></i>
+              <!-- Initially, display the pause icon -->
             </button>
           </div>
 
@@ -608,7 +588,7 @@
             <span class="indicator"></span>
             <span class="indicator"></span>
           </div>
-        </div>      
+        </div>
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render, get_object_or_404
 
 # from .forms import user_info
@@ -11,34 +11,18 @@ from django.views.decorators.csrf import csrf_protect
 from .utils import *
 
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 from .forms import ContactForm
 
 
 def home(request):
+    """
+    adding rad-cards.objects selection if needed in the specific page.
+    It does the same thing when adding other contents. From django 5.0.6
+    """
 
-    # genre = models.genres
-    # header_main = models.header_main
-    # header_sub = models.header_sub
-    # paragraph = models.paragraph
-    # backImage = models.background_image
-    # paragraph1 = models.rad_paragraph1
-    # paragraph2 = models.rad_paragraph2
-    # paragraph3 = models.rad_paragraph3
-    # paragraph4 = models.rad_paragraph4
-    # background_image = models.rad_background_image
-    # image1 = models.rad_image1
-    # image2 = models.rad_image2
-    # image3 = models.rad_image3
-    # image4 = models.rad_image4
-
-    # for _ in rad_genres:
-
-    #     if models.csrf_protect():
-
-    #         genre =
-
+    # rad_card = rad_content.objects.all()
+    # context = {'rad_card': rad_card}
     return render(request, 'index.html')
 
 
@@ -48,6 +32,9 @@ def services(request):
 
 
 def news(request):
+
+    # news = news_content.objects.all()
+    # context = {'news': news}
 
     return render(request, 'news.html')
 
@@ -158,3 +145,31 @@ def about_us(request):
 #         save.password == password1
 
 #     return render(request, 'sign_up.html')
+
+def rad_card(request):
+
+    rad_card = rad_content.objects.all()
+    context = {'rad_card': rad_card}
+    return render(request, 'rad_card.html', context)
+
+# For accounts
+
+
+def login(request):
+
+    return render(request, 'login.html')
+
+
+def signIn(request):
+
+    return render(request, 'signIn.html')
+
+
+def case_study(request):
+
+    return render(request, 'case_study.html')
+
+
+def about_case_study(request):
+
+    return render(request, 'about_case_study.html')
