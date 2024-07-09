@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+}
+
+.footer-container-mobile {
+  display: none;
+}
+
+.footer-main {
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid white 1px;
+  z-index: 999;
+}
+
+.footer-logo {
+  padding-block: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-content a {
+  text-decoration: none;
+}
+
+.footer-content h3 {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer-content i {
+  color: black;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.footer-content h3:hover,
+.footer-content i:hover {
+  color: #B2A476;
+  transition: 500ms ease;
+}
+
+.footer-logoImage img {
+  max-width: 200px;
+}
+
+.footer-logoImage img:hover {
+  opacity: 0.8;
+  transition: 500ms ease;
+}
+
+@media (max-width: 500px) {
+
+    .footer-container {
+      display: none;
+    }
+
+    .footer-container-mobile {
+      background-color: #eee;
+      width: 100%;
+      display: block;
+      padding: 20px;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content:left;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-content a h3 {
+      text-align: left;
+      color: #282d32;
+    }
+}

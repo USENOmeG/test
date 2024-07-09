@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+    z-index: 1;
+}
+
+#nav_help a {
+    color: #FF4500 !important;
+}
+
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
+}
+
+.dropbtn a:hover {
+    color: #FF4500;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+.help-container {
+    margin-block: 100px;
+    display: flex;
+    z-index: 1;
+}
+
+.help-left {
+    position: fixed;
+    left: 0;
+    padding: 30px;
+    border-right: solid #eee 1px;
+    overflow-y: auto;
+    flex: 1;
+    align-self: stretch;
+    height: 100%;
+    z-index: 1;
+}
+
+.help-section a {
+    text-decoration: none;
+    z-index: 999;
+}
+
+.help-section h3 {
+    margin-top: 30px;
+    color: #282d32;  
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 20px;
+}
+
+.help-section h3:hover {
+    background: lightgrey;
+    border-radius: 10px;
+    transition: 500ms ease;
+}
+
+.help-section.active h3 {
+    font-weight: bold;
+    color: #FF4500;
+    background: #FFD580;
+    border-radius: 10px;
+}
+
+.help-right {
+    margin-bottom: 100px;
+    width: 100%;
+    padding: 30px;
+    margin-left: 200px; 
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-self: stretch;
+}
+
+.help-content {
+    display: none;
+}
+
+.help-content.active {
+    width: 100%;
+    display: block;
+}
+
+.help-main {
+    padding-inline: 5%;
+}
+
+.help-mainHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.help-mainHeader p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF4500;
+    font-family: poppins;
+}
+
+.help-mainHeader h3 {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.help-card {
+    border-bottom: solid #eee 1px;
+    padding: 20px;
+}
+
+.help-card h3 {
+    color: #282d32;
+}
+
+.help-card a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1200px) {
+    .help-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .help-left {
+        position: relative;
+        padding: 15px;
+        border-bottom: solid #eee 1px;
+        order: 1;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+    }
+
+    .help-section h3 {
+        margin-top: 0px;
+    }
+
+    .help-right {
+        order: 2;
+        margin-bottom: 100px;
+        margin-left: 0px; 
+        padding: 30px;
+    }
+
+    .help-mainHeader {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .help-main {
+        padding-inline: 5%;
+    }
+
+    .help-mainHeader p {
+        font-size: 18px;
+    }
+    
+    .help-mainHeader h3 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .help-left {
+        border-right: solid #eee 0px;
+        width: 100vw;
+    }
+
+    .help-right {
+        padding-inline: 5%;
+        margin-left: 0px; 
+    }
+
+    .help-mainHeader {
+        margin-top: 30px;
+    }
+
+    .help-mainHeader h3 {
+        font-size: 30px;
+    }
+
+    .help-card h3 {
+        font-size: 16px;
+    }
+
+
+}
+ 

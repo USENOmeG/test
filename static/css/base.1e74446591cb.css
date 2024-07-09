@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    transition: 0.01s ease;
+    margin: 0;
+}
+
+a::selection, p::selection, h3::selection, h4::selection, h5::selection, a::selection {
+    background-color: #B2A476;
+}
+
+#loading_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282d32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other content */
+  }
+  
+  .loader {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #B2A476; /* Initial color */
+    animation: pulse 2s infinite alternate, change-color 4s infinite linear; /* Apply pulsating and color transition animations */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+  }
+  
+  /* Define pulsating animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Grow to 1.2 times original size */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Define color transition animation */
+  @keyframes change-color {
+    0% {
+      background-color: #B2A476;
+    }
+    25% {
+      background-color: white;
+    }
+    50% {
+      background-color: dodgerblue;
+    }
+    75% {
+      background-color: lavender;
+    }
+    100% {
+      background-color: limegreen;
+    }
+  }
+  
+  /* Apply different animation delays for each circle */
+  .circle:nth-child(2) {
+    animation-delay: -1s; /* Delay the animation for the second circle */
+  }
+  
+  .circle:nth-child(3) {
+    animation-delay: -0.5s; /* Delay the animation for the third circle */
+  }
+   
+
+/* Navbar container */
+.navbar {
+    height: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-left: auto;
+    position: relative;
+    top: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all 0.5ms ease-out;
+    z-index: 999;
+    background-color: transparent;
+}
+
+nav.scrolled {
+    background-color: white;
+}
+
+nav.scrolled a,
+nav.scrolled i {
+    color: #282d32;
+}
+
+.navbar-logo a {
+    align-items: center;
+    display: flex;
+}
+
+.navbar-logo a:hover {
+    opacity: 0.8;
+    transition: 500ms ease;
+}
+
+.navbar-logo img {
+    width: 200px;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.dropbtn a:hover,
+.dropbtn a:hover i {
+    color: #B2A476;
+    transition: 5ms ease;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #282d32;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+.dropdown:hover .drop_content {
+    visibility: visible;
+}
+
+.drop_content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #B2A476;
+    width: 80%;
+    left: 10%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    padding-block: 20px;
+}
+
+.drop_content_box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #282d32;
+}
+
+.drop_service a {
+    color: white;
+    display: block;
+}
+
+.drop_service a:hover p {
+    color: #282d32;
+    transition: 500ms ease;
+}
+
+.drop_service a p {
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navbar-content {
+    padding: 14px 16px;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-contact a {
+    font-size: 14px;
+    border-radius: 10px;
+    color: white !important;
+}
+
+.navbar-contact a:hover h3 {
+    color: #B2A476;
+    transition: 5ms ease;
+}
+
+.navbar_ux {
+    display: flex;
+}
+
+.ai_search {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ai_search i {
+    font-size: 24px;
+    color: white;
+}
+
+.ai_search i:hover {
+    color: #B2A476;
+    transition: 500ms;
+}
+
+.search_box {
+    display: none;
+}
+
+.search_box input {
+    width: 800px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: solid 1px #282d32;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.search_box.active {
+    display: block;
+}
+
+.user_account a {
+    text-decoration: none;
+}
+
+.user_account i {
+    font-size: 22px;
+    color: white;
+}
+
+.user_account i:hover {
+    color: #B2A476;
+    transition: 500ms;
+}
+
+/* when clicking the searching button, it displays none */
+.navbar-menu.hidden {
+    display: none;
+}
+
+.scroll-progress-container {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    z-index: 99;
+}
+
+.scroll-progress-container.scrolled {
+    background-color: #eee;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #B2A476;
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-menu,
+    .navbar-items,
+    .navbar-contact,
+    .navbar-document,
+    .mode-switcher,
+    .navbar_ux {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .mobile-menu-icon i {
+        font-size: 24px;
+        color: #282d32;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+    .mobile_dropbtn {
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        color: #282d32;
+        padding: 14px 16px;
+        background-color: inherit;
+        margin: 0;
+    }
+
+    .mobile-nav-active .navbar-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        background-color: white;
+        z-index: 1;
+    }
+
+    .mobile_dropbtn h3 i {
+        right: 5%;
+        position: fixed;
+    }
+
+    .mobile_ux {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile_ux a {
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        color: #282d32;
+        padding: 14px 16px;
+        background-color: inherit;
+        margin: 0;
+    }
+
+    .mobile_ux a:hover {
+        color: #B2A476;
+        transition: 5ms ease;
+    }
+
+    .mobile_dropdown a {
+        color: #282d32;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 14px 16px;
+    }
+
+    .mobile_dropdown a:hover {
+        color: #B2A476;
+        transition: 5ms;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-logo img {
+        width: 150px;
+    }
+
+    .navbar-logo a h3 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
+
