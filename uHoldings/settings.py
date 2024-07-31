@@ -32,13 +32,10 @@ else:
     print("Debugging is disabled")
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
-if DEBUG:
-    ALLOWED_HOSTS = ["*"]
-else:
-    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST',
-                                     'uholdings.up.railway.app')]
+if not DEBUG:
+    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
 
 # Application definition
