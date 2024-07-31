@@ -428,3 +428,11 @@ function navMobileIcon() {
 // Initialize the function
 navMobileIcon();
 
+// For mobile_navbar
+function showSection(sectionId) {
+  document.getElementById(sectionId).classList.add('active');
+}
+
+function hideSection(sectionId) {
+  document.getElementById(sectionId).classList.remove('active');
+}

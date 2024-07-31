@@ -13,10 +13,8 @@
       <p>アカウントを作成して、u&nbsp;Holdingsの最新情報を手に入れよう</p>
       <div class="sign_up_form">
         <form action="GET">
-          <input type="Email" placeholder="Email address" />
-          <input type="text" placeholder="passoword1" />
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+          {{ form.as_p }}
+          <button type="submit">Register</button>
         </form>
       </div>
     </div>

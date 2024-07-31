@@ -28,24 +28,24 @@ a::selection, p::selection, h3::selection, h4::selection, h5::selection, a::sele
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ensure it appears above other content */
-  }
+}
   
-  .loader {
+.loader {
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
+}
   
-  .circle {
+.circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #B2A476; /* Initial color */
     animation: pulse 2s infinite alternate, change-color 4s infinite linear; /* Apply pulsating and color transition animations */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
-  }
+}
   
   /* Define pulsating animation */
   @keyframes pulse {
@@ -61,33 +61,32 @@ a::selection, p::selection, h3::selection, h4::selection, h5::selection, a::sele
   }
   
   /* Define color transition animation */
-  @keyframes change-color {
+@keyframes change-color {
     0% {
-      background-color: #B2A476;
+        background-color: #B2A476;
     }
     25% {
-      background-color: white;
+        background-color: white;
     }
     50% {
-      background-color: dodgerblue;
+        background-color: dodgerblue;
     }
     75% {
-      background-color: lavender;
+        background-color: lavender;
     }
     100% {
-      background-color: limegreen;
-    }
-  }
-  
-  /* Apply different animation delays for each circle */
-  .circle:nth-child(2) {
+        background-color: limegreen;
+    }       
+}
+
+/* Apply different animation delays for each circle */
+.circle:nth-child(2) {
     animation-delay: -1s; /* Delay the animation for the second circle */
-  }
-  
-  .circle:nth-child(3) {
+}
+
+.circle:nth-child(3) {
     animation-delay: -0.5s; /* Delay the animation for the third circle */
-  }
-   
+}
 
 /* Navbar container */
 .navbar {
@@ -348,22 +347,22 @@ nav.scrolled i {
         align-items: center;
         padding: 10px;
     }
-
+    
     .mobile-menu-icon {
         display: block;
         cursor: pointer;
         z-index: 999;
     }
-
+    
     .mobile-menu-icon i {
         font-size: 24px;
         color: #282d32;
         overflow: hidden;
         z-index: 999;
     }
-
+    
     .mobile_dropbtn {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         border: none;
         outline: none;
@@ -372,7 +371,7 @@ nav.scrolled i {
         background-color: inherit;
         margin: 0;
     }
-
+    
     .mobile-nav-active .navbar-items {
         display: flex;
         flex-direction: column;
@@ -386,43 +385,80 @@ nav.scrolled i {
         background-color: white;
         z-index: 1;
     }
-
+    
     .mobile_dropbtn h3 i {
         right: 5%;
         position: fixed;
     }
 
+    .mobile_dropdown button {
+        background: none;
+        border: none;
+    }
+    
+    .mobile_dropdown button h3 {
+        color: #282d32;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+    
     .mobile_ux {
         display: flex;
         flex-direction: column;
     }
-
+    
     .mobile_ux a {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         border: none;
         outline: none;
         color: #282d32;
-        padding: 14px 16px;
+        padding: 28px 32px;
         background-color: inherit;
         margin: 0;
     }
-
+    
     .mobile_ux a:hover {
         color: #B2A476;
         transition: 5ms ease;
     }
-
+    
     .mobile_dropdown a {
         color: #282d32;
         font-weight: bold;
-        font-size: 18px;
-        padding: 14px 16px;
+        font-size: 20px;
+        padding: 28px 32px;
     }
-
+    
     .mobile_dropdown a:hover {
         color: #B2A476;
         transition: 5ms;
+    }
+    
+    .mobile_drop_content {
+        display: none;
+        padding: 10px;
+    }
+    
+    .mobile_drop_content.active {
+        display: block;
+    } 
+
+    .navbar-items {
+        display: none;
+    }
+    
+    .navbar-items.active {
+        display: block;
+    }
+    
+    .mobile_drop_content {
+        display: none;
+    }
+    
+    .mobile_drop_content.active {
+        display: block;
     }
 }
 

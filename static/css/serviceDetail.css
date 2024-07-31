@@ -98,6 +98,10 @@ body {
     margin-top: 50px;
 }
 
+.serviceDetail-contentText p {
+    margin-top: 30px;
+}
+
 .other-solution {
     background-color: #eee;
     padding-block: 80px;

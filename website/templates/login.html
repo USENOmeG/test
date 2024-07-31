@@ -19,15 +19,14 @@
         </p>
       </div>
 
-      <form action="GET">
-        <input id="email_Address" type="text" placeholder="Email Address" />
-        <input id="password1 " type="text" placeholder="Passoword" />
-        <button class="login_btn" type="submit"><h3>Log In</h3></button>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Login</button>
+        <a href="{% url 'logout' %}">Logout</a>
       </form>
-
-      <div class="login_footer">
-        <p>※現在はアカウント作成用のフォームを設けておりません</p>
-      </div>
+      {% if messages %} {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %} {% endif %}
     </div>
   </body>
 </html>

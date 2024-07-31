@@ -1,0 +1,1118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.first-content,
+.rad_content,
+.about-strike3,
+.third-content,
+.homeCareer_text,
+.home-news {
+    padding-inline: 5%;
+    padding-block: 150px;
+} 
+
+.third-header p,
+.news-header p,
+.chatbot-btn button {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.first-content {
+    border-bottom: solid #eee 1px;
+    width: 100vw;
+    height: 92vh;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.5), #B2A476);
+    opacity: 0.8;
+    animation: waveAnimation 60s linear infinite;
+}
+
+.wave:nth-child(2) {
+    animation: waveAnimation2 45s linear infinite;
+    opacity: 0.6;
+}
+
+.wave:nth-child(3) {
+    animation: waveAnimation3 30s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes waveAnimation2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes waveAnimation3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.first-header {
+    margin-top: 100px;
+    z-index: 10;
+}
+
+.first-header h3 {
+    color:  #282d32; 
+    font-size: 120px;
+    font-weight: bolder;
+    grid-row: auto;
+    white-space: normal; 
+    word-wrap: break-word; 
+}
+
+.first-contact {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-paragraph {
+    max-width: 800px;
+}
+
+.home-paragraph p {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #282d32; 
+}
+
+.home_paragraph_link {
+    margin-top: 50px;
+}
+
+.home_paragraph_link a {
+    text-decoration: none;
+}
+
+.home_paragraph_link p {
+    color: #282d32; 
+    font-weight: bold;
+}
+
+.home_paragraph_link p:hover {
+    color: #B2A476;
+}
+
+.home_paragraph_link p:hover i {
+    transform: translateX(10px);
+    transition: 500ms ease;
+}
+
+.typing-animation {
+    display: inline-block;
+    border-right: 5px solid orangered; 
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px; 
+}
+  
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #282d32; }
+}
+
+.rad_content {
+    background-color: #000000;
+}
+
+.rad_card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-lines: 2;
+    gap: 48px;
+}
+
+.rad_card {
+    position: relative;
+    height: 496px;
+    width: 372px;
+    background-color: #B2A476;
+    border: none;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    overflow: hidden;
+}
+
+.rad_card a {
+    text-decoration: none;
+    color: white;
+}
+
+.rad_card:hover {
+    transform: scale(1.05);
+    transition: 500ms ease;
+    background-blend-mode: darken;
+    background-position-x: 500px;
+    background-position-y: 500px;
+}
+
+.red_card_genre p,
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
+    text-align: left;
+}
+
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
+    margin-top: 15px;
+}
+
+.red_card_genre p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.rad_card_header p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rad_card_header h3 {
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rad_card_hiddencontent {
+    visibility: hidden;
+}
+
+.rad_card_hiddencontent p {
+    position: relative;
+    right: -500px;
+    transition: 500ms ease;
+    font-size: 20px;
+}
+
+.rad_card:hover .rad_card_hiddencontent {
+    visibility: visible;
+}
+
+.rad_card:hover .rad_card_hiddencontent p {
+    visibility: visible;
+    transform: translateX(-500px);
+    transition: 500ms ease;
+}
+
+.rad_card_content_button {
+    position: absolute; 
+    bottom: 20px;     
+    right: 20px;        
+}
+
+.rad_card_content_button h3 {
+    text-align: right;
+}
+
+.CopyRights_highlightBar_container {
+    padding-inline: 5%;
+    padding-block: 16px;
+    border-bottom: solid #eee 1px;
+}
+
+.CopyRights_highlightBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CopyRights_highlightBar h3 {
+    font-weight: bolder;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    align-self: center;
+}
+
+.highlight_content {
+    display: flex;
+    gap: 10px;
+}
+
+.highlight_number {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #B2A476;
+    border-right: solid #B2A476 1px;
+}
+
+.highlight_text {
+    align-self: center;
+}
+
+.highlight_text a {
+    text-decoration: none;
+    color: #282d32;
+}
+
+.highlight_text a:hover {
+    color: #B2A476;
+    transition: 500ms ease;
+}
+
+.about-strike3 {
+    border-bottom: solid #eee 1px;
+}
+
+.strike3-header h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.strike3-header p {
+    font-size: 24px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    margin-top: 100px;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.strike3-image {
+    text-align: center;
+}
+
+.strike3-image img {
+    max-width: 1000px;
+    max-height: 600px;
+}
+
+.strike3Image-paragraph {
+    padding: 10px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+  
+.strike3-footer {
+    margin-top: 50px;
+}
+
+.strike3-footer p {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.strike3-footer p span {
+    background: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.third-content {
+    background-color: #000000;
+    border-bottom: solid #eee 1px;
+    position: relative;
+    text-align: center;
+}
+
+.third-header {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 50%; 
+    transform: translateY(0); 
+    z-index: 1; 
+    background-color: transparent;
+    transition: top 0.3s, transform 0.3s; 
+    text-align: center;
+}
+
+.third-header p {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.third-header h3 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.third-header span {
+    color: #B2A476;
+    font-size: 130px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: bold;
+}
+
+#whyUs_subHeader {
+    font-size: 130px;
+}
+
+.whyUs_cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.whyUs_card {
+    width: 45%; 
+    margin-top: 150px;
+    padding: 40px;
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.whyUs_card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.whyUs_card:nth-child(even) {
+    align-self: flex-end;
+}
+
+.whyUs_card h4 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.whyUs_card_hidden {
+    position: relative;
+    top: 1050px;
+    visibility: hidden;
+}
+
+.whyUs_card:hover .whyUs_card_header h4 {
+    transform: translateY(-1100px);
+    transition: 500ms ease;
+}
+
+.whyUs_card:hover .whyUs_card_hidden {
+    visibility: visible;
+    transform: translateY(-1050px);
+    transition: 500ms ease;
+}
+
+.home_career {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.homeCareer_image {
+    flex: 1;
+    position: relative;
+}
+
+.homeCareer_image img#main_image {
+    max-width: 1000px;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    z-index: -1; 
+}
+
+.homeCareer_image img#sub_image {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    top: -30px;
+    z-index: 10; 
+}
+
+.homeCareer_text {
+    flex: 1;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.homeCareer_text h4 {
+    font-size: 24px;
+    margin-top: 30px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.homeCareer_text h3 {
+    font-size: 42px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.homeCareer_text h5 {
+    font-size: 18px;
+    margin-block: 30px;
+}
+
+.homeCareer_text h3 span {
+    color: #B2A476;
+    font-size: 70px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: bold;
+}
+
+.homeCareer_text a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #282d32;
+    font-weight: bold;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.homeCareer_text a:hover {
+    color: #B2A476;
+    transition: 500ms ease;
+}
+
+.homeCareer_text a:hover i {
+    color: #B2A476;
+    transform: translateX(10px);
+    transition: 500ms ease;
+}
+
+.home-news {
+    border-bottom: solid #eee 1px;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.news-header h3 {
+    font-size: 24px;
+    color: #282d32;
+}
+
+.news-header p {
+    font-size: 80px;
+    font-weight: bold;
+    color: #B2A476;
+}
+
+.news-content {
+    margin-top: 100px;
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 500px;
+}
+
+.news-card {
+    flex: 0 0 auto;
+}
+
+.news-card a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #282d32;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.news-card .news_date,
+.news-card .news_content {
+    padding: 10px;
+}
+
+.news_controls {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls {
+    position: relative;
+    z-index: 10;
+}
+
+#prev, #play-pause, #next {
+    background-color: transparent;
+    color: #282d32;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#play-pause i {
+    font-size: 30px;
+}
+
+.indicators {
+    position: relative;
+    display: flex;
+    z-index: 10;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #282d32;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #B2A476;
+}
+
+/* For fixed content and scripts*/
+.chatbot-btn {
+    position: fixed; 
+    right: 5%;
+    bottom: 5%;
+    z-index: 999; 
+}
+
+.chatbot-btn button {
+    width: 150px;
+    padding: 15px 30px;
+    border-radius: 40px;
+    border: transparent;
+    color: #282d32;
+    background-color: lightblue;
+    font-size: 20px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chatbot-section {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: none;
+    z-index: 10;
+    background-color: white;
+    transition: 2s;
+    border-radius: 20px;
+    border: solid #eee 1px;
+    padding-inline: 5%;
+    box-shadow: 0 0 5px;
+}
+
+.back-to-top-button {
+    background-color: white;
+    color: #282d32;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-top: solid #eee 1px;
+    border-bottom: solid #eee 1px;
+}
+
+.back-to-top-button h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.back-to-top-button:hover {
+    background-color: whitesmoke;
+    transition: 500ms ease;
+}
+
+/* For lower resolution pc */
+@media (max-width: 1600px){
+    .first-header h3 {
+        font-size: 110px;
+    }
+    .rad_card_container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .rad_card {
+        height: 424px;
+        width: 276px;
+    }
+    .rad_card_paragraph p {
+        font-size: 12px;
+    }
+    .strike3-header h3,
+    .third-header h3,
+    .news-header p {
+        font-size: 80px;
+    }  
+    .strike3-header p {
+        font-size: 20px;
+    }
+    .third-header h3 {
+        font-size: 50px;
+    }
+    .third-header span {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .homeCareer_text,
+    .home-news {
+        padding-inline: 5%;
+        padding-block: 150px;
+    } 
+    .first-header h3 {
+        font-size: 90px;
+    }
+}
+
+/* For tablets i.g. Ipads */
+@media (max-width: 1024px) {
+    .first-header {
+        margin-left: 0;
+    }
+    .first-header h3 {
+        font-size: 74px;
+        text-align: center;
+    }
+    .home-paragraph {
+        max-width: 100%;
+    }
+    .CopyRights_highlightBar {
+        overflow-x: scroll;
+    }
+    .CopyRights_highlightBar h3 {
+        margin-right: 50px;
+    }
+    .highlight_content {
+        min-width: 200px;
+    }
+    .rad_card_container {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    .strike3-header h3,
+    .third-header h3,
+    .news-header h3 {
+        font-size: 58px;
+    }  
+    .strike3-footer p {
+        font-size: 28px;
+    }
+    .third-header span {
+        font-size: 60px;
+    }
+    #whyUs_subHeader {
+        font-size: 76px;
+    }
+    .home_career {
+        display: flex;
+        flex-direction: column;
+    }
+    .homeCareer_image {
+        order: 1;
+    }
+    .homeCareer_text {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .homeCareer_text,
+    .home-news {
+        padding-block: 80px;
+    } 
+
+    .first-content {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    .first-header h3 {
+        font-size: 50px;
+    }
+
+    .home_paragraph_link a {
+        text-align: center;
+    }
+
+    .rad_card_container {
+        display: flex;
+        overflow-x: scroll;
+    } 
+    .rad_card {
+        min-height: 496px;
+        min-width: 372px;
+    }
+    .rad_card:hover {
+        transform: scale(1.0);
+    }
+    .third-header span {
+        font-size: 50px;
+    }
+    .third-header h3,
+    .news-header h3 {
+        font-size: 32px;
+    }
+    .third-header p,
+    .news-header p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 430px) {
+    .first-header h3 {
+        font-size: 48px;
+    }  
+
+    .strike3-header h3,
+    .strike3-header h3 span,
+    .third-header h3,
+    .news-header p {
+        font-size: 42px;
+    }
+
+    .home-paragraph p,
+    .third-header p,
+    .news-header h3,
+    .strike3-header p {
+        font-size: 20px;
+    }
+
+    .rad_card_container {
+        gap: 20px;
+    }
+
+    .rad_card {
+        min-width: 350px;
+        min-height: 466px;
+    }
+
+    .strike3Image-paragraph p {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .strike3-image img,
+    .strike3-image2 img {
+        margin-top: 50px;
+        max-width: 400px;
+    }
+
+    .strike3-footer {
+        margin-top: 30px;
+    }
+
+    .strike3-footer p {
+        font-size: 20px;
+    }
+
+    .slide {
+        margin-top: 30px;
+    }
+
+    .third-main {
+        margin-top: 30px;
+    }
+
+    .third-header h3,
+    .third-header p {
+        text-align: center;
+    }
+
+    #whyUs_subHeader {
+        font-size: 52px;
+    }
+
+    .whyUs_cards_container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .whyUs_card {
+        width: 80%; 
+        margin-top: 100px;
+        padding: 20px;
+        flex: 1 1 100%;
+        z-index: 2;
+    }
+
+    .whyUs_card h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .whyUs_card_hidden {
+        position: relative;
+        top: 1050px;
+        visibility: hidden;
+    }
+
+    .whyUs_card:hover .whyUs_card_header h4 {
+        transform: translateY(-1100px);
+        transition: 500ms ease;
+    }
+
+    .whyUs_card:hover .whyUs_card_hidden {
+        visibility: visible;
+        transform: translateY(-1050px);
+        transition: 500ms ease;
+    }
+    .homeCareer_text {
+        padding-block: 30px;
+        margin-left: 0px;
+    }
+    .homeCareer_text h3 {
+        font-size: 36px;
+    }
+    .homeCareer_text h5 {
+        font-size: 18px;
+    }
+    .homeCareer_text h3 span {
+        font-size: 50px;
+    }
+    .news-card p {
+        font-size: 18px;
+    }
+    .newsCard-header a {
+        font-size: 16px;
+    }
+    .read-more-btn {
+        font-size: 16px;
+    }
+    .subs-header h3 {
+        font-size: 18px;
+    }
+    #play-pause i {
+        font-size: 24px;
+    }
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 397px) {
+    .first-content,
+    .rad_content,
+    .about-strike3,
+    .third-content,
+    .home-news {
+        padding-block: 50px;
+    }
+    .first-header h3 {
+        font-size: 48px;
+    }
+    .strike3-header h3,
+    .strike3-header h3 span,
+    .third-header h3,
+    .news-header p {
+        font-size: 38px;
+    }
+    .home-paragraph p,
+    .third-header p,
+    .news-header h3,
+    .strike3-header p {
+        font-size: 18px;
+    }
+    .rad_card_container {
+        gap: 20px;
+    }
+    .rad_card {
+        min-height: 426px;
+        min-width: 320px;
+    }
+    .slide {
+        margin-top: 30px;
+    }
+    .strike3Image-paragraph p {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .strike3-image img,
+    .strike3-image2 img {
+        margin-top: 50px;
+        max-width: 380px;
+    }
+    .strike3-footer {
+        margin-top: 30px;
+    }
+    .strike3-footer p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .third-main {
+        margin-top: 30px;
+    }
+    .third-header h3,
+    .third-header p {
+        text-align: center;
+    }
+    #whyUs_subHeader {
+        font-size: 50px;
+    }
+    .whyUs_cards_container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .whyUs_card {
+        width: 80%; 
+        margin-top: 100px;
+        padding: 20px;
+        flex: 1 1 100%;
+        z-index: 2;
+    }
+    .whyUs_card h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .whyUs_card_hidden {
+        position: relative;
+        top: 1050px;
+        visibility: hidden;
+    }
+    .whyUs_card:hover .whyUs_card_header h4 {
+        transform: translateY(-1100px);
+        transition: 500ms ease;
+    }
+    .whyUs_card:hover .whyUs_card_hidden {
+        visibility: visible;
+        transform: translateY(-1050px);
+        transition: 500ms ease;
+    }
+    .homeCareer_text {
+        padding-block: 30px;
+        margin-left: 0px;
+    }
+    .homeCareer_text h3 {
+        font-size: 36px;
+    }
+    .homeCareer_text h5 {
+        font-size: 18px;
+    }
+    .homeCareer_text h3 span {
+        font-size: 50px;
+    }
+    .news-card p {
+        font-size: 18px;
+    }
+    .newsCard-header a {
+        font-size: 16px
+    }
+    .read-more-btn {
+        font-size: 16px;
+    }
+    .subs-header h3 {
+        font-size: 18px;
+    }
+    #play-pause i {
+        font-size: 24px;
+    }
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-paragraph p,
+    .third-header p,
+    .news-header h3,
+    .strike3-header p {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 680px) {
+    .home-paragraph p {
+        font-size: 14px;
+    }
+}

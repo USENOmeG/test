@@ -35,199 +35,33 @@
         </div>
 
         <div class="case_cards">
-          <ul>
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
+          <div class="rad_card_container">
+            {% for content in rad_card %}
+            <div
+              class="rad_card"
+              style="background-image: url('{{ content.thumbnail_image.url }}');"
+            >
+              <a href="{% url 'radCard_detail' content.pk %}">
+                <div class="rad_card_genre">
+                  <p>{{ content.genres }}</p>
                 </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
+                <div class="rad_card_header">
+                  <p>{{ content.header_main }}</p>
                 </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
+                <div class="rad_card_hiddencontent">
+                  <div class="rad_card_paragraph">
+                    <p>{{ content.description }}</p>
                   </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
+                  <div class="rad_card_content_button">
+                    <a href="{% url 'radCard_detail' content.pk %}"
+                      ><h3>EXPAND</h3></a
+                    >
                   </div>
                 </div>
               </a>
-            </li>
-
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
-                </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
-                </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
-                  </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
-                </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
-                </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
-                  </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
-                </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
-                </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
-                  </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
-                </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
-                </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
-                  </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/rad_card">
-                <div class="case_card_genre">
-                  <p>CASE STUDY</p>
-                </div>
-
-                <div class="case_card_header">
-                  <p>開示判決</p>
-                  <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
-                  <h4>Date: 2024/07/06</h4>
-                </div>
-
-                <div class="case_card_showncontent">
-                  {% comment %} inserting background image {% endcomment %}
-                </div>
-
-                <div class="case_card_hiddencontent">
-                  <div class="case_card_paragraph">
-                    <p>
-                      In a serene forest, the bright sun filtered through the
-                      dense foliage, casting playful shadows on the vibrant
-                      green moss. Birds chirped melodiously while a gentle
-                      breeze whispered through the trees.
-                    </p>
-                  </div>
-                  <div class="case_card_content_button">
-                    <a href="#"><h3>EXPAND</h3></a>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
+            </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

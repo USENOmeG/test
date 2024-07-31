@@ -21,7 +21,7 @@
 }
 
 .case_card_container {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .case_study_header P {
@@ -37,22 +37,15 @@
     color: #B2A476;
 }
 
-.case_card_container {
-    
-}
-
-.case_cards {
+.rad_card_container {
     margin-top: 50px;
-}
-
-.case_cards ul {
-    list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    max-lines: 2;
     gap: 48px;
 }
 
-.case_cards ul li {
+.rad_card {
     position: relative;
     height: 496px;
     width: 372px;
@@ -67,12 +60,12 @@
     overflow: hidden;
 }
 
-.case_cards ul li a {
+.rad_card a {
     text-decoration: none;
     color: white;
 }
 
-.case_cards ul li:hover {
+.rad_card:hover {
     transform: scale(1.05);
     transition: 500ms ease;
     background-blend-mode: darken;
@@ -81,15 +74,15 @@
 }
 
 .red_card_genre p,
-.case_cards ul li header p,
-.case_cards ul li header h3,
-.case_cards ul li_paragraph p {
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
     text-align: left;
 }
 
-.case_cards ul li header p,
-.case_cards ul li header h3,
-.case_cards ul li_paragraph p {
+.rad_card_header p,
+.rad_card_header h3,
+.rad_card_paragraph p {
     margin-top: 15px;
 }
 
@@ -98,59 +91,57 @@
     font-weight: bold;
 }
 
-.case_cards ul li header p {
-    font-size: 28px;
+.rad_card_header p {
+    font-size: 24px;
     font-weight: bold;
 }
 
-.case_cards ul li header h3 {
+.rad_card_header h3 {
     line-height: 22px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.case_card_hiddencontent {
+.rad_card_hiddencontent {
     visibility: hidden;
 }
 
-.case_card_hiddencontent p {
+.rad_card_hiddencontent p {
     position: relative;
     right: -500px;
     transition: 500ms ease;
     font-size: 20px;
 }
 
-.case_cards ul li:hover .case_card_hiddencontent {
+.rad_card:hover .rad_card_hiddencontent {
     visibility: visible;
 }
 
-.case_cards ul li:hover .case_card_hiddencontent p {
+.rad_card:hover .rad_card_hiddencontent p {
     visibility: visible;
     transform: translateX(-500px);
     transition: 500ms ease;
 }
 
-.case_card_content_button {
+.rad_card_content_button {
     position: absolute; 
     bottom: 20px;     
     right: 20px;        
 }
 
-.case_card_content_button h3 {
+.rad_card_content_button h3 {
     text-align: right;
 }
 
 @media (max-width: 1600px) {
-    .case_card_container {
+    .rad_card_container {
         grid-template-columns: repeat(4, 1fr);
     }
-    
-    .case_cards ul li {
+    .rad_card {
         height: 424px;
         width: 276px;
     }
-
-    .case_card_paragraph p {
+    .rad_card_paragraph p {
         font-size: 12px;
     }
 }

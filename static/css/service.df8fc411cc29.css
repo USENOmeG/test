@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+#nav_services a {
+    color: #B2A476 !important;
+}
+
+.dropbtn a,
+.dropbtn a,
+.navbar_ux a i,
+.navbar_ux  button i,
+.language_selection button i {
+    color: #282d32; 
+}
+
+.dropbtn a:hover {
+    color: #B2A476;
+}
+
+.scroll-progress-container {
+    background-color: #eee;
+}
+
+.service-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.serviceDetail-header,
+.serviceDetail-content,
+.serviceDetail-contentB {
+    padding-inline: 5%;
+    padding-block: 100px;
+    background: #282d32;
+    background-blend-mode: multiply;
+}
+
+
+.serviceDetail-headerA,
+.serviceDetail-headerC {
+    text-align: left;
+    background-color: gray; 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat:auto;
+}
+
+.serviceDetail-headerB,
+.serviceDetail-headerD {
+    text-align: right;
+    background-color: gray; 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceDetail-headerA {
+    background-image: url("../images/decoration/law1.aace7426a0d3.jpg");
+}
+
+.serviceDetail-headerB {
+    background-image: url("../images/decoration/law2.74dc49ad81bf.jpg");
+}
+
+.serviceDetail-headerC {
+    background-image: url("../images/decoration/law3.596b7cf86106.jpg");
+}
+
+.serviceDetail-headerD {
+    background-image: url("../images/decoration/law4.2448160d4a7c.jpg");
+}
+
+.serviceDetail-headerA:hover,
+.serviceDetail-headerB:hover,
+.serviceDetail-headerC:hover,
+.serviceDetail-headerD:hover {
+    background-color: white;
+    background-blend-mode: multiply;
+    transition: 500ms ease;
+}
+
+.serviceDetail-headerA h3,
+.serviceDetail-headerC h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.serviceDetail-headerB h3,
+.serviceDetail-headerD h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.serviceDetail-headerA p,
+.serviceDetail-headerB p,
+.serviceDetail-headerC p,
+.serviceDetail-headerD p {
+    font-size: 16px;
+    margin-top: 30px;
+    color: white;
+}
+
+.serviceDetail-text {
+    padding-inline: 5%;
+    padding-block: 100px;
+}
+
+.more_info {
+    margin-top: 30px;
+    overflow: initial;
+}
+
+.more_info a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 25px;
+    color: #282d32;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.more_info a:hover {
+    color: white;
+    background-color: #282d32;
+    transition: 500ms ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .service-container {
+        margin-top: 100px;
+        display: block;
+    }
+} 
+    
+
+

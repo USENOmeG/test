@@ -82,294 +82,31 @@
       want to use prettier, remove here and save the script {% endcomment %}
       <div class="rad_content">
         <div class="rad_card_container">
+          {% for card in rad_card %}
           <div
             class="rad_card"
-            style="
-              background-image: url('{% static 'images/rad_card_background/rad_image1.jpg' %}');
-            "
+            style="background-image: url('{{ card.thumbnail_image.url }}');"
           >
-            <a href="/rad_card">
+            <a href="{% url 'radCard_detail' card.pk %}">
               <div class="rad_card_genre">
-                <p>CASE STUDY</p>
+                <p>{{ card.genres }}</p>
               </div>
-
               <div class="rad_card_header">
-                <p>開示判決</p>
-                <h3>対BIGLOBEにおいてu Holdings側が勝訴の判決をいただいた</h3>
+                <p>{{ card.header_main }}</p>
               </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
               <div class="rad_card_hiddencontent">
                 <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
+                  <p>{{ card.description }}</p>
                 </div>
                 <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
+                  <a href="{% url 'radCard_detail' card.pk %}"
+                    ><h3>EXPAND</h3></a
+                  >
                 </div>
               </div>
             </a>
           </div>
-
-          <div class="rad_card">
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>NEWS</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>新規許諾メーカー</p>
-                <h3>X社よりYの許諾を頂き、調査を開始</h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    国内超人気作家のX氏より、作品の調査許諾を頂き、海賊版等の違法アップロード/ダウンロードの取り締まりを開始した。
-                    すでに数多くの違法行為を観測しており、順次申し立てを行う予定である。
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="rad_card"
-            style="
-              background-image: url('{% static 'images/rad_card_background/rad_image2.jpg' %}');
-            "
-          >
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="rad_card"
-            style="
-              background-image: url('{% static 'images/rad_card_background/rad_image3.jpg' %}');
-            "
-          >
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="rad_card">
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="rad_card"
-            style="
-              background-image: url('{% static 'images/rad_card_background/rad_image4.jpeg' %}');
-            "
-          >
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="rad_card">
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="rad_card"
-            style="
-              background-image: url('{% static 'images/rad_card_background/rad_image5.jpeg' %}');
-            "
-          >
-            <a href="#">
-              <div class="rad_card_genre">
-                <p>CASE STUDY</p>
-              </div>
-
-              <div class="rad_card_header">
-                <p>AAAAAAAAAA</p>
-                <h3>
-                  Mr.Usen, the former president of Japan is aboutto get sued on
-                  the case of strike3
-                </h3>
-              </div>
-
-              <div class="rad_card_showncontent">
-                {% comment %} inserting background image {% endcomment %}
-              </div>
-
-              <div class="rad_card_hiddencontent">
-                <div class="rad_card_paragraph">
-                  <p>
-                    In a serene forest, the bright sun filtered through the
-                    dense foliage, casting playful shadows on the vibrant green
-                    moss. Birds chirped melodiously while a gentle breeze
-                    whispered through the trees.
-                  </p>
-                </div>
-                <div class="rad_card_content_button">
-                  <a href="#"><h3>EXPAND</h3></a>
-                </div>
-              </div>
-            </a>
-          </div>
+          {% endfor %}
         </div>
       </div>
       {% comment %} till here {% endcomment %}
@@ -532,46 +269,18 @@
         </div>
 
         <div class="news-content">
+          {% for news_content in news %}
           <div class="news-card">
-            <a href="#">
+            <a href="{% url 'radCard_detail' news_content.pk %}">
               <div class="news_date">
-                <p>2024年1月26日</p>
+                <p>{{ news_content.time_stamp }}</p>
               </div>
               <div class="news_content">
-                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
+                <p>{{ news_content.header_main }}</p>
               </div>
             </a>
           </div>
-          <div class="news-card">
-            <a href="#">
-              <div class="news_date">
-                <p>2024年1月26日</p>
-              </div>
-              <div class="news_content">
-                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-              </div>
-            </a>
-          </div>
-          <div class="news-card">
-            <a href="#">
-              <div class="news_date">
-                <p>2024年1月26日</p>
-              </div>
-              <div class="news_content">
-                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-              </div>
-            </a>
-          </div>
-          <div class="news-card">
-            <a href="#">
-              <div class="news_date">
-                <p>2024年1月26日</p>
-              </div>
-              <div class="news_content">
-                <p>u&nbsp;Holdingsと株式会社Xの業務提携</p>
-              </div>
-            </a>
-          </div>
+          {% endfor %}
         </div>
 
         <div class="news_controls">

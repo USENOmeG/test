@@ -12,7 +12,7 @@ body {
 }
 
 #nav_help a {
-    color: #FF4500 !important;
+    color: #B2A476 !important;
 }
 
 .dropbtn a,
@@ -23,7 +23,7 @@ body {
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476;
 }
 
 .scroll-progress-container {
@@ -69,8 +69,8 @@ body {
 
 .help-section.active h3 {
     font-weight: bold;
-    color: #FF4500;
-    background: #FFD580;
+    color: #B2A476;
+    background: rgba(0, 204, 255, 0.5);
     border-radius: 10px;
 }
 
@@ -106,7 +106,7 @@ body {
 .help-mainHeader p {
     font-size: 20px;
     font-weight: bold;
-    color: #FF4500;
+    color: #B2A476;
     font-family: poppins;
 }
 

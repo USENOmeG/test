@@ -1,0 +1,71 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/e325191aeb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/radCard_detail.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="card_detail_container">
+      <div class="radDetail_header">
+        <h1>{{ card_detail.genres }}</h1>
+        <h3>{{ card_detail.header_main }}</h3>
+        <h2>{{ card_detail.description}}</h2>
+      </div>
+
+      <div class="radDetail_content">
+        {% if card_detail.image1 %}
+        <img
+          src="{{ card_detail.image1.url }}"
+          alt="{{ card_detail.header_main }}"
+        />
+        {% endif %}
+        <p>{{ card_detail.paragraph1 }}</p>
+      </div>
+
+      <div class="radDetail_content">
+        {% if card_detail.image2 %}
+        <img
+          src="{{ card_detail.image2.url }}"
+          alt="{{ card_detail.header_main }}"
+        />
+        {% endif %}
+        <p>{{ card_detail.paragraph2 }}</p>
+      </div>
+
+      <div class="radDetail_content">
+        {% if card_detail.image3 %}
+        <img
+          src="{{ card_detail.image3.url }}"
+          alt="{{ card_detail.header_main }}"
+        />
+        {% endif %}
+        <p>{{ card_detail.paragraph3 }}</p>
+      </div>
+
+      <div class="radDetail_content">
+        {% if card_detail.image4 %}
+        <img
+          src="{{ card_detail.image4.url }}"
+          alt="{{ card_detail.header_main }}"
+        />
+        {% endif %}
+        <p>{{ card_detail.paragraph4 }}</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+{% endblock content %}

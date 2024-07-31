@@ -24,7 +24,7 @@
 .PPolicy-container {
     margin-block: 100px;
     padding: 50px;
-    padding-inline: 10%;
+    padding-inline: 5%;
 }
 
 .policy-header  h3 {
@@ -56,4 +56,19 @@
 
 .policy-content p {
     margin-top: 20px;
+}
+
+@media (max-width: 430px) {
+    
+    .policy-header  h3 {
+        font-size: 48px;
+    }
+    
+    .policy-header p {
+        font-size: 14px;
+    }
+    
+    .policy-main {
+        margin-top: 50px;
+    }
 }

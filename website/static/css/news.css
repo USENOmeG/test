@@ -7,7 +7,7 @@
 }
 
 #nav_news a {
-    color: #FF4500 !important;
+    color: #B2A476 !important;
 }
 
 .dropbtn a,
@@ -18,7 +18,7 @@
 }
 
 .dropbtn a:hover {
-    color: #FF4500;
+    color: #B2A476
 }
 
 .scroll-progress-container {
@@ -35,7 +35,7 @@
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    color: #FF4500;
+    color: #B2A476;
     font-family: poppins;
 }
 
@@ -66,6 +66,25 @@
 .hidden-content {
     display: none;
     margin-top: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.hidden-content::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 10px;
+    background: white;
+}
+
+.news-card.expanded .hidden-content {
+    -webkit-line-clamp: unset;
 }
   
 .read-more-btn {
@@ -91,7 +110,7 @@
 
 .news-button button {
     padding: 5px 10px;
-    border: solid orangered 1px;
+    border: solid #B2A476 1px;
     border-radius: 5px;
     background-color: transparent;
 }
@@ -111,15 +130,15 @@
     
     .news-header h3 {
         text-align: left;
-        font-size: 30px;
+        font-size: 48px;
     }
 
     .news-card a {
-        font-size: 16px;
+        font-size: 22px;
     }
       
     .read-more-btn {
-        font-size: 16px;
+        font-size: 22px;
     }
 
     .news-card {

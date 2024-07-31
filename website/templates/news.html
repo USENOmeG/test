@@ -19,50 +19,19 @@
     </div>
 
     <div class="news-content">
+      {% for news_content in news %}
       <div class="news-card">
         <div class="newsCard-header">
-          <a href="#">2024年1月26日 - uホールディングと株式会社Xの業務提携</a>
-          <button class="read-more-btn" onclick="toggleContent(this)">
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-        </div>
-
-        <p class="hidden-content">
-          uホールディングが、株式会社Xとの戦略的な業務提携を発表しました。この提携により、双方は持つ技術力やノウハウを結集し、新たな市場への展開を図ります。
-          uホールディングの豊富なリソースと株式会社Xの専門性が交わることで、双方が目指すイノベーションが加速され、顧客への付加価値が向上することが期待されます。
-          提携により、業界における新たな標準を築く一翼となり、市場競争において一層の強みを発揮することでしょう。両社は協力し、今後ますます発展していくことが期待されます。
-        </p>
-      </div>
-
-      <div class="news-card">
-        <div class="newsCard-header">
-          <a href="#">2023年11月26日 - uホールディングと株式会社Yの業務提携</a>
-          <button class="read-more-btn" onclick="toggleContent(this)">
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-        </div>
-        <p class="hidden-content">
-          uホールディングが、株式会社Xとの戦略的な業務提携を発表しました。この提携により、双方は持つ技術力やノウハウを結集し、新たな市場への展開を図ります。
-          uホールディングの豊富なリソースと株式会社Yの専門性が交わることで、双方が目指すイノベーションが加速され、顧客への付加価値が向上することが期待されます。
-          提携により、業界における新たな標準を築く一翼となり、市場競争において一層の強みを発揮することでしょう。両社は協力し、今後ますます発展していくことが期待されます。
-        </p>
-      </div>
-
-      <div class="news-card">
-        <div class="newsCard-header">
-          <a href="#"
-            >2022年12月26日 - uホールディングによる著作権保護サービスの開始</a
+          <a href="{% url 'radCard_detail' news_content.pk %}"
+            >{{ news_content.time_stamp }} - {{ news_content.header_main }}</a
           >
           <button class="read-more-btn" onclick="toggleContent(this)">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
         </div>
-        <p class="hidden-content">
-          uホールディングが新たな一翼を担う著作権保護サービスを本日開始しました。このサービスは、コンテンツ制作者や企業がデジタル上での知的財産権を確実に保護できる仕組みを提供します。
-          uホールディングの最先端技術を駆使し、不正コピーの防止や適切なライセンス管理を可能にし、クリエイターたちが安心して創造活動に集中できる環境を整備しました。
-          今後ますます拡大が見込まれるデジタル時代において、Uホールディングは著作権の健全な保護を担う存在として、業界に新たな風を吹き込むことでしょう。
-        </p>
+        <p class="hidden-content">{{ news_content.paragraph1 }}</p>
       </div>
+      {% endfor %}
     </div>
 
     <div class="news-pages">

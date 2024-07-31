@@ -39,150 +39,160 @@
           </div>
 
           <div class="navbar-items">
-            <div class="dropdown" id="dropdown_margin">
-              <button class="mobile_dropbtn" id="nav_services">
+            <!-- What we do Section -->
+            <div class="mobile_dropdown" id="mobile_margin">
+              <button
+                class="mobile_dropbtn"
+                onclick="showSection('what_we_do_section')"
+              >
                 <h3>
                   What we do&nbsp;<i class="fa-solid fa-chevron-right"></i>
                 </h3>
               </button>
-
-              <div class="drop_content">
-                <div class="drop_content_box">
-                  <button>
+              <div class="mobile_drop_content" id="what_we_do_section">
+                <button onclick="hideSection('what_we_do_section')">
+                  <h3>
+                    <i class="fa-solid fa-chevron-left"></i>&nbsp;What we do
+                  </h3>
+                </button>
+                <div class="mobile_drop_content_box">
+                  <button onclick="showSection('capabilities_section')">
                     <h3>
                       Capabilities&nbsp;<i
                         class="fa-solid fa-chevron-right"
                       ></i>
                     </h3>
                   </button>
-                  <div class="drop_service">
-                    <a href="/service1">
-                      <p>著作物の保護</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="/service2">
-                      <p>違法ダウンローダーの摘発</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="/service3">
-                      <p>協力関係の構築</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="/service4">
-                      <p>監視と検知</p>
-                    </a>
+                  <div class="mobile_drop_content" id="capabilities_section">
+                    <button onclick="hideSection('capabilities_section')">
+                      <h3>
+                        <i class="fa-solid fa-chevron-left"></i
+                        >&nbsp;Capabilities
+                      </h3>
+                    </button>
+                    <div class="drop_service">
+                      <a href="/service1"><p>著作物の保護</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="/service2"><p>違法ダウンローダーの摘発</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="/service3"><p>協力関係の構築</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="/service4"><p>監視と検知</p></a>
+                    </div>
                   </div>
                 </div>
-
-                <div class="drop_content_box">
-                  <button>
+                <div class="mobile_drop_content_box">
+                  <button onclick="showSection('case_studies_section')">
                     <h3>
                       Case studies&nbsp;<i
                         class="fa-solid fa-chevron-right"
                       ></i>
                     </h3>
                   </button>
-                  <div class="drop_service">
-                    <a href="/case_study">
-                      <p>開示判決一覧</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="/about_case_study">
-                      <p>開示判決とは</p>
-                    </a>
+                  <div class="mobile_drop_content" id="case_studies_section">
+                    <button onclick="hideSection('case_studies_section')">
+                      <h3>
+                        <i class="fa-solid fa-chevron-left"></i>&nbsp;Case
+                        studies
+                      </h3>
+                    </button>
+                    <div class="drop_service">
+                      <a href="/case_study"><p>開示判決一覧</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="/about_case_study"><p>開示判決とは</p></a>
+                    </div>
                   </div>
                 </div>
-
-                <div class="drop_content_box">
-                  <button>
+                <div class="mobile_drop_content_box">
+                  <button onclick="showSection('industries_section')">
                     <h3>
                       Industries&nbsp;<i class="fa-solid fa-chevron-right"></i>
                     </h3>
                   </button>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>著作物の管理</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>著作物の保護</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>データ管理</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>ハイレベルテクノロジー</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>ソフトウエア</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="#">
-                      <p>プラットフォーム</p>
-                    </a>
+                  <div class="mobile_drop_content" id="industries_section">
+                    <button onclick="hideSection('industries_section')">
+                      <h3>
+                        <i class="fa-solid fa-chevron-left"></i>&nbsp;Industries
+                      </h3>
+                    </button>
+                    <div class="drop_service">
+                      <a href="#"><p>著作物の管理</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="#"><p>著作物の保護</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="#"><p>データ管理</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="#"><p>ハイレベルテクノロジー</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="#"><p>ソフトウエア</p></a>
+                    </div>
+                    <div class="drop_service">
+                      <a href="#"><p>プラットフォーム</p></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="dropdown">
-              <button class="mobile_dropbtn" id="nav_services">
+            <!-- Who we are Section -->
+            <div class="mobile_dropdown">
+              <button
+                class="mobile_dropbtn"
+                onclick="showSection('who_we_are_section')"
+              >
                 <h3>
                   Who we are&nbsp;<i class="fa-solid fa-chevron-right"></i>
                 </h3>
               </button>
-
-              <div class="drop_content">
-                <div class="drop_content_box">
-                  <button>
-                    <h3>Our organization</h3>
-                    &nbsp;<i class="fa-solid fa-chevron-right"></i>
+              <div class="mobile_drop_content" id="who_we_are_section">
+                <button onclick="hideSection('who_we_are_section')">
+                  <h3>
+                    <i class="fa-solid fa-chevron-left"></i>&nbsp;Who we are
+                  </h3>
+                </button>
+                <div class="mobile_drop_content_box">
+                  <button onclick="showSection('organization_section')">
+                    <h3>
+                      Our organization&nbsp;<i
+                        class="fa-solid fa-chevron-right"
+                      ></i>
+                    </h3>
                   </button>
-                  <div class="drop_service">
-                    <a href="/about/company-index">
-                      <p>u&nbsp;Holdingsについて</p>
-                    </a>
-                  </div>
-
-                  <div class="drop_service">
-                    <a href="/service2">
-                      <p>Office</p>
-                    </a>
+                  <div class="mobile_drop_content" id="organization_section">
+                    <button onclick="hideSection('organization_section')">
+                      <h3>
+                        <i class="fa-solid fa-chevron-left"></i>&nbsp;Our
+                        organization
+                      </h3>
+                    </button>
+                    <div class="drop_service">
+                      <a href="/about/company-index"
+                        ><p>u&nbsp;Holdingsについて</p></a
+                      >
+                    </div>
+                    <div class="drop_service">
+                      <a href="/service2"><p>Office</p></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Other Links -->
             <div class="mobile_dropdown">
               <a href="/news">News&nbsp;</a>
             </div>
-
             <div class="mobile_dropdown">
               <a href="/contact">Contact</a>
             </div>
-
             <div class="mobile_ux">
               <div><a href="#">AI&nbsp;search</a></div>
               <div><a class="user_account" href="/login">Account</a></div>
@@ -315,7 +325,7 @@
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn" id="nav_help">
+            <button class="dropbtn" id="nav_contact">
               <a href="/contact">Contact</a>
             </button>
           </div>
@@ -336,7 +346,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
 
-          <a class="user_account" href="/login"
+          <a class="user_account" id="nav_login" href="/login"
             ><i class="fa-solid fa-user"></i
           ></a>
         </div>

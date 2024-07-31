@@ -7,6 +7,10 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .dropbtn a,
 .navbar_ux a i,
 .navbar_ux  button i,
@@ -180,6 +184,8 @@
 
 .company_index_quote_content {
     margin-top: 50px; 
+    display: flex;
+    gap: 50px;
 }
 
 .quote_header {
@@ -276,6 +282,7 @@
     display: flex;
     gap: 30px;
     max-width: 600px;
+    pointer-events: none;
 }
 
 .office_card a:hover {
@@ -319,6 +326,41 @@
 
 .whyUs_card:hover .whyUs_card_hidden {
     visibility: visible;
+}
+
+.whyUs_card_hidden {
+    position: relative;
+    top: 300px;
+    visibility: hidden;
+}
+
+.whyUs_card:hover .whyUs_card_header h4 {
+    transform: translateY(-1200px);
+    transition: 500ms ease;
+}
+
+.whyUs_card:hover .whyUs_card_hidden {
+    visibility: visible;
+    transform: translateY(-300px);
+    transition: 500ms ease;
+}
+
+@media (max-width: 1600px) {
+    .company_index_quote_content img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .company_index_quote_content {
+        display: block;
+    }
+
+    .company_index_quote_text h3 {
+        margin-top: 30px;
+    }
+    
 }
 
 @media (max-width: 430px) {

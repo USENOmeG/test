@@ -6,6 +6,10 @@
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+#nav_services a {
+    color: #B2A476 !important;
+}
+
 .dropbtn a,
 .dropbtn a,
 .navbar_ux a i,
